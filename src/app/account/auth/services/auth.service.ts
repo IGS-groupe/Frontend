@@ -41,4 +41,7 @@ export class AuthService {
   createContact(contact: any): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}/contacts`, contact, this.getHttpOptions());
   }  
+  logout(): Observable<any> {
+    return this.http.post<any>(`${this.baseUrl}/logout`, {}, this.getHttpOptions());
+  }
 }

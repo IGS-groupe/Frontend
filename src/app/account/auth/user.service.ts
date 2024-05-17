@@ -61,4 +61,16 @@ export class UserService {
     };
     return this.http.put<any>(`${this.baseUrl}/change-password`, body, { headers: this.getAuthHeaders() });
   }
+
+  logout(): Observable<string> {  // Expecting a response of type string
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${localStorage.getItem('token')}`,  // Directly fetching the token for logout
+        'Content-Type': 'application/json'
+      }),
+      responseType: 'text' as 'json'  // Handling response as plain text
+    };
+
+    return this.http.post<string>(`${this.baseUrl.replace('/users', '/auth')}/logout`, {}, httpOptions);
+  }
 }

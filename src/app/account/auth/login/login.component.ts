@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
       response => {
         const roles = response.roles;  // Correctly access roles
         if(roles.includes("ROLE_USER")){
-          console.log('API Response:', response); // Log the full response object
+          console.log('API Response:', response.token); // Log the full response object
           localStorage.setItem('userId', response.userId.toString());
           localStorage.setItem('token', response.token);
           localStorage.setItem('fisrtName', response.fisrtName);
