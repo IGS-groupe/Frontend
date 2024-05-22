@@ -1,0 +1,635 @@
+{
+        "navbar": {
+          "aboutUs": "À propos de nous",
+          "about": "Sur",
+          "governance": "Gouvernance",
+          "collaborators": "Collaborateurs",
+          "consulting": "Consultation",
+          "environmentalSolutions": "Solutions environnementales",
+          "energySolutions": "Solutions énergétiques",
+          "rnd": "R&D",
+          "rmd": "RMD",
+          "analyticalServices": "Services analytiques",
+          "iso": "ISO",
+          "goldPMAssaying": "Analyse de l'or et PM",
+          "assayingTesting": "Essais et analyses",
+          "labAuditing": "Audit de laboratoire",
+          "metTesting": "Essais métallurgiques",
+          "samplePreparation": "Préparation des échantillons",
+          "communitionTesting": "Essais de communition",
+          "gravityTesting": "Essais de gravité",
+          "goldTestingCapabilities": "Capacités d'essai d'or",
+          "floatationTestingCapabilities": "Capacités d'essai de flottation",
+          "hydrometTesting": "Essais hydrométallurgiques",
+          "slSeparationTesting": "Essais de séparation S/L",
+          "magneticAndElectrostaticSeparation": "Séparation magnétique et électrostatique",
+          "reference": "Référence",
+          "projects": "Projets",
+          "clients": "Clients",
+          "news": "Nouvelles",
+          "contactUs": "Contactez-nous",
+          "login": "Connexion"
+        },
+      
+        "home":{
+            "home": {
+            "slide1": {
+                "title": "Impact Global Solutions",
+                "description": "IGS Impact Global Solutions Inc. est une entreprise privée fournissant des services de conseil, de test météorologique et d'analyse à l'industrie minière. IGS s'engage également à fournir rapidement des solutions innovantes aux besoins les plus exigeants, avec l'objectif d'être la seule entreprise privée canadienne offrant des solutions de R&D à l'industrie minière."
+            },
+            "slide2": {
+                "title": "Dédié à l'innovation",
+                "description": "Chez IGS, nous repoussons les limites de la recherche et du développement pour fournir des solutions de premier plan à travers le secteur minier."
+            }
+            },
+            "features": {
+            "maturity": {
+                "title": "MATURITÉ",
+                "details": [
+                "IGS est une entreprise 'nouvellement née', mais possède une expérience et une maturité équivalente à la somme de celle de son équipe de gestion des solutions.",
+                "Nous n'avons aucun doute que nous réussirons ensemble.",
+                "Les partenaires du think tank, les associés et les fournisseurs de services et de conseil sont essentiels à notre mission."
+                ]
+            },
+            "values": {
+                "title": "VALEURS",
+                "details": [
+                "IGS s'appuie sur la liberté de penser, de partager et d'innover dans un monde et des esprits ouverts.",
+                "En conséquence, nous récompenserons et gratifierons nos employés et partenaires.",
+                "Nous reconnaissons leurs contributions et protégeons leurs propriétés intellectuelles."
+                ]
+            },
+            "mission": {
+                "title": "MISSION",
+                "details": [
+                "Toutes les idées pertinentes et précieuses de nos partenaires sont avancées pour un défi mutuel.",
+                "Nous opérons avec un haut niveau de respect et d'engagement.",
+                "Notre objectif est de construire des talents de réflexion de classe mondiale."
+                ]
+            },
+            "dimension": {
+                "title": "DIMENSION",
+                "details": [
+                "L'équipe d'IGS est engagée à performer, à consolider, à évoluer et à se diversifier vers divers domaines d'ingénierie et niveaux de complexité de projets.",
+                "Ensemble, nous croyons que nous pouvons construire l'avenir."
+                ]
+            }
+            },
+            "about": {
+            "ethosTitle": "ETHOS",
+            "ethosDetails": [
+                "Nous faisons ce que nous sommes capables de faire avec excellence, ou nous trouvons des personnes capables de le faire en s'assurant qu'elles maintiennent également nos normes.",
+                "Chaque effort, tâche ou projet que nous entreprenons sera mené à terme comme si nous avions un intérêt personnel et aboutira finalement à la croissance de nos clients.",
+                "Nous traitons les actifs de nos clients comme s'ils étaient les nôtres et considérons en conséquence les objectifs, budgets et calendriers du projet.",
+                "Nous travaillons au maximum pour atteindre ou dépasser nos cibles et engagements, car nous ne céderons jamais face aux problèmes les plus difficiles.",
+                "Nous traitons avec respect et compréhension et nous considérons correctement l'implication des sentiments et des jugements du client pendant la période d'exécution du projet et après."
+            ]
+            }
+        },
+        "about":{
+        "propos": {
+          "title": "À propos de IGS",
+          "backgroundImageAlt": "Image de fond"
+        },
+        "features": {
+          "introduction": {
+            "title": "Introduction",
+            "description": "IGS est un centre d’expertise et d’innovations à but non lucratif qui offre aux sociétés minières une gamme de services spécialisés et d’expertises de recherche afin d’optimiser et développer les procédés clés de traitement de minerais, pour améliorer la compétitivité et pour réduire l’impact environnemental par des solutions innovantes.",
+            "missionTitle": "Notre mission",
+            "missionText": "Créer des solutions innovantes en traitement de minerais au bénéfice d’une industrie minière durable, en travaillant étroitement avec nos membres, nos clients et nos partenaires.",
+            "visionTitle": "Notre vision",
+            "visionText": "Être reconnu à l’international comme un leader en technologies et en innovation dans le traitement de minerais."
+          },
+          "values": {
+            "title": "Des valeurs qui nous guident",
+            "creativity": "Nous travaillons à voir des possibilités là où il ne semble pas y en avoir : nous cultivons l’art de faire autrement.",
+            "integrity": "Nous faisons preuve d’honnêteté par la véracité et l’exactitude de nos paroles, en cohérence avec nos actions.",
+            "commitment": "Nous faisons la promesse envers nos collègues, notre organisation, nos membres et nos partenaires d’offrir le meilleur de nous-même et de poser des actions en ce sens.",
+            "teamSpirit": "Nous nous unissons et travaillons ensemble dans un but commun, dans un climat de confiance, d’ouverture et de respect.",
+            "healthSafetySustainability": "Nous nous engageons à contribuer à un milieu de travail sain et sécuritaire et nous posons des actions concrètes pour prendre part au développement durable."
+          }
+        },
+        "about": {
+          "clientCommitmentTitle": "Engagement client - Notre promesse",
+          "clientCommitmentText": "Chez IGS, la culture client est une priorité et s’applique à l’interne comme à l’externe. Consultez Notre engagement client, la promesse que nous nous faisons entre nous, envers nos clients, nos membres et nos partenaires qui est le reflet de cette culture. Nous nous faisons la promesse d’appliquer cet engagement individuellement et collectivement au sein de tout IGS.",
+          "companyPortraitTitle": "Portrait d'entreprise",
+          "companyPortraitText": "Tourné vers la satisfaction de ses membres et clients et engagé à garantir des résultats de qualité et de bonnes pratiques professionnelles, Corem met notamment en oeuvre deux systèmes de management de la qualité assurant",
+          "qualityPolicyTitle": "Politique qualité",
+          "qualityPolicyText": "Tourné vers la satisfaction de ses membres et clients et engagé à garantir des résultats de qualité et de bonnes pratiques professionnelles, IGS met notamment en oeuvre deux systèmes de management de la qualité assurant une prestation de service de laboratoire répondant aux exigences les plus élevées de l’industrie minière.",
+          "healthSafetyEnvironmentPolicyTitle": "Politiques en regard de la santé, la sécurité au travail et l'environnement",
+          "healthSafetyEnvironmentPolicyText": "IGS dirige ses activités de façon à assurer un milieu de travail sain et sécuritaire à ses employés, ses sous-traitants et ses visiteurs et à protéger l’environnement. Consultez la Politique de IGS en regard de la santé, de la sécurité au travail et de l’environnement pour plus de détails. Dans l’objectif de supporter ses membres, ses clients et ses fournisseurs dans leur développement durable, IGS à mis en place une politique environnementale pour l’entreprise."
+        }
+        },
+        "gouvernance":{
+        "governance": {
+          "title": "Gouvernance",
+          "boardTitle": "Conseil d'administration",
+          "teamMembers": [
+            {
+              "name": "Ahmed Bouajila",
+              "position": "Président & PDG",
+              "socialLinks": {
+                "facebook": "Facebook",
+                "linkedin": "Linkedin",
+                "google": "Google"
+              }
+            },
+            {
+              "name": "Muhammad Hasib, Ph D",
+              "position": "Directeur du Laboratoire Analytique",
+              "socialLinks": {
+                "facebook": "Facebook",
+                "linkedin": "Linkedin",
+                "google": "Google"
+              }
+            },
+            {
+              "name": "Mohamed Belarbi",
+              "position": "Directeur des Tests Métallurgiques",
+              "socialLinks": {
+                "facebook": "Facebook",
+                "linkedin": "Linkedin",
+                "google": "Google"
+              }
+            },
+            {
+              "name": "Mark Hurley",
+              "position": "PDG & Chef",
+              "socialLinks": {
+                "facebook": "Facebook",
+                "linkedin": "Linkedin",
+                "google": "Google"
+              }
+            }
+          ]
+        }
+       
+        },
+        "collaborateurs":{
+        "collaborators": {
+          "title": "Collaborateurs",
+          "sectionTitle": "Innover en collaborant",
+          "subtitle": "Profitez des liens que IGS a déjà tissés",
+          "description": "Plusieurs projets sont menés avec ses partenaires académiques et privés mondiaux. Les gouvernements du Québec et du Canada sont également nos partenaires financiers.",
+          "researchPartners": {
+            "title": "Partenaires de recherche",
+            "partners": [
+              "AMIRA International, Melbourne (Australie)",
+              "Canada Mining Innovation Council (CMIC), Ottawa (Ont.)",
+              "Centre de traitement des résidus industriels (CTRI), Rouyn-Noranda (Qc.)",
+              "Coalia, Thetford Mines (Qc.)",
+              "IVADO, Montréal (Qc.)",
+              "National Research Council of Canada (NRC)",
+              "Ressources naturelles Canada (CanmetMINES), Ottawa (Ont.)"
+            ]
+          },
+          "researchDevelopmentPartners": {
+            "title": "Partenaires de recherche, développement et valorisation",
+            "partners": [
+              "BBA",
+              "BioCarbon Industries",
+              "Copper Mountain",
+              "Cyanco",
+              "Derrick",
+              "Draslovka",
+              "FLSmidth",
+              "H2Flow",
+              "Jumine",
+              "MeGlobal",
+              "Métal 7",
+              "Metcom",
+              "Mining and Process Solutions",
+              "National Carbon",
+              "Newmont, Mine Porcupine",
+              "Paul Wurth",
+              "ThyssenKrupp",
+              "Scantech",
+              "Weir Minerals"
+            ]
+          },
+          "universities": {
+            "title": "Universités",
+            "partners": [
+              "Curtin University, Perth, (Australie)",
+              "University of British Columbia, Vancouver (C.-B.)",
+              "École Polytechnique de Montréal (Qc.)",
+              "INRS-ÉTÉ, Québec (Qc.)",
+              "Laval University, Québec (Qc.)",
+              "McGill University, Montréal (Qc.)",
+              "Queen's University, Kingston (Ont.)",
+              "University of Toronto, Toronto (Ont.)"
+            ]
+          },
+          "financialPartnersTitle": "Partenaires financiers"
+        }
+        },
+        "consulting":{
+        "consulting": {
+          "title": "Consultation",
+          "description": "IGS fournit des services de consultation spécifiques et un soutien aux industries chimiques, des matériaux et des minéraux, en fournissant des solutions à toutes les étapes du développement de projets ainsi que dans la chaîne de production et d'opération.",
+          "motto": "Notre équipe est prête à apporter à votre organisation le savoir, le savoir-faire et les solutions pour vous permettre de réaliser des bénéfices et de rester compétitif.",
+          "servicesTitle": "Nos services incluent:",
+          "services": [
+            "Solutions, outils, méthodes, développement de processus et de flux",
+            "Supervision de programmes de tests de démonstration en laboratoire et en pilote",
+            "Prototypage",
+            "Veille technologique, sourcing technologique et résolution de problèmes technologiques",
+            "Évaluation de la PI et brevetage (VIP)",
+            "Révision diligente",
+            "Gestion spécifique de la R&D et suivi de la collaboration",
+            "Support au démarrage et à l'accélération",
+            "Audit de projets et d'opérations (IMPACT)",
+            "Recrutement de talents (WTS)",
+            "Formation et coaching",
+            "Résolution de problèmes opérationnels",
+            "Engagement et conseils techniques de personnes qualifiées",
+            "Support au financement de solutions et au financement du développement de solutions (SDF)"
+          ]
+        }
+        },
+        "environmental":{
+            "navbar": {},
+            "environmentalSolutions": {
+            "title": "Solutions Environnementales",
+            "intro": "Le groupe IGS Environnement offre des services de conseil spécifiques et un soutien aux secteurs environnementaux, en fournissant des solutions à toutes les étapes du développement de projets industriels. Notre équipe est prête à apporter à votre projet et à vos opérations le savoir, le savoir-faire et les solutions pour vous permettre d'atténuer les préoccupations environnementales.",
+            "services": [
+                "Atténuation des émissions industrielles",
+                "Expertise en gestion des résidus",
+                "Décontamination des sols, traitement de l'eau, recyclage",
+                "Cartographie des NORMES",
+                "Conseil sur les meilleures pratiques",
+                "Recyclage, gestion et récupération des consommables"
+                ]
+                }
+        },
+        "energySolutions": {
+        "title": "Solutions Énergétiques",
+        "description": "Le groupe IGS Énergie offre des services de conseil spécifiques et un soutien aux secteurs de l'énergie, en fournissant des solutions à toutes les étapes du développement de votre projet industriel et de son exploitation. Notre équipe est prête à apporter à votre projet et à vos opérations le savoir, le savoir-faire et les solutions pour vous permettre de gérer les préoccupations énergétiques.",
+        "services": [
+            "Production, transport et distribution d'énergie électrique",
+            "Efficacité énergétique",
+            "Récupération d'énergie",
+            "Énergies renouvelables",
+            "Énergie thermique, conversion d'énergie, biocarburants"
+        ]
+        },
+        "RnD": {
+            "title": "R&D",
+            "description": "IGS vise à être un groupe de conseil leader au Canada dans l'extraction et le traitement de divers minéraux. Nos activités de R&D visent des solutions innovantes pour aborder les dépôts de minerais complexes, en vue de les rendre exploitables dans le cadre étroit de la faisabilité technique, environnementale et économique.",
+            "activities": [
+            "Développement de processus pour récupérer des valeurs à partir de déchets, de résidus historiques et de sous-produits.",
+            "Développement de feuilles de flux pour valoriser les minerais de basse et moyenne qualité",
+            "Gestion des études pilotes et de démonstration pour collecter les données de conception pour les usines commerciales",
+            "Réalisation d'audits d'usine et amélioration des KPIs par :",
+            "Évaluation de la PI et brevetage (VIP)",
+            "Examen diligent",
+            "Gestion spécifique de la R&D et suivi de la collaboration"
+            ],
+            "planningTeam": {
+            "title": "Notre équipe de planification R&D s'occupe de :",
+            "points": [
+                "Planification des ressources et mise en œuvre de projets financés en interne et par des tiers pour le laboratoire.",
+                "Mise en œuvre de la gestion de la propriété intellectuelle.",
+                "Gestion du système de qualité",
+                "Traitement des divers accords et protocoles d'entente pour la mise en œuvre"
+            ]
+            }
+        },
+        "RMD": {
+            "title": "RMD",
+            "description": "Le groupe IGS Énergie offre des services de conseil spécifiques et un soutien aux secteurs de l'énergie, fournissant des solutions à toutes les étapes du développement de votre projet industriel et de son exploitation. Notre équipe est prête à apporter à votre projet et à vos opérations le savoir, le savoir-faire et les solutions pour vous aider à atténuer les préoccupations énergétiques.",
+            "services": [
+            "Production, transport et distribution d'énergie électrique",
+            "Efficacité énergétique",
+            "Récupération d'énergie",
+            "Énergies renouvelables",
+            "Énergie thermique, conversion d'énergie, biocarburants"
+            ]
+        },
+        "goldPM": {
+            "title": "Analyse de l'or et des métaux précieux",
+            "description": "L'analyse de l'or et des métaux précieux comprend une série d'étapes cruciales pour l'analyse précise de métaux précieux comme l'or. Initialement, les échantillons sont soumis à des processus de fusion et de coupellation, qui impliquent la fonte du métal et sa séparation des impuretés. Ensuite, des techniques de digestion et de dilution sont utilisées pour préparer les métaux à l'analyse. Des méthodes d'absorption atomique sont ensuite employées pour détecter et mesurer la présence d'or et d'autres métaux avec précision. De plus, les échantillons subissent une séparation par tamis avant de subir une analyse par feu pour déterminer précisément la teneur en or. Ces procédures méticuleuses assurent une évaluation et une quantification approfondies des métaux précieux à diverses fins.",
+            "processes": [
+            "Fusion et coupellation des échantillons",
+            "Digestion et dilution des métaux",
+            "Détection de l'or et des métaux par absorption atomique",
+            "Séparation par tamis suivie d'une analyse par feu des échantillons et détermination de l'or"
+            ]
+        },
+        "goldTesting": {
+            "title": "Capacités d'essai de l'or",
+            "description": "La cyanuration de l'or reste la technologie de traitement de l'or la plus utilisée. IGS, étant associé à de nombreux projets de développement et d'optimisation de schémas de traitement de l'or, peut apporter une valeur ajoutée au développement de votre projet et ainsi guider votre programme de tests pour qu'il soit bien adapté à votre dépôt et plus tôt dans le cycle du projet. Nos capacités de test de cyanuration de l'or couvrent tout, depuis le fraisage de l'or libre jusqu'aux minéraux porteurs d'or les plus réfractaires :",
+            "techniques": [
+            "Lixiviation directe au cyanure",
+            "Lixiviation en tas (CIL)",
+            "Lixiviation en pulpe (CIP)",
+            "Lixiviation au cyanure agité – Cuve et bouteille",
+            "Activité du carbone et caractérisation du carbone",
+            "Chargement du carbone pour la modélisation",
+            "Simulation de lixiviation en tas (COBR et essais en colonne)",
+            "Détermination du taux d'absorption d'oxygène",
+            "Demande de chaux",
+            "Lixiviation améliorée par l'oxygène",
+            "Caractérisation du vol de prég",
+            "Détoxication et destruction du cyanure",
+            "Précipitation de l'arsenic"
+            ]
+        },
+        "labAuditing": {
+            "title": "Audit de Laboratoire",
+            "intro": "IGS fournit également l'implémentation ISO-17025, l'implémentation QA/QC, les directives de meilleures pratiques de laboratoire, et les services d'audit de laboratoire.",
+            "details": [
+            "L'ISO 17025 est une exigence réglementaire et une pression clientèle, essentielle pour l'entreprise et sans laquelle l'ensemble de l'entreprise peut être à risque.",
+            "Les organisations ne peuvent pas risquer de compromettre cela avec un système de gestion inefficace, l'audit interne est le gardien pour assurer votre succès continu.",
+            "L'ISO 17025 est une norme d'accréditation conçue pour donner une confiance totale dans le système de l'organisation. Elle diffère des normes de certification telles que l'ISO 9001 ou l'ISO 14001.",
+            "Dans un système d'accréditation, les erreurs ne sont tout simplement pas acceptables, et le système de gestion ISO 17025 doit être conçu et mis en œuvre infailliblement pour survivre au processus d'audit d'accréditation difficile.",
+            "L'audit interne devrait fournir une approche tout aussi rigoureuse. Bien qu'il doive apporter une valeur ajoutée à l'organisation, le premier objectif est de s'assurer que les exigences de la norme sont incontestablement respectées.",
+            "Les auditeurs doivent encore rechercher des opportunités d'amélioration telles que la rationalisation des processus et la réduction des bureaucraties inutiles.",
+            "Étant donné l'importance de l'activité d'audit interne, il est essentiel que les auditeurs soient expérimentés et compétents.",
+            "IGS compte une équipe de 5 auditeurs qualifiés couvrant complètement le composant global du système de gestion ISO 17025. Nous concevons et mettons en œuvre des systèmes de gestion ISO 17025 qui répondent à l'objectif commercial de l'organisation tout en assurant des processus efficaces."
+            ],
+            "auditingCapabilities": [
+            "Donner confiance à la direction que les processus qu'ils ont sont efficaces et qu'ils maintiendront leur accréditation ISO 17025.",
+            "Convaincre facilement les auditeurs d'accréditation que le système est audité de manière approfondie et professionnelle.",
+            "Fournir un audit approfondi qui identifie toute question avant qu'un auditeur d'accréditation puisse la détecter.",
+            "Fournir les compétences, l'expertise et les ressources qui ne sont pas facilement disponibles en interne.",
+            "Offrir de l'expérience pour identifier les contrôles nécessaires appropriés par rapport aux opportunités d'amélioration."
+            ],
+            "conclusion": "En engageant les auditeur(s) d'IGS pour mener vos audits internes, vous assurerez l'efficacité de votre système de gestion et protégerez le statut d'accréditation ISO de l'incertitude de l'audit externe. Les auditeur(s) d'IGS offrent un ensemble de services complets de consultation, de mise en œuvre, d'audit, de coaching et de formation du système de gestion ISO 17025."
+        },
+        "samplePreparation": {
+            "title": "Préparation des échantillons",
+            "description": "IGS offre une manipulation minutieuse des matériaux et une préparation des échantillons dès la première étape de la chaîne de services analytiques comprenant : Broyage, division, homogénéisation et pulvérisation des échantillons.",
+            "processes": [
+            "Broyage, division, homogénéisation et pulvérisation des échantillons pour assurer uniformité et cohérence.",
+            "Utilisation de l'équipement nécessaire et des procédures pour éviter les problèmes de ségrégation des échantillons, de contamination et de traçabilité."
+            ],
+            "equipmentDetails": "IGS utilise des équipements de pointe conçus pour manipuler les échantillons avec le plus grand soin afin de prévenir toute forme de contamination ou de perte d'intégrité."
+        },
+        "comminutionTesting": {
+            "title": "Tests de Comminution",
+            "intro": "IGS offre actuellement des tests de comminution clés, nécessaires pour les études de projets et les cycles de développement. Nous pouvons également travailler avec d'autres sous-traitants pour fournir des tests de pointe sur la dureté des minerais et l'évaluation de la broyabilité :",
+            "tests": [
+            "Test de chute JK (DWT)",
+            "Test de comminution du broyeur SAG (SMC)",
+            "Broyeur à boulets Bond (BWI)",
+            "Abrasion Bond (Ai)",
+            "WI comparatif Bond modifié",
+            "Test de Levin",
+            "Charge ponctuelle",
+            "Autres exigences de tests de comminution annexes telles que les tests SPI"
+            ]
+        },
+        "gravityTesting": {
+            "title": "Tests de Gravité",
+            "description": "Les technologies de séparation par gravité sont des méthodes d'enrichissement attrayantes, étant la voie de traitement la plus économique pour la récupération des minéraux. Avec une expertise de premier plan dans le développement de schémas de traitement minéral, l'équipe IGS peut offrir une large gamme d'options de tests de séparation par gravité :",
+            "methods": [
+            "Concentration par gravité Knelson",
+            "Table de Mozley",
+            "Tests en une étape et E-GRG",
+            "Caractérisation des tests HLS"
+            ]
+        },
+        "flotationTesting": {
+            "title": "Capacités de Tests de Flottation",
+            "intro": "L'équipe IGS possède une expérience étendue et diversifiée dans la flottation de divers minéraux et le développement de schémas de circuits de flottation à échelle de laboratoire pour soutenir des projets basiques et complexes. Nos services de tests de flottation comprennent :",
+            "services": [
+            "Développement de recettes et de schémas de processus de flottation",
+            "Cinétique de flottation grossière",
+            "Sélection des réactifs",
+            "Nettoyage par lots",
+            "Tests de cycle verrouillé"
+            ],
+            "knowhow": "Notre savoir-faire couvre une large gamme de matières premières :",
+            "commodities": [
+            "Métaux de base : Cuivre, Plomb, Zinc, Nickel, Cobalt",
+            "Métaux précieux : Or, Argent et PGM",
+            "Oxydes : Niobium, lithium, métaux de base oxydés, TER, etc."
+            ]
+        },
+        "hydrometTesting": {
+            "title": "Tests Hydrométallurgiques",
+            "description": "L'équipe d'IGS possède une solide expérience dans les tests et le développement de procédés hydrométallurgiques, participant activement à de nombreux projets de R&D associés. Les tests de laboratoire hydrométallurgiques impliquant tous les acides et bases minéraux comprennent :",
+            "procedures": [
+            "Lixiviation acide",
+            "Lixiviation par fusion et calcination",
+            "Séparation IX/SX",
+            "Étapes de purification",
+            "Chloration",
+            "Distillation fractionnée",
+            "Lixiviation assistée par ultrasons"
+            ],
+            "note": "Ces services de test complets sont conçus pour garantir des stratégies de traitement optimales pour la récupération et le traitement des minéraux."
+        },
+        "slSeparationTesting": {
+            "title": "Tests de Séparation Solide/Liquide",
+            "description": "IGS propose des tests de vitesse de décantation en cylindre statique et des tests dynamiques pour la conception et le dimensionnement initiaux des épaississeurs. Des tests de criblage de floculants sont réalisés pour sélectionner le floculant le plus adapté à votre type de minerai.",
+            "tests": [
+            "Tests de vitesse de décantation en cylindre statique pour évaluer la conception et la taille initiales de l'épaississeur.",
+            "Tests dynamiques pour optimiser la performance de l'épaississeur.",
+            "Criblage de floculants pour déterminer le meilleur floculant pour une séparation efficace."
+            ]
+        },
+        "magneticElectrostaticSeparation": {
+            "title": "Séparation Magnétique et Électrostatique",
+            "description": "IGS propose le développement de schémas de traitement pour des minerais tels que le fer, le titanifère et des minerais industriels comme l'or, le chromite et le tungstène, utilisant nos instruments de séparation magnétique et électrostatique. L'intensité du champ de notre séparation magnétique atteint jusqu'à 20000 Gauss. Notre équipement comprend :",
+            "equipmentList": [
+            "Tube Davis",
+            "Séparateur magnétique à haute intensité et humide",
+            "Séparateur magnétique à rouleaux secs",
+            "Séparateur électrostatique"
+            ],
+            "additionalInfo": "Nous fournissons également des diagnostics et une assistance à l'établissement des processus pour votre projet en cours."
+        },
+        "projects": {
+            "title": "Projets",
+            "description": "Un aperçu des projets en cours et achevés démontrant nos capacités et notre expertise dans divers domaines :",
+            "projectDetails": [
+            {
+                "title": "Audit et exploitation de laboratoire",
+                "details": [
+                "Audit, révision des pratiques QA/QC et exploitation intérimaire du laboratoire analytique de l'usine Cu-Zn",
+                "Étude préliminaire et ingénierie de base pour la mise en service d'une installation de démonstration de 1 tpd, (extraction hydrométallurgique de SR)"
+                ]
+            },
+            {
+                "title": "Développement des technologies de processus hydrométallurgiques",
+                "details": [
+                "Extraction par solvant du vanadium avec un focus sur l'élimination efficace du Fe/Cr"
+                ]
+            },
+            {
+                "title": "Révision de la technologie de traitement",
+                "details": [
+                "Révision critique et feuille de route de développement de projet. Projet Nb-Apatite-RE-Uranium"
+                ]
+            },
+            {
+                "title": "Autre implication récente des membres clés de l'équipe",
+                "details": [
+                "Due diligence de la mine Niobec pour une transaction d'acquisition potentielle.",
+                "Révision diligente des processus hydrométallurgiques / pyrométallurgiques et des technologies pour les ressources Nevado (Titanium) - Révision des dossiers de démonstration de la production de pigments spécialisés – Simulation du processus global pour un cas d'affaires commercial.",
+                "Cartographie de la radioactivité du traitement des terres rares. Solutions d'atténuation et faisabilité de la disposition des résidus hydrométallurgiques riches en Th-U par remblayage.",
+                "Révision diligente, perspectives de montée en puissance et caractéristiques techniques et risques d'investissement, producteur de lithium carbonaté, usine de flottation et hydrométallurgique.",
+                "Développement de processus et ingénierie de processus, Projet de Terres Rares et de Niobium (types de minerais bastnaesite et monazite).",
+                "Supervision des tests métallurgiques et révision de la métallurgie globale et du raffinage pour un projet de faible teneur en Nb-Ta."
+                ]
+            },
+            {
+                "title": "Solutions environnementales",
+                "details": [
+                "Revue critique, évaluation LCA et étude de marché des technologies pour un processus breveté visant à produire du rutile synthétique à partir d'ilménite de faible qualité",
+                "Révision critique et comparaison de l'empreinte environnementale de la production de pigments de titane via des technologies émergentes et commerciales",
+                "Aperçu des problèmes de gypse de processus et des opportunités d'atténuation - Le cas du phospho-gypse",
+                "Révision critique des technologies émergentes pour la décadmiation de l'acide phosphorique et des produits fertilisants associés - Perspective de transfert de technologie à court-moyen terme"
+                ]
+            }
+            ]
+        },
+        "clients": {
+            "title": "Clients",
+            "description": "Chez IGS, nous sommes fiers de livrer des projets réussis à nos clients à toutes les étapes du développement de projet. Depuis 2016, nous avons servi de nombreux clients locaux et internationaux.",
+            "clientList": [
+            {
+                "name": "Eramet",
+                "logo": "assets/images/small/eramet.jpg",
+                "description": "Détails sur les projets et collaborations avec Eramet."
+            },
+            {
+                "name": "Mazda",
+                "logo": "assets/images/small/maz.png",
+                "description": "Aperçu de notre partenariat à long terme avec Mazda."
+            },
+            {
+                "name": "Fanuc",
+                "logo": "assets/images/small/fan.jpg",
+                "description": "Exploration des projets d'automatisation réalisés avec Fanuc."
+            },
+            {
+                "name": "Burberry",
+                "logo": "assets/images/small/bu.png",
+                "description": "Efforts collaboratifs pour améliorer les processus de production de Burberry."
+            },
+            {
+                "name": "New York Times",
+                "logo": "assets/images/small/ny.png",
+                "description": "Détails sur les solutions technologiques fournies au New York Times."
+            }
+            ]
+        },
+        "newsSection": {
+            "title": "Actualités",
+            "bannerImage": "assets/images/small/news.jpg",
+            "articles": [
+            {
+                "image": "assets/images/small/news1.jpg",
+                "title": "IGS rencontre le Sénat américain",
+                "description": "IGS, représenté par M. Ahmed Boujila (Président), faisait partie de l'équipe de Central American Nickel lors de la rencontre avec les membres du sénat américain responsables du programme des minéraux critiques.",
+                "date": "21 août, 2020"
+            }
+            ]
+        },
+        "contact": {
+            "title": "Solutions Énergétiques",
+            "introTitle": "Discutons ensemble pour optimiser vos résultats !",
+            "introDescription": [
+            "Notre équipe est orientée solutions",
+            "IGS offre aux entreprises minières une gamme de services spécialisés et d'expertise en recherche pour optimiser et développer les processus clés de traitement des minéraux. Choisir IGS, c'est choisir plus de 20 ans d'innovation !",
+            "Contactez-nous pour discuter de vos problèmes et nous vous proposerons des solutions."
+            ],
+            "contact": {
+            "callUs": "Appelez-nous !",
+            "phoneNumber": "+1 418-527-8211",
+            "emailUs": "Envoyez-nous un email !",
+            "email": "contact@igs.com"
+            },
+            "form": {
+            "title": "Contactez-nous",
+            "nameLabel": "Votre nom",
+            "emailLabel": "Votre email",
+            "issueLabel": "Décrivez le problème",
+            "companyLabel": "Votre entreprise",
+            "dateLabel": "Date de la réclamation",
+            "contactPersonLabel": "Personne à contacter",
+            "submitButton": "Envoyer"
+            }
+        },
+        "loginPage": {
+        "header": "Connexion",
+        "emailLabel": "Email",
+        "emailPlaceholder": "Entrez votre e-mail",
+        "emailRequired": "L'email est requis.",
+        "emailInvalid": "L'email doit être une adresse email valide.",
+        "passwordLabel": "Mot de passe",
+        "passwordPlaceholder": "Entrez votre mot de passe",
+        "passwordRequired": "Le mot de passe est requis.",
+        "loginButton": "Connexion",
+        "forgotPassword": "Mot de passe oublié ?",
+        "resetNow": "Réinitialisez-le maintenant.",
+        "noAccount": "Vous n'avez pas de compte ?",
+        "registerNow": "Inscrivez-vous maintenant."
+        },
+        "registrationPage": {
+        "header": "Inscription",
+        "successMessage": "Inscription réussie!",
+        "form": {
+            "firstName": {
+            "label": "Prénom",
+            "placeholder": "Entrez votre prénom",
+            "requiredError": "Le prénom est requis."
+            },
+            "lastName": {
+            "label": "Nom de famille",
+            "placeholder": "Entrez votre nom de famille",
+            "requiredError": "Le nom de famille est requis."
+            },
+            "username": {
+            "label": "Nom d'utilisateur",
+            "placeholder": "Entrez votre nom d'utilisateur",
+            "requiredError": "Le nom d'utilisateur est requis."
+            },
+            "email": {
+            "label": "Email",
+            "placeholder": "Entrez votre e-mail",
+            "requiredError": "L'email est requis.",
+            "invalidError": "L'email doit être une adresse email valide."
+            },
+            "phoneNumber": {
+            "label": "Numéro de téléphone",
+            "placeholder": "Entrez votre numéro de téléphone",
+            "requiredError": "Le numéro de téléphone est requis.",
+            "invalidError": "Le numéro de téléphone doit être valide."
+            },
+            "password": {
+            "label": "Mot de passe",
+            "placeholder": "Entrez votre mot de passe",
+            "requiredError": "Le mot de passe est requis."
+            },
+            "gender": {
+            "label": "Genre",
+            "options": {
+                "male": "Homme",
+                "female": "Femme",
+                "other": "Autre"
+            },
+            "requiredError": "Le genre est requis."
+            },
+            "submitButton": "S'inscrire",
+            "loginPrompt": "Vous avez déjà un compte ?",
+            "loginLink": "Connectez-vous ici."
+        }
+        },
+        "resetPasswordPage": {
+            "title": "Réinitialiser le mot de passe",
+            "form": {
+            "emailLabel": "Email",
+            "emailPlaceholder": "Entrez votre e-mail",
+            "emailRequiredError": "L'email est requis.",
+            "sendResetLinkButton": "Envoyer le lien de réinitialisation"
+            },
+            "loginPrompt": "Connaissez-vous votre mot de passe ?",
+            "loginLinkText": "Connectez-vous ici."
+        }
+          
+          
+    }

@@ -33,7 +33,12 @@ import { NewsComponent } from './components/news/news.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IsoComponent } from './components/iso/iso.component';
-
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+export function createTranslateLoader(http: HttpClient): any {
+  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [NavbarComponent, HomeComponent, FooterComponent, ProposComponent, GouvernanceComponent, CollaborateursComponent, ConsultingComponent, RMDComponent, EnvironmentalComponent, EnergyComponent, RdComponent, GoldComponent, TestingComponent, LabComponent, PreparationComponent, CommunitionComponent, GravityComponent, GoldTestingComponent, FloatationComponent, HydrometComponent, SeparationComponent, MagneticComponent, ProjectsComponent, ClientsComponent, NewsComponent, ContactComponent,IsoComponent],
@@ -44,7 +49,14 @@ import { IsoComponent } from './components/iso/iso.component';
     NgbCarouselModule,
     NgbDropdownModule, 
     ScrollToModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,  
+        deps: [HttpClient]
+      }
+    }),
     
   ]
 })

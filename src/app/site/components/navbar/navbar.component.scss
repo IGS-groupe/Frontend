@@ -1,60 +1,79 @@
-// Navbar styles
+// Improved Navbar styles
 .navbar {
-    background-color: #343a40; // Dark background color
-    padding: 0.5rem 0; // Reduced padding
+    background: linear-gradient(to right, #2c3e50 0%, #34495e 100%); // Subtle gradient background
+    padding: 1rem 1rem; // Uniform padding
     position: fixed;
     width: 100%;
-    z-index: 1000; // Ensure navbar is above other elements
+    z-index: 1050; // High z-index for top layer
 
     .navbar-brand img {
-        height: 30px; // Reduced logo height
+        height: 40px; // Optimal logo height
+        transition: transform 0.3s ease-in-out; // Smooth logo scale
+
+        &:hover {
+            transform: scale(1.05); // Gentle scale effect on hover
+        }
     }
 
     .navbar-nav .nav-link {
-        color: #fff; // Text color
-        font-size: 16px; // Font size
-        font-weight: 500; // Font weight
-        transition: all 0.3s ease; // Smooth transition
+        color: #ecf0f1; // Bright text color for readability
+        font-size: 12px; // Suitable font size
+        padding: 0.8rem 1rem; // Ample padding for easier click
+        transition: background-color 0.3s ease, color 0.3s ease;
 
-        &:hover {
-            color: #007bff; // Text color on hover
+        &:hover, &:focus {
+            color: #f1c40f; // Gold color for high visibility on hover
+            background-color: rgba(255, 255, 255, 0.1); // Slight background on hover for distinction
         }
     }
 
     .dropdown-menu {
-        background-color: #343a40; // Dark background color
-        border: none; // Remove border
-        margin-top: 0; // Reset default margin
-        display: none; // Hide by default
+        background-color: #2c3e50; // Matching with the navbar gradient start
+        border: none;
+        border-radius: 0.5rem; // Rounded corners for dropdown
+        margin-top: 0.5rem; // Slightly lower than the navbar for a layered effect
 
         .dropdown-item {
-            color: #fff; // Text color
-            font-weight: 400; // Font weight
-            transition: background-color 0.3s ease; // Smooth transition
+            color: #ecf0f1;
+            padding: 0.5rem 1rem;
 
             &:hover {
-                background-color: #007bff; // Background color on hover
+                background-color: #f1c40f; // Uniform with hover color
+                color: #2c3e50;
             }
         }
     }
 
     .navbar-nav .nav-item:hover .dropdown-menu {
-        display: block; // Display dropdown on parent link hover
+        display: block; // Ensures the dropdown appears on hover
     }
 
-    .navbar-nav .btn {
-        margin-left: 15px; // Spacing between buttons
+    .language-switcher {
+        border-left: 1px solid #34495e; // Separator for the language switcher
+        margin-left: 20px;
+        padding-left: 20px;
+
+        button {
+            background: none;
+            border: none;
+            color: #ecf0f1;
+            font-size: 16px;
+            transition: color 0.3s;
+
+            &:hover {
+                color: #f1c40f; // Consistent hover effect
+            }
+        }
     }
 
     .btn-outline-success {
-        color: #28a745; // Text color
-        border-color: #28a745; // Border color
-        transition: all 0.3s ease; // Smooth transition
+        color: #28a745; // Original green tone
+        border-color: #28a745;
 
         &:hover {
-            color: #fff; // Text color on hover
-            background-color: #28a745; // Background color on hover
-            border-color: #28a745; // Border color on hover
+            color: #fff;
+            background-color: #28a745;
+            border-color: #28a745;
         }
     }
 }

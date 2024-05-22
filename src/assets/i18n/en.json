@@ -1,315 +1,625 @@
 {
-  "HEADER": {
-    "SEARCH": "Search...",
-    "MEGA_MENU": "Mega Menu",
-    "NOTIFICATIONS": {
-      "TITLE": "Notifications",
-      "VIEW_ALL": "View All",
-      "LOAD_MORE": "View More..",
-      "FIRST": {
-        "TITLE": "Your order is placed",
-        "TEXT": "If several languages coalesce the grammar",
-        "TIME": "3 min ago"
+    "navbar": {
+      "aboutUs": "About Us",
+      "about": "About",
+      "governance": "Governance",
+      "collaborators": "Collaborators",
+      "consulting": "Consulting",
+      "environmentalSolutions": "Environmental Solutions",
+      "energySolutions": "Energy Solutions",
+      "rnd": "R&D",
+      "rmd": "RMD",
+      "analyticalServices": "Analytical Services",
+      "iso": "ISO",
+      "goldPMAssaying": "Gold & PM Assaying",
+      "assayingTesting": "Assaying & Testing",
+      "labAuditing": "Lab Auditing",
+      "metTesting": "Met Testing",
+      "samplePreparation": "Sample Preparation",
+      "communitionTesting": "Communition Testing",
+      "gravityTesting": "Gravity Testing",
+      "goldTestingCapabilities": "Gold Testing Capabilities",
+      "floatationTestingCapabilities": "Floatation Testing Capabilities",
+      "hydrometTesting": "Hydromet Testing",
+      "slSeparationTesting": "S/L Separation Testing",
+      "magneticAndElectrostaticSeparation": "Magnetic and Electrostatic Separation",
+      "reference": "Reference",
+      "projects": "Projects",
+      "clients": "Clients",
+      "news": "News",
+      "contactUs": "Contact Us",
+      "login": "Login"
+    },
+  "home":{
+    "home": {
+      "slide1": {
+        "title": "Impact Global Solutions",
+        "description": "IGS Impact Global Solutions Inc. is a private company providing consulting, met testing and analytical services to the mining industry. IGS is also committed to fast track innovative solutions to the most challenging needs, aiming to be the only Canadian private company providing R&D solutions to the mining industry."
       },
-      "SECOND": {
-        "TITLE": "James Lemire",
-        "TEXT": "It will seem like simplified English.",
-        "TIME": "1 hours ago"
-      },
-      "THIRD": {
-        "TITLE": "Your item is shipped",
-        "TEXT": "If several languages coalesce the grammar",
-        "TIME": "3 min ago"
-      },
-      "FOUR": {
-        "TITLE": "Salena Layfield",
-        "TEXT": "As a skeptical Cambridge friend of mine occidental.",
-        "TIME": "1 hours ago"
+      "slide2": {
+        "title": "Dedicated to Innovation",
+        "description": "At IGS, we push the boundaries of research and development to provide top-tier solutions across the mining sector."
       }
     },
-    "SETTINGS": "Settings",
-    "UI": {
-      "TITLE": "UI Components",
-      "LIGHTBOX": "LightBox",
-      "RANGE_SLIDER": "Range Slider",
-      "SWEET_ALERT": "Sweet Alert",
-      "RATING": "Rating",
-      "FORMS": "Forms",
-      "TABLES": "Tables",
-      "CHARTS": "Charts"
+    "features": {
+      "maturity": {
+        "title": "MATURITY",
+        "details": [
+          "IGS is a 'just born' company, but with experience and maturity equivalent to the sum of its solutions management team.",
+          "We have no doubt that together we will succeed.",
+          "Think tank partners, associates, and consulting and service providers are integral to our mission."
+        ]
+      },
+      "values": {
+        "title": "VALUES",
+        "details": [
+          "IGS relies on the freedom to think, share, and innovate in open worlds and minds.",
+          "Accordingly, we will award and gratify our employees and partners.",
+          "We recognize their contributions and protect their IPs."
+        ]
+      },
+      "mission": {
+        "title": "MISSION",
+        "details": [
+          "All relevant and valuable partners' ideas are put forward for mutual challenge.",
+          "We operate with a high level of respect and commitment.",
+          "Our goal is to build world-class thinking talents."
+        ]
+      },
+      "dimension": {
+        "title": "DIMENSION",
+        "details": [
+          "IGS's team is committed to performance, consolidation, evolution, and expansion.",
+          "We aim to cover diverse engineering fields and project complexity levels.",
+          "Together, we believe we can build the future."
+        ]
+      }
     },
-    "APPLICATIONS": {
-      "TITLE": "Applications",
-      "ECOMMERCE": "Ecommerce",
-      "CALENDAR": "Calendar",
-      "EMAIL": "Email",
-      "PROJECTS": "Projects",
-      "TASKS": "Tasks",
-      "CONTACTS": "Contacts"
-    },
-    "EXTRA_PAGES": {
-      "TITLE": "Extra Pages",
-      "LIGHT_SIDEBAR": "Light Sidebar",
-      "COMPACT_SIDEBAR": "Compact Sidebar",
-      "HORIZONTAL_LAYOUT": "Horizontal layout",
-      "MAINTENANCE": "Maintenance",
-      "COMING SOON": "Coming Soon",
-      "TIMELINE": "Timeline",
-      "FAQ": "FAQs"
-    },
-    "LOGIN": {
-      "PROFILE": "Profile",
-      "MY_WALLET": "My Wallet",
-      "SETTINGS": "Settings",
-      "LOCK_SCREEN": "Lock screen",
-      "LOGOUT": "Logout"
+    "about": {
+      "ethosTitle": "ETHOS",
+      "ethosDetails": [
+        "We do what we are able to do with excellence or find people capable of doing it ensuring they too maintain our standards.",
+        "Each effort, task or project we undertake will be completed as though we have a vested interest and ultimately result in the growth of our clients.",
+        "We treat our client’s assets as if they were our own and consider the project’s objectives, budgets, and schedules consequently.",
+        "We work to our utmost to meet or exceed our targets and commitments, as we will never surrender when facing the most challenging problems.",
+        "We deal with respect and comprehension and we do consider properly the client feelings and judgments involvement during the project execution period and after while."
+      ]
     }
   },
-  "MENUITEMS": {
-    "MENU": {
-      "TEXT": "Menu"
+  "about":{
+    "propos": {
+      "title": "About IGS",
+      "backgroundImageAlt": "Background Image"
     },
-    "DASHBOARDS": {
-      "TEXT": "Dashboards",
-      "BADGE": "04",
-      "LIST": {
-        "DEFAULT": "Default",
-        "SAAS": "Saas",
-        "CRYPTO": "Crypto",
-        "BLOG": "Blog"
+    "features": {
+      "introduction": {
+        "title": "Introduction",
+        "description": "IGS is a non-profit expertise and innovation center that offers mining companies a range of specialized services and research expertise to optimize and develop key mineral processing methods, to enhance competitiveness and to reduce environmental impact through innovative solutions.",
+        "missionTitle": "Our Mission",
+        "missionText": "To create innovative solutions in mineral treatment for the benefit of a sustainable mining industry, working closely with our members, clients, and partners.",
+        "visionTitle": "Our Vision",
+        "visionText": "To be internationally recognized as a leader in technology and innovation in mineral processing."
+      },
+      "values": {
+        "title": "Values That Guide Us",
+        "creativity": "We work to see possibilities where there seem to be none: we cultivate the art of doing differently.",
+        "integrity": "We demonstrate honesty through the truthfulness and accuracy of our words, in line with our actions.",
+        "commitment": "We promise our colleagues, our organization, our members, and our partners to give our best and take actions accordingly.",
+        "teamSpirit": "We unite and work together for a common purpose, in an atmosphere of trust, openness, and respect.",
+        "healthSafetySustainability": "We are committed to contributing to a healthy and safe workplace and we take concrete actions to participate in sustainable development."
       }
     },
-    "LAYOUTS": {
-      "TEXT": "Layouts",
-      "LIST": {
-        "HORIZONTAL": "Horizontal",
-        "LIGHTSIDEBAR": "Light Sidebar",
-        "COMPACTSIDEBAR": "Compact Sidebar",
-        "ICONSIDEBAR": "Icons Sidebar",
-        "BOXED": "Boxed Layout",
-        "COLOREDSIDEBAR": "Colored Sidebar",
-        "VERTICAL": "Vertical",
-        "LIGHTTOPBAR": "Light Topbar",
-        "COLOREDHEADER": "Colored Header",
-        "SCROLLABLE": "Scrollable"
-      }
-    },
-    "APPS": {
-      "TEXT": "Apps"
-    },
-    "CALENDAR": {
-      "TEXT": "Calendar"
-    },
-    "CHAT": {
-      "TEXT": "Chat",
-      "BADGE": "New"
-    },
-    "FILEMANAGER": {
-      "TEXT": "File Manager",
-      "BADGE": "New"
-    },
-    "ECOMMERCE": {
-      "TEXT": "Ecommerce",
-      "LIST": {
-        "PRODUCTS": "Products",
-        "PRODUCTDETAIL": "Product Detail",
-        "ORDERS": "Orders",
-        "CUSTOMERS": "Customers",
-        "CART": "Cart",
-        "CHECKOUT": "Checkout",
-        "SHOPS": "Shops",
-        "ADDPRODUCT": "Add Product"
-      }
-    },
-    "CRYPTO": {
-      "TEXT": "Crypto",
-      "LIST": {
-        "WALLET": "Wallet",
-        "BUY/SELL": "Buy/Sell",
-        "EXCHANGE": "Exchange",
-        "LENDING": "Lending",
-        "ORDERS": "Orders",
-        "KYCAPPLICATION": "KYC Application",
-        "ICOLANDING": "ICO Landing"
-      }
-    },
-    "EMAIL": {
-      "TEXT": "Email",
-      "LIST": {
-        "INBOX": "Inbox",
-        "READEMAIL": "Read Email",
-        "TEMPLATE": {
-          "BADGE": "New",
-          "TEXT": "Template",
-          "LIST": {
-            "BASIC": "Basic Action",
-            "ALERT": "Alert Email",
-            "BILLING": "Billing Email"
-          }
-        }
-      }
-    },
-    "INVOICES": {
-      "TEXT": "Invoices",
-      "LIST": {
-        "INVOICELIST": "Invoice List",
-        "INVOICEDETAIL": "Invoice Detail"
-      }
-    },
-    "PROJECTS": {
-      "TEXT": "Projects",
-      "LIST": {
-        "GRID": "Projects Grid",
-        "PROJECTLIST": "Projects List",
-        "OVERVIEW": "Project Overview",
-        "CREATE": "Create New"
-      }
-    },
-    "TASKS": {
-      "TEXT": "Tasks",
-      "LIST": {
-        "TASKLIST": "Task List",
-        "KANBAN": "Kanban Board",
-        "CREATETASK": "Create Task"
-      }
-    },
-    "CONTACTS": {
-      "TEXT": "Contacts",
-      "LIST": {
-        "USERGRID": "User Grid",
-        "USERLIST": "User List",
-        "PROFILE": "Profile"
-      }
-    },
-    "BLOG": {
-      "TEXT": "Blog",
-      "BADGE": "New",
-      "LIST": {
-        "BLOGLIST": "Blog List",
-        "BLOGGRID": "Blog Grid",
-        "DETAIL": "Blog Details"
-      }
-    },
-    "PAGES": {
-      "TEXT": "Pages"
-    },
-    "AUTHENTICATION": {
-      "TEXT": "Authentication",
-      "BADGE": "New",
-      "LIST": {
-        "LOGIN": "Login",
-        "LOGIN2": "Login 2",
-        "REGISTER": "Register",
-        "REGISTER2": "Register 2",
-        "RECOVERPWD": "Recover Password",
-        "RECOVERPWD2": "Recover Password 2",
-        "LOCKSCREEN": "Lock screen",
-        "LOCKSCREEN2": "Lock screen 2",
-        "CONFIRMMAIL": "Confirm Mail",
-        "CONFIRMMAIL2": "Confirm Mail 2",
-        "EMAILVERIFICATION": "Email verification",
-        "EMAILVERIFICATION2": "Email verification 2",
-        "TWOSTEPVERIFICATION": "Two step verification",
-        "TWOSTEPVERIFICATION2": "Two step verification 2"
-      }
-    },
-    "UTILITY": {
-      "TEXT": "Utility",
-      "LIST": {
-        "STARTER": "Starter Page",
-        "MAINTENANCE": "Maintenance",
-        "TIMELINE": "Timeline",
-        "FAQS": "FAQs",
-        "PRICING": "Pricing",
-        "ERROR404": "Error 404",
-        "ERROR500": "Error 500"
-      }
-    },
-    "COMPONENTS": {
-      "TEXT": "Components"
-    },
-    "UIELEMENTS": {
-      "TEXT": "UI Elements",
-      "LIST": {
-        "ALERTS": "Alerts",
-        "BUTTONS": "Buttons",
-        "CARDS": "Cards",
-        "CAROUSEL": "Carousel",
-        "DROPDOWNS": "Dropdowns",
-        "GRID": "Grid",
-        "IMAGES": "Images",
-        "LIGHTBOX": "Lightbox",
-        "MODALS": "Modals",
-        "RANGESLIDER": "Range Slider",
-        "PROGRESSBAR": "Progress Bars",
-        "PLACEHOLDER": "Placeholder",
-        "SWEETALERT": "Sweet Alert",
-        "TABS": "Tabs & Accordions",
-        "TYPOGRAPHY": "Typography",
-        "VIDEO": "Video",
-        "GENERAL": "General",
-        "COLORS": "Colors",
-        "CROPPER": "Image Cropper"
-      }
-    },
-    "FORMS": {
-      "TEXT": "Forms",
-      "BADGE": "09",
-      "LIST": {
-        "ELEMENTS": "Form Elements",
-        "VALIDATION": "Form Validation",
-        "ADVANCED": "Form Advanced",
-        "EDITOR": "Form Editor",
-        "FILEUPLOAD": "Form File Upload",
-        "REPEATER": "Form Repeater",
-        "WIZARD": "Form Wizard",
-        "MASK": "Form Mask",
-        "LAYOUTS": "Form Layouts"
-      }
-    },
-    "TABLES": {
-      "TEXT": "Tables",
-      "LIST": {
-        "BASIC": "Basic Tables",
-        "ADVANCED": "Advanced Table"
-      }
-    },
-    "CHARTS": {
-      "TEXT": "Charts",
-      "LIST": {
-        "APEX": "Apex Chart",
-        "CHARTJS": "Chartjs Chart",
-        "CHARTIST": "Chartist Chart",
-        "ECHART": "E Chart"
-      }
-    },
-    "ICONS": {
-      "TEXT": "Icons",
-      "LIST": {
-        "BOXICONS": "Boxicons",
-        "MATERIALDESIGN": "Material Design",
-        "DRIPICONS": "Dripicons",
-        "FONTAWESOME": "Font Awesome"
-      }
-    },
-    "MAPS": {
-      "TEXT": "Maps",
-      "LIST": {
-        "GOOGLEMAP": "Google Maps"
-      }
-    },
-    "MULTILEVEL": {
-      "TEXT": "Multi Level",
-      "LIST": {
-        "LEVEL1": {
-          "1": "Level 1.1",
-          "2": "Level 1.2",
-          "LEVEL2": {
-            "1": "Level 2.1",
-            "2": "Level 2.2"
-          }
-        }
-      }
+    "about": {
+      "clientCommitmentTitle": "Client Commitment - Our Promise",
+      "clientCommitmentText": "At IGS, client culture is a priority and applies both internally and externally. Review our client commitment, the promise we make to each other, to our clients, members, and partners, which reflects this culture. We make the promise to apply this commitment individually and collectively within all of IGS.",
+      "companyPortraitTitle": "Company Portrait",
+      "companyPortraitText": "Focused on satisfying its members and clients and committed to ensuring quality results and good professional practices, Corem implements two quality management systems ensuring high-quality laboratory service provision.",
+      "qualityPolicyTitle": "Quality Policy",
+      "qualityPolicyText": "Focused on the satisfaction of its members and clients and committed to guaranteeing quality results and good professional practices, IGS implements two quality management systems that ensure a laboratory service provision that meets the highest industry standards.",
+      "healthSafetyEnvironmentPolicyTitle": "Policies on Health, Workplace Safety, and the Environment",
+      "healthSafetyEnvironmentPolicyText": "IGS conducts its activities in a way that ensures a healthy and safe workplace for its employees, subcontractors, and visitors, and to protect the environment. Review IGS's policy on health, workplace safety, and the environment for more details. In order to support its members, clients, and suppliers in their sustainable development, IGS has established an environmental policy for the company."
     }
-  }
+  },
+  "gouvernance":{
+    "governance": {
+      "title": "Governance",
+      "boardTitle": "Board of Directors",
+      "teamMembers": [
+        {
+          "name": "Ahmed Bouajila",
+          "position": "President & CEO",
+          "socialLinks": {
+            "facebook": "Facebook",
+            "linkedin": "Linkedin",
+            "google": "Google"
+          }
+        },
+        {
+          "name": "Muhammad Hasib, Ph D",
+          "position": "Analytical Lab Director",
+          "socialLinks": {
+            "facebook": "Facebook",
+            "linkedin": "Linkedin",
+            "google": "Google"
+          }
+        },
+        {
+          "name": "Mohamed Belarbi",
+          "position": "Met Testing Director",
+          "socialLinks": {
+            "facebook": "Facebook",
+            "linkedin": "Linkedin",
+            "google": "Google"
+          }
+        },
+        {
+          "name": "Mark Hurley",
+          "position": "CEO & Lead",
+          "socialLinks": {
+            "facebook": "Facebook",
+            "linkedin": "Linkedin",
+            "google": "Google"
+          }
+        }
+      ]
+    }
+    
+  },
+  "collaborateurs":{
+    "collaborators": {
+      "title": "Collaborators",
+      "innovationTitle": "Innovating by Collaborating",
+      "mainText": "Take advantage of the connections IGS has already forged",
+      "detailText": "Several projects are conducted with its global academic and private partners. The governments of Quebec and Canada are also our financial partners.",
+      "researchPartnersTitle": "Research Partners",
+      "researchPartnersList": [
+        "AMIRA International, Melbourne (Australia)",
+        "Canada Mining Innovation Council (CMIC), Ottawa (Ont.)",
+        "Centre de traitement des résidus industriels (CTRI), Rouyn-Noranda (Qc.)",
+        "Coalia, Thetford Mines (Qc.)",
+        "IVADO, Montreal (Qc.)",
+        "National Research Council of Canada (NRC)",
+        "Natural Resources Canada (CanmetMINES), Ottawa (Ont.)"
+      ],
+      "researchDevPartnersTitle": "Research, Development and Valorization Partners",
+      "researchDevPartnersList": [
+        "BBA",
+        "BioCarbon Industries",
+        "Copper Mountain",
+        "Cyanco",
+        "Derrick",
+        "Draslovka",
+        "FLSmidth",
+        "H2Flow",
+        "Jumine",
+        "MeGlobal",
+        "Metal 7",
+        "Metcom",
+        "Mining and Process Solutions",
+        "National Carbon",
+        "Newmont, Porcupine Mine",
+        "Paul Wurth",
+        "ThyssenKrupp",
+        "Scantech",
+        "Weir Minerals"
+      ],
+      "universitiesTitle": "Universities",
+      "universitiesList": [
+        "Curtin University, Perth (Australia)",
+        "University of British Columbia, Vancouver (B.C.)",
+        "École Polytechnique de Montréal (Qc.)",
+        "INRS-ÉTÉ, Quebec (Qc.)",
+        "Laval University, Quebec (Qc.)",
+        "McGill University, Montreal (Qc.)",
+        "Queen's University, Kingston (Ont.)",
+        "University of Toronto, Toronto (Ont.)"
+      ],
+      "financialPartnersTitle": "Financial Partners"
+    }
+  },
+  "consulting":{
+    "consulting": {
+      "title": "Consulting",
+      "description": "IGS provides specific consulting services and support to Chemical, Materials, and Minerals industries, delivering solutions in all steps of project development and along the operation and production chain.",
+      "motto": "Our team is willing to bring to your organization knowledge, know-how, and solutions to allow you to make profit and remain competitive.",
+      "servicesTitle": "Our services include:",
+      "services": [
+        "Solutions, Tools, Methods, Process & Flowsheet Development",
+        "Lab, Pilot Demonstration Testing Program Supervision",
+        "Prototyping",
+        "Tech-Watching, Tech-Sourcing & Tech-Solving",
+        "Valuation of IP and Patenting (VIP)",
+        "Due Diligent Review",
+        "Specific R&D Management and Collaboration Follow Up",
+        "Start-Up & Ramp-Up Support",
+        "Operation and Project Auditing (IMPACT)",
+        "Workforce Talent Staffing (WTS)",
+        "Training & Coaching",
+        "Operation Problem Solving",
+        "Qualified Person Commitment and Technical Advising",
+        "Solution’s Financing Support and Solutions Development Funding (SDF)"
+      ]
+    }
+  },
+  "environmental":{
+    "environmentalSolutions": {
+      "title": "Environmental Solutions",
+      "intro": "IGS Environment Group provides specific consulting services and support to the Environment sectors, delivering solutions in all steps of industrial project development. Our team is willing to bring to your project and operations knowledge, know-how, and solutions to allow you to mitigate environment concerns.",
+      "services": [
+        "Industrial emissions mitigation",
+        "Tailings management expertise",
+        "Soil decontamination, water treatment, recycling",
+        "NORMS mapping",
+        "Best practices advising",
+        "Consumable recycling, management, and recovery"
+      ]
+    }
+  },
+    "energySolutions": {
+      "title": "Energy Solutions",
+      "description": "IGS Energy Group provides specific consulting services and support to the Energy sectors, delivering solutions in all steps of your industrial project development and operation. Our team is willing to bring to your project and operations knowledge, know-how, and solutions to allow you to mitigate energy concerns.",
+      "services": [
+        "Electric power generation, transportation, and distribution",
+        "Energy efficiency",
+        "Energy recovery",
+        "Renewable energies",
+        "Thermal energy, energy conversion, biofuels"
+      ]
+    },
+      "RnD": {
+        "title": "R&D",
+        "description": "IGS is targeting to be a Canadian leading consultancy group in the extraction and processing of various minerals. Our R&D activities target innovative solutions to tackle complex ore deposits, aiming to make them exploitable within the narrow technical, environmental, and economic feasibility.",
+        "activities": [
+          "Development of processes to recover valuables from wastes, historical tailings, and by-products.",
+          "Flow sheet development to beneficiate low and medium-grade ores",
+          "Management of Pilot and demonstration studies to collect the design data for commercial plants",
+          "Perform Plant audit and KPIs improvement through:",
+          "Valuation of IP and Patenting (VIP)",
+          "Due Diligent Review",
+          "Specific R&D Management and Collaboration Follow Up"
+        ],
+        "planningTeam": {
+          "title": "Our R&D Planning team deals with:",
+          "points": [
+            "Resource planning and implementation of in-house and externally funded projects for the lab.",
+            "Implementation of intellectual property management.",
+            "Quality system management",
+            "Processing of various agreements & MoUs for implementation"
+          ]
+        }
+      },
+    "RMD": {
+          "title": "RMD",
+          "description": "IGS Energy Group provides specific consulting services and support to the Energy sectors, delivering solutions in all steps of your industrial project development and operation. Our team is willing to bring to your project and operations knowledge, know-how, and solutions to help you mitigate energy concerns.",
+          "services": [
+            "Electric power generation, transportation, and distribution",
+            "Energy efficiency",
+            "Energy recovery",
+            "Renewable energies",
+            "Thermal energy, energy conversion, biofuels"
+          ]
+      },
+    "goldPM": {
+            "title": "Gold & PM Assaying",
+            "description": "Gold & PM Assaying encompasses a series of crucial steps for the accurate analysis of precious metals like gold. Initially, samples are subjected to fusion and cupellation processes, which involve melting and separating the metal from impurities. Following this, digestion and dilution techniques are utilized to prepare the metals for analysis. Atomic Absorption methods are then employed to detect and measure the presence of gold and other metals with precision. Furthermore, the samples undergo separation via sieves before undergoing fire assay to determine the gold content accurately. These meticulous procedures ensure thorough assessment and quantification of precious metals for a variety of purposes.",
+            "processes": [
+              "Fusion, and Cupellation of Samples",
+              "Digestion and dilution of metals",
+              "Detection of gold and metals by Atomic Absorption",
+              "Separation by sieves followed by fire assay of samples and determination of gold"
+            ]
+      },
+    "goldTesting": {
+              "title": "Gold Testing Capabilities",
+              "description": "Gold cyanidation remains the most used gold processing technology. IGS, being associated with many gold processing scheme development and optimization projects, can bring added value to your project development and thus guide your testing program to be well-suited to your deposit and earlier in the project cycle. Our gold cyanidation testing capabilities cover everything from free gold milling to the most refractory gold bearing minerals:",
+              "techniques": [
+                "Direct Cyanide Leaching",
+                "Carbon in Leach (CIL)",
+                "Carbon in Pulp (CIP)",
+                "Stirred Cyanide Leach – Vat & Bottle",
+                "Carbon Activity & Carbon Characterization",
+                "Carbon Loading for modeling",
+                "Heap Leach Simulation (COBR & Column Testing)",
+                "Oxygen Uptake Rate Determination",
+                "Lime Demand",
+                "Oxygen Enhanced Leaching",
+                "Preg-Robbing Characterization",
+                "Cyanide Detox and Destruction",
+                "Arsenic Precipitation"
+              ]
+      },
+    "labAuditing": {
+                "title": "Lab Auditing",
+                "intro": "IGS also provides ISO-17025 Implementation, QA/QC Implementation, Laboratory Best Practice Guidance, and Laboratory Auditing Services.",
+                "details": [
+                  "ISO 17025 is a regulatory requirement and a customer pressure, being essential for business and without it, the organization’s whole business may be at risk.",
+                  "As organizations cannot risk jeopardizing this with an ineffective management system, internal auditing is the gatekeeper to ensure your ongoing success.",
+                  "ISO 17025 is an accreditation standard designed to give total confidence in the organization’s system. It is different from certification standards such as ISO 9001 or ISO 14001.",
+                  "In an accreditation system, errors are simply not acceptable, and the ISO 17025 management system must be infallibly designed and implemented to survive the tough accreditation auditing process.",
+                  "Internal auditing should provide a similarly thorough approach. While it does need to bring added value to the organization, the first objective is to ensure that the requirements of the standard are met unquestionably.",
+                  "Auditors must still look for improvement opportunities such as streamlining processes and reducing unnecessary bureaucracies.",
+                  "Given the importance of the internal audit activity, it is essential that auditors are experienced and skilled.",
+                  "IGS counts a team of 5 qualified auditors fully covering the overall ISO 17025 management system component. We design and implement ISO 17025 management systems that address the organization’s business goal and yet assure effective processes."
+                ],
+                "auditingCapabilities": [
+                  "Give management confidence that the processes they have are effective and that they will maintain their ISO 17025 accreditation.",
+                  "Easily convince accreditation auditors that the system is audited thoroughly and professionally.",
+                  "Provide thorough auditing that identifies any question before an accreditation auditor might identify it.",
+                  "Provide the skills, expertise, and resources that are not easily available internally.",
+                  "Offer experience to identify appropriate necessary controls versus opportunities for improvement."
+                ],
+                "conclusion": "By engaging IGS auditor(s) to conduct your internal audits you will assure the effectiveness of your management system and protect ISO accreditation status from the uncertainty of the external auditing. IGS Auditor(s) offers a suited package of full-service ISO 17025 management system consulting, implementation, auditing, coaching, and training."
+      },
+    "samplePreparation": {
+                  "title": "Sample Preparation",
+                  "description": "IGS offers diligent material handling and sample preparation at the early step of the analytical services chain comprising: Crushing, splitting, homogenization, and pulverizing of samples.",
+                  "processes": [
+                    "Crushing, splitting, homogenization, and pulverizing of samples to ensure uniformity and consistency.",
+                    "Use of necessary equipment and procedures to avoid issues with sample segregation, contamination, and traceability."
+                  ],
+                  "equipmentDetails": "IGS uses state-of-the-art equipment designed to handle samples with utmost care to prevent any form of contamination or loss of integrity."
+      },
+    "comminutionTesting": {
+                    "title": "Comminution Testing",
+                    "intro": "IGS is currently offering key comminution testing, needed for project studies and development cycles. We can also work with other subcontractors to provide state-of-the-art testing in ore hardness and grindability assessment:",
+                    "tests": [
+                      "JK Drop-Weight Test (DWT)",
+                      "SAG Mill Comminution Test (SMC)",
+                      "Bond Ball Mill (BWI)",
+                      "Bond Abrasion (Ai)",
+                      "Modified Bond Comparative WI",
+                      "Levin Test",
+                      "Point Load",
+                      "Other ancillary comminution testing requirements such as SPI Testing"
+                    ]
+      },
+    "gravityTesting": {
+                      "title": "Gravity Testing",
+                      "description": "Gravity separation technologies are attractive beneficiation methods, being the most economical process route for mineral recovery. With a leading expertise in mineral processing flowsheet development, the IGS team can offer a wide range of gravity separation testing options:",
+                      "methods": [
+                        "Knelson Gravity Concentration",
+                        "Mozley Tabling",
+                        "One stage and E-GRG testing",
+                        "HLS testing characterisation"
+                      ]
+      },
+        "flotationTesting": {
+          "title": "Flotation Testing Capabilities",
+          "intro": "IGS team has extensive and diversified experience in the flotation of various minerals and lab scale flotation circuit scheme development to support both basic and complex projects. Our flotation testing services include:",
+          "services": [
+            "Flotation process recipe and scheme development",
+            "Rougher Kinetics",
+            "Reagent screening",
+            "Batch Cleaner",
+            "Locked Cycle Testing"
+          ],
+          "knowhow": "Our knowhow covers a broad range of commodities:",
+          "commodities": [
+            "Base Metals: Copper, Lead, Zinc, Nickel, Cobalt",
+            "Precious Metals: Gold, Silver, and PGM",
+            "Oxide: Niobium, lithium, oxide base metals, REE, etc."
+          ]
+        },
+          "hydrometTesting": {
+            "title": "Hydromet Testing",
+            "description": "IGS team is well experienced in hydrometallurgical testing and process development, being actively involved in many related R&D projects. Hydrometallurgical lab scale testing involving all mineral acids and bases includes:",
+            "procedures": [
+              "Acid leaching",
+              "Fusion and calcine leach",
+              "IX/SX separation",
+              "Purification steps",
+              "Chlorination",
+              "Fractional distillation",
+              "Ultrasound assisted leaching"
+            ],
+            "note": "These comprehensive testing services are designed to ensure optimal processing strategies for mineral recovery and treatment."
+          },
+          "slSeparationTesting": {
+            "title": "S/L Separation Testing",
+            "description": "IGS offers static cylinder settling rate and dynamic tests for initial thickener design and sizing. Flocculant screening tests are conducted to select the most suited flocculant for your ore type.",
+            "tests": [
+              "Static cylinder settling rate tests to assess the initial thickener design and size.",
+              "Dynamic tests to optimize thickener performance.",
+              "Flocculant screening to determine the best flocculant for efficient separation."
+            ]
+          },
+          "magneticElectrostaticSeparation": {
+            "title": "Magnetic and Electrostatic Separation",
+            "description": "IGS offers flowsheet development for iron, titaniferrous, and industrial ores such as gold, chromite, and tungsten using our magnetic and electrostatic separation instruments. The field strength of our magnetic separation goes up to 20000 Gauss. Our equipment includes:",
+            "equipmentList": [
+              "Davis Tube",
+              "Wet, High Intensity Magnetic Separator",
+              "Dry Roll Magnetic Separator",
+              "Electrostatic Separator"
+            ],
+            "additionalInfo": "We also provide diagnostics and process establishment assistance for your current project."
+          },
+          "projects": {
+            "title": "Projects",
+            "description": "An overview of ongoing and completed projects demonstrating our capabilities and expertise in various domains:",
+            "projectDetails": [
+              {
+                "title": "Lab auditing and operation",
+                "details": [
+                  "Audit, review QA/QC practices and interim operation of Cu-Zn plant analytical Lab",
+                  "Preliminary study and base engineering for the commissioning of 1 tpd demo-plant, (hydrometallurgical extraction of SR)"
+                ]
+              },
+              {
+                "title": "Hydromet Process technologies development",
+                "details": [
+                  "Vanadium solvent extraction with focus on Fe/Cr efficient removal"
+                ]
+              },
+              {
+                "title": "Processing technology review",
+                "details": [
+                  "Critical Review and project development road map. Nb-Apatite-RE-Uranium Project"
+                ]
+              },
+              {
+                "title": "Other recent involvement of key team members",
+                "details": [
+                  "Due Diligence on the Niobec Mine for potential acquisition transaction.",
+                  "Due Diligent Review of Titanium hydromet. / Pyromet. Processes and Technologies for Nevado resources (Titanium)- Review of Pigment specialty production demo plant records – Simulation of the overall process for commercial business case.",
+                  "Radioactivity mapping of the rare earth processing. Mitigation solutions and feasibility of hydromet tailings (Th-U rich) disposal via backfilling.",
+                  "Diligent review, ramp-up perspective and technical features and investment risks, carbonate lithium producer, flotation and hydrometallurgical plant.",
+                  "Process development and process engineering, Rare Earth and Niobium Project (bastnaesite and monazite ore types).",
+                  "Met testing supervision and review of overall processing and refining metwork for a Nb-Ta low grade project."
+                ]
+              },
+              {
+                "title": "Environmental solutions",
+                "details": [
+                  "Critical revue, LCA assessment and technology market study for patented process aiming to produce Synthetic Rutile from low grade ilmenite",
+                  "Critical review and comparison of the environmental footprint of Titanium pigment production via emerging and commercial technologies",
+                  "Overview of Process Gypsum issues and mitigation opportunities- The phospho-gypsum case",
+                  "Critical review of emerging technologies for decadmiation of phosphoric acid and associated fertilizers products- Perspective of short-mid-term technology transfer"
+                ]
+              }
+            ]
+          },
+          "clients": {
+            "title": "Clients",
+            "description": "At IGS, we pride ourselves on delivering successful projects to our customers at all stages of project development. Since 2016, we have served many local and international clients.",
+            "clientList": [
+              {
+                "name": "Eramet",
+                "logo": "assets/images/small/eramet.jpg",
+                "description": "Details about projects and collaborations with Eramet."
+              },
+              {
+                "name": "Mazda",
+                "logo": "assets/images/small/maz.png",
+                "description": "Insights into our long-term partnership with Mazda."
+              },
+              {
+                "name": "Fanuc",
+                "logo": "assets/images/small/fan.jpg",
+                "description": "Exploration of automation projects completed with Fanuc."
+              },
+              {
+                "name": "Burberry",
+                "logo": "assets/images/small/bu.png",
+                "description": "Collaborative efforts in enhancing Burberry's production processes."
+              },
+              {
+                "name": "New York Times",
+                "logo": "assets/images/small/ny.png",
+                "description": "Details on technological solutions provided to the New York Times."
+              }
+            ]
+          },
+          "newsSection": {
+            "title": "Actualités",
+            "bannerImage": "assets/images/small/news.jpg",
+            "articles": [
+              {
+                "description": "IGS, représenté par M. Ahmed Boujila (Président), faisait partie de l'équipe de Central American Nickel lors de la rencontre avec les membres du sénat américain responsables du programme des minéraux critiques."
+              }
+            ]
+          },
+          "contact": {
+            "title": "Energy Solutions",
+            "introTitle": "Let's discuss together to optimize your results!",
+            "introDescription": [
+              "Our team is solution-oriented",
+              "IGS offers mining companies a range of specialist services and research expertise to optimize and develop key mineral processing processes. Choosing IGS means choosing more than 20 years of innovation!",
+              "Contact us to discuss your issues and we will offer you solutions."
+            ],
+            "contact": {
+              "callUs": "Call us!",
+              "phoneNumber": "+1 418-527-8211",
+              "emailUs": "Email us!",
+              "email": "contact@igs.com"
+            },
+            "form": {
+              "title": "Contact us",
+              "nameLabel": "Your name",
+              "emailLabel": "Your email",
+              "issueLabel": "Describe the Problem",
+              "companyLabel": "Your business",
+              "dateLabel": "Date of Claim",
+              "contactPersonLabel": "Contact person",
+              "submitButton": "Send"
+            }
+          },
+          "loginPage": {
+            "header": "Login",
+            "emailLabel": "Email",
+            "emailPlaceholder": "Enter your e-mail",
+            "emailRequired": "Email is required.",
+            "emailInvalid": "The email must be a valid email address.",
+            "passwordLabel": "Password",
+            "passwordPlaceholder": "Enter your password",
+            "passwordRequired": "Password is required.",
+            "loginButton": "Login",
+            "forgotPassword": "Forgot your password ?",
+            "resetNow": "Reset it now.",
+            "noAccount": "You do not have an account ?",
+            "registerNow": "Register now."
+          },
+          "registrationPage": {
+            "header": "Registration",
+            "successMessage": "Registration successful!",
+            "form": {
+              "firstName": {
+                "label": "First Name",
+                "placeholder": "Enter your first name",
+                "requiredError": "First name is required."
+              },
+              "lastName": {
+                "label": "Last Name",
+                "placeholder": "Enter your last name",
+                "requiredError": "Last name is required."
+              },
+              "username": {
+                "label": "Username",
+                "placeholder": "Enter your username",
+                "requiredError": "Username is required."
+              },
+              "email": {
+                "label": "Email",
+                "placeholder": "Enter your e-mail",
+                "requiredError": "Email is required.",
+                "invalidError": "The email must be a valid email address."
+              },
+              "phoneNumber": {
+                "label": "Phone Number",
+                "placeholder": "Enter your phone number",
+                "requiredError": "Phone number is required.",
+                "invalidError": "The phone number must be valid."
+              },
+              "password": {
+                "label": "Password",
+                "placeholder": "Enter your password",
+                "requiredError": "Password is required."
+              },
+              "gender": {
+                "label": "Gender",
+                "options": {
+                  "male": "Man",
+                  "female": "Woman",
+                  "other": "Other"
+                },
+                "requiredError": "Gender is required."
+              },
+              "submitButton": "Register",
+              "loginPrompt": "Already have an account?",
+              "loginLink": "Login here."
+            }
+          },
+          "resetPasswordPage": {
+            "title": "Reset password",
+            "form": {
+              "emailLabel": "Email",
+              "emailPlaceholder": "Enter your e-mail",
+              "emailRequiredError": "Email is required.",
+              "sendResetLinkButton": "Send reset link"
+            },
+            "loginPrompt": "Do you know your password?",
+            "loginLinkText": "Log in here."
+          }
+          
+                           
 }
