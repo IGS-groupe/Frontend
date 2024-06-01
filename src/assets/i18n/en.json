@@ -103,9 +103,13 @@
       "values": {
         "title": "Values That Guide Us",
         "creativity": "We work to see possibilities where there seem to be none: we cultivate the art of doing differently.",
+        "IntegrityTitle":"Integrity",
         "integrity": "We demonstrate honesty through the truthfulness and accuracy of our words, in line with our actions.",
+        "EngagementTitle":"Engagement",
         "commitment": "We promise our colleagues, our organization, our members, and our partners to give our best and take actions accordingly.",
+        "teamSpiritTitle":"Team spirit",
         "teamSpirit": "We unite and work together for a common purpose, in an atmosphere of trust, openness, and respect.",
+        "HealthTitle":"Health, safety and sustainable development",
         "healthSafetySustainability": "We are committed to contributing to a healthy and safe workplace and we take concrete actions to participate in sustainable development."
       }
     },
@@ -120,11 +124,10 @@
       "healthSafetyEnvironmentPolicyText": "IGS conducts its activities in a way that ensures a healthy and safe workplace for its employees, subcontractors, and visitors, and to protect the environment. Review IGS's policy on health, workplace safety, and the environment for more details. In order to support its members, clients, and suppliers in their sustainable development, IGS has established an environmental policy for the company."
     }
   },
-  "gouvernance":{
     "governance": {
       "title": "Governance",
       "boardTitle": "Board of Directors",
-      "teamMembers": [
+      "teamMembers1": 
         {
           "name": "Ahmed Bouajila",
           "position": "President & CEO",
@@ -134,6 +137,7 @@
             "google": "Google"
           }
         },
+        "teamMembers2":
         {
           "name": "Muhammad Hasib, Ph D",
           "position": "Analytical Lab Director",
@@ -143,6 +147,7 @@
             "google": "Google"
           }
         },
+        "teamMembers3":
         {
           "name": "Mohamed Belarbi",
           "position": "Met Testing Director",
@@ -152,6 +157,7 @@
             "google": "Google"
           }
         },
+        "teamMembers4":
         {
           "name": "Mark Hurley",
           "position": "CEO & Lead",
@@ -161,62 +167,58 @@
             "google": "Google"
           }
         }
-      ]
-    }
-    
-  },
-  "collaborateurs":{
+    },
     "collaborators": {
       "title": "Collaborators",
-      "innovationTitle": "Innovating by Collaborating",
-      "mainText": "Take advantage of the connections IGS has already forged",
-      "detailText": "Several projects are conducted with its global academic and private partners. The governments of Quebec and Canada are also our financial partners.",
+      "sectionTitle": "Innovating by Collaborating",
+      "subtitle": "Take advantage of the connections IGS has already forged",
+      "description": "Several projects are conducted with its global academic and private partners. The governments of Quebec and Canada are also our financial partners.",
       "researchPartnersTitle": "Research Partners",
-      "researchPartnersList": [
-        "AMIRA International, Melbourne (Australia)",
-        "Canada Mining Innovation Council (CMIC), Ottawa (Ont.)",
-        "Centre de traitement des résidus industriels (CTRI), Rouyn-Noranda (Qc.)",
-        "Coalia, Thetford Mines (Qc.)",
-        "IVADO, Montreal (Qc.)",
-        "National Research Council of Canada (NRC)",
-        "Natural Resources Canada (CanmetMINES), Ottawa (Ont.)"
-      ],
-      "researchDevPartnersTitle": "Research, Development and Valorization Partners",
-      "researchDevPartnersList": [
-        "BBA",
-        "BioCarbon Industries",
-        "Copper Mountain",
-        "Cyanco",
-        "Derrick",
-        "Draslovka",
-        "FLSmidth",
-        "H2Flow",
-        "Jumine",
-        "MeGlobal",
-        "Metal 7",
-        "Metcom",
-        "Mining and Process Solutions",
-        "National Carbon",
-        "Newmont, Porcupine Mine",
-        "Paul Wurth",
-        "ThyssenKrupp",
-        "Scantech",
-        "Weir Minerals"
-      ],
-      "universitiesTitle": "Universities",
-      "universitiesList": [
-        "Curtin University, Perth (Australia)",
-        "University of British Columbia, Vancouver (B.C.)",
-        "École Polytechnique de Montréal (Qc.)",
-        "INRS-ÉTÉ, Quebec (Qc.)",
-        "Laval University, Quebec (Qc.)",
-        "McGill University, Montreal (Qc.)",
-        "Queen's University, Kingston (Ont.)",
-        "University of Toronto, Toronto (Ont.)"
-      ],
-      "financialPartnersTitle": "Financial Partners"
-    }
-  },
+      "researchPartnersList":{
+        "title": "Partenaires de recherche",
+        "AMIRA": "AMIRA International, Melbourne (Australia)",
+        "CMIC": "Canada Mining Innovation Council (CMIC), Ottawa (Ont.)",
+        "CTRI": "Industrial residue treatment center (CTRI), Rouyn-Noranda (Qc.)",
+        "Coalia": "Coalia, Thetford Mines (Qc.)",
+        "IVADO": "IVADO, Montreal (Qc.)",
+        "NRC": "National Research Council Canada (NRC)",
+        "CanmetMINES": "Natural Resources Canada (CanmetMINES), Ottawa, Ont."
+      },
+      "researchDevPartners":{
+        "title": "Research, Development and Valorization Partners",
+        "BBA": "BBA",
+        "BioCarbonIndustries": "BioCarbon Industries",
+        "CopperMountain": "Copper Mountain",
+        "Cyanco": "Cyanco",
+        "Derrick": "Derrick",
+        "Draslovka": "Draslovka",
+        "FLSmidth": "FLSmidth",
+        "H2Flow": "H2Flow",
+        "Jumine": "Jumine",
+        "MeGlobal": "MeGlobal",
+        "Metal7": "Metal 7",
+        "Metcom": "Metcom",
+        "MiningAndProcessSolutions": "Mining and Process Solutions",
+        "NationalCarbon": "National Carbon",
+        "NewmontPorcupineMine": "Newmont, Porcupine Mine",
+        "PaulWurth": "Paul Wurth",
+        "ThyssenKrupp": "ThyssenKrupp",
+        "Scantech": "Scantech",
+        "WeirMinerals": "Weir Minerals"
+        },
+      "academicPartners": {
+          "title": "Universities",
+          "Curtin": "Curtin University, Perth (Australia)",
+          "UBC": "University of British Columbia, Vancouver (B.C.)",
+          "EPM": "École Polytechnique de Montréal (Qc.)",
+          "INRS": "INRS-ÉTÉ, Quebec (Qc.)",
+          "Laval": "Laval University, Quebec (Qc.)",
+          "McGill": "McGill University, Montreal (Qc.)",
+          "Queens": "Queen's University, Kingston (Ont.)",
+          "UofT": "University of Toronto, Toronto (Ont.)"
+        },
+        "financialPartnersTitle": "Financial Partners"
+        },
   "consulting":{
     "consulting": {
       "title": "Consulting",
