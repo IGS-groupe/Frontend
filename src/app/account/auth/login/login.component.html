@@ -1,55 +1,35 @@
-<div class="account-pages my-5 pt-sm-5">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8 col-lg-6 col-xl-5">
-        <div class="card overflow-hidden card-container">
-          <div class="card-header">
-            Login
-          </div>
-          <div class="card-body pt-0">
-            <div class="p-4">
-              <form class="form-horizontal" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="fa fa-envelope"></i></span>
-                    </div>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your e-mail" formControlName="usernameOrEmail" required>
-                  </div>
-                  <div *ngIf="f.usernameOrEmail.errors?.required" class="invalid-feedback">
-                    Email is required.
-                  </div>
-                  <div *ngIf="f.usernameOrEmail.errors?.email" class="invalid-feedback">
-                    The email must be a valid email address.
-                  </div>
-                </div>
+<div class="login-wrapper">
+  <div class="login-card">
+    <h1 class="login-title">Bienvenue 👋</h1>
+    <p class="login-subtitle">Connectez-vous à votre compte</p>
 
-                <div class="mb-3">
-                  <label for="password" class="form-label">Password</label>
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="fa fa-lock"></i></span>
-                    </div>
-                    <input type="password" class="form-control" id="password" placeholder="Enter your password" formControlName="password" required>
-                  </div>
-                  <div *ngIf="f.password.errors?.required" class="invalid-feedback">
-                    Password is required.
-                  </div>
-                </div>
-
-                <div class="mt-3 d-grid">
-                  <button class="btn btn-primary" type="submit">Login</button>
-                </div>
-              </form>
-            </div>
-          </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email" class="form-label">Adresse Email *</label>
+        <div class="input-wrapper">
+          <i class="fa fa-envelope icon"></i>
+          <input type="email" id="email" class="form-control" formControlName="usernameOrEmail" placeholder="exemple@email.com" required>
         </div>
-        <div class="mt-4 text-center">
-          <p>Forgot your password ? <a routerLink="/account/restpassword" class="fw-medium text-primary">Reset it now.</a></p>
-          <p>You do not have an account ? <a routerLink="/account/signup" class="fw-medium text-primary">Register now.</a></p>
-        </div>
+        <div *ngIf="f.usernameOrEmail.errors?.required" class="error-text">Email requis.</div>
+        <div *ngIf="f.usernameOrEmail.errors?.email" class="error-text">Format email invalide.</div>
       </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">Mot de passe *</label>
+        <div class="input-wrapper">
+          <i class="fa fa-lock icon"></i>
+          <input type="password" id="password" class="form-control" formControlName="password" placeholder="••••••••" required>
+        </div>
+        <div *ngIf="f.password.errors?.required" class="error-text">Mot de passe requis.</div>
+      </div>
+
+      <button type="submit" class="btn-login">Se connecter</button>
+    </form>
+
+    <div class="extra-links">
+      <a routerLink="/account/restpassword">Mot de passe oublié ?</a>
+      <span> | </span>
+      <a routerLink="/account/signup">Créer un compte</a>
     </div>
   </div>
 </div>

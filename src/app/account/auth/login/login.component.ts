@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.loginForm.value).subscribe(
       response => {
         const roles = response.roles;  // Correctly access roles
-        if(roles.includes("ROLE_USER")){
+        // if(roles.includes("ROLE_USER")){
           console.log('API Response:', response.token); // Log the full response object
           localStorage.setItem('userId', response.userId.toString());
           localStorage.setItem('token', response.token);
@@ -50,13 +50,13 @@ export class LoginComponent implements OnInit {
           // Navigate to the 'demande' page and pass the user ID as a state or parameter
           this.router.navigate(['/account/Listdemande'], { queryParams: { userId: response.userId } });
           this.error = '';
-        }else{
-          this.toastr.error("", 'UserName incorrect ', {
-            positionClass: 'toast-top-center',
-            timeOut: 3000,
-            closeButton: true
-          });
-        }
+        // }else{
+        //   this.toastr.error("", 'UserName incorrect ', {
+        //     positionClass: 'toast-top-center',
+        //     timeOut: 3000,
+        //     closeButton: true
+        //   });
+        // }
          // Clear any previous errors
       },
       error => {
