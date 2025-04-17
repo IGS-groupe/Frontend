@@ -1,170 +1,201 @@
 .request-summary {
-  font-family: 'Arial', sans-serif;
-  padding: 20px;
-  background: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 30px;
+  background: #f8fafc;
 
   h1 {
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #1f2937;
+  }
+
+  .card-header {
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 20px 30px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    letter-spacing: 0.5px;
+  }
+
+  .card-content {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    font-size: 16px;
   }
 
   .header-details {
     display: flex;
-    flex-wrap: wrap; // Allows details to wrap on smaller screens
-    justify-content: space-between; // Spreads items evenly
-    margin-bottom: 20px; // Adds some space below the section
-    padding: 10px;
-    background-color: #f9f9f9; // Light background to distinguish section
-    border-radius: 8px; // Rounded corners
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); // Adds subtle shadow
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 30px;
   }
 
   .detail {
+    flex: 1 1 45%;
     display: flex;
-    flex-basis: calc(50% - 10px); // Splits in two columns, adjusting for gap
-    align-items: center; // Vertically centers the label and value
-    margin: 5px 0; // Adds vertical margin for spacing between details
+    align-items: center;
+    gap: 12px;
   }
 
   .label {
-    font-weight: bold;
-    margin-right: 10px; // Space between label and value
-    white-space: nowrap; // Ensures label does not wrap
-    color: #333; // Dark color for better readability
+    font-weight: 600;
+    color: #1e293b;
+    white-space: nowrap;
+    font-size: 16px;
   }
 
   .value {
-    font-weight: normal;
-    color: #666; // Slightly lighter than the label for contrast
+    color: #475569;
+    font-weight: 400;
+    font-size: 16px;
   }
 
-  .sample-table {
+  .sample-table, .parameters-table {
     width: 100%;
     border-collapse: collapse;
-    text-align: left;
-  }
-  
-  .sample-table th, .sample-table td {
-    padding: 8px 16px;
-    border-right: 1px solid #dee2e6;
-    border-bottom: 2px solid #dee2e6;
-  }
-  
-  .sample-table th {
-    background-color: #f8f9fa;
-    color: #333;
-    font-size: 14px;
-    white-space: nowrap;
-    font-weight: bold;
-  }
-  
-  .sample-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  .sample-table tr:nth-child(odd) {
-    background-color: #ffffff;
-  }
-  
-
-  .parameters-details {
-    background: #f9f9f9;
-    padding: 10px;
-    border: 1px solid #ddd;
     margin-top: 20px;
   }
-  
-  .parameters-details h2 {
-    padding: 10px 0;
-    text-align: center;
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 10px;
-  }
-  
-  .parameters-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-  }
-  
+
+  .sample-table th, .sample-table td,
   .parameters-table th, .parameters-table td {
-    padding: 8px;
-    border: 1px solid #ddd;
+    padding: 14px 20px;
+    border: 1px solid #e2e8f0;
     text-align: left;
+    font-size: 15px;
   }
-  
-  .parameters-table th {
-    background-color: #f8f9fa;
-    color: #333;
-    font-weight: bold;
+
+  .sample-table th, .parameters-table th {
+    background-color: #f1f5f9;
+    color: #1f2937;
+    font-weight: 700;
   }
-  
-  .parameters-table tbody tr:nth-child(odd) {
-    background-color: #f2f2f2;
-  }
-  
+
+  .sample-table tr:nth-child(even),
   .parameters-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+
+  .sample-table tr:nth-child(odd),
+  .parameters-table tbody tr:nth-child(odd) {
     background-color: #ffffff;
   }
-  
+
+  .parameters-details {
+    margin-top: 30px;
+    padding: 25px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+  }
+
+  .parameters-details h2 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1f2937;
+    font-weight: 600;
+  }
 
   .form-actions {
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
+    margin-top: 30px;
 
     button {
-      padding: 10px 20px;
+      padding: 12px 28px;
+      font-size: 15px;
+      border-radius: 8px;
+      font-weight: 600;
       border: none;
-      border-radius: 4px;
-      font-weight: bold;
-      cursor: pointer;
       transition: background-color 0.3s ease;
+    }
 
-      &.cancel-button {
-        background-color: #ccc;
-        color: #333;
+    .cancel-button {
+      background-color: #e2e8f0;
+      color: #1e293b;
 
-        &:hover {
-          background-color: #bbb;
-        }
+      &:hover {
+        background-color: #cbd5e1;
       }
+    }
 
-      &.submit-button {
-        background-color: #4CAF50;
-        color: white;
+    .btn-primary {
+      background-color: #10b981;
+      color: #ffffff;
 
-        &:hover {
-          background-color: #449d48;
-        }
+      &:hover {
+        background-color: #059669;
       }
     }
   }
 
   .card-container {
     background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    width: 95%;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin: 30px auto;
+    width: 100%;
     overflow: hidden;
   }
+}
 
-  .card-header {
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+/* Modal improvement */
+.modal-header {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.modal-body {
+  font-size: 16px;
+  color: #374151;
+  padding: 20px 25px;
+}
+
+.modal-footer {
+  padding: 15px 25px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  .btn {
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    border: none;
   }
 
-  .card-content {
-    padding: 20px;
+  .btn-secondary {
+    background-color: #6b7280;
+    color: white;
+
+    &:hover {
+      background-color: #4b5563;
+    }
+  }
+
+  .btn-primary {
+    background-color: #10b981;
+    color: white;
+
+    &:hover {
+      background-color: #059669;
+    }
   }
 }

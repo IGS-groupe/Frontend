@@ -1,107 +1,92 @@
 <app-client-nav-bar></app-client-nav-bar>
 <div class="form-container">
-  <div class="card-header">
-    <h2>ÉCHANTILLON 1</h2>
+  <div class="main-title">
+    <h1>New Sample</h1>
+    <p class="required-note"><span>*</span>: obligatory</p>
   </div>
   <div class="card">
     <form [formGroup]="echantillonForm" (ngSubmit)="onSubmit()">
       <div class="form-row">
         <div class="form-group">
-          <label for="gabarit">Sample type:</label>
-          <select class="form-control" formControlName="typeEchantillon" id="typeEchantillon">
-            <option value="" disabled selected>Select Sample Type</option>
+          <label for="typeEchantillon">Sample type</label>
+          <select class="styled-select" formControlName="typeEchantillon" id="typeEchantillon">
+            <option value="" disabled selected hidden>Select Sample Type</option>
             <option *ngFor="let typesEchantillon of typesEchantillons" [value]="typesEchantillon.value">
               {{ typesEchantillon.display }}
             </option>
           </select>
         </div>
+
         <div class="form-group">
-          <label for="typeEchantillon" class="required">Back:</label>
-          <select class="form-control" formControlName="returns" id="returns">
-            <option value="" disabled selected>Select Back</option>
+          <label for="returns">Back</label>
+          <select class="styled-select" formControlName="returns" id="returns">
+            <option value="" disabled selected hidden>Select Back</option>
             <option *ngFor="let retour of retours" [value]="retour.value">
               {{ retour.display }}
             </option>
           </select>
         </div>
+
         <div class="form-group">
-          <label for="disposes" class="required">Arrange:</label>
-          <select class="form-control" formControlName="disposes" id="disposes">
-            <option value="" disabled selected>Select Arrange</option>
+          <label for="disposes">Arrange</label>
+          <select class="styled-select" formControlName="disposes" id="disposes">
+            <option value="" disabled selected hidden>Select Arrange</option>
             <option *ngFor="let disposer of disposers" [value]="disposer.value">
               {{ disposer.display }}
             </option>
           </select>
         </div>
       </div>
+
       <div class="form-group">
-        <label for="nomEchantillon">Sample Name:</label>
-        <input type="text" class="form-control" formControlName="nomEchantillon" id="nomEchantillon">
+        <label for="nomEchantillon">Sample Name</label>
+        <input type="text" class="form-control" formControlName="nomEchantillon" id="nomEchantillon" />
       </div>
+
       <div class="form-group">
-        <label for="nomEchantillon">Location Sampling:</label>
-        <input type="text" class="form-control" formControlName="lieuPrelevement" id="lieuPrelevement">
+        <label for="lieuPrelevement">Location Sampling</label>
+        <input type="text" class="form-control" formControlName="lieuPrelevement" id="lieuPrelevement" />
       </div>
+
       <div class="form-group">
-        <label for="addressRetourner">Return address:</label>
-        <input type="text" class="form-control" formControlName="addressRetourner" id="addressRetourner">
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="dateFinPrelevement" class="required">Collection end date:</label>
-          <input type="date" class="form-control" formControlName="dateFinPrelevement" id="dateFinPrelevement">
-        </div>
-        <div class="form-group">
-          <label for="heureFinPrelevement" class="required">Sampling end time:</label>
-          <input type="time" class="form-control" formControlName="heureFinPrelevement" id="heureFinPrelevement">
-        </div>
+        <label for="addressRetourner">Return address</label>
+        <input type="text" class="form-control" formControlName="addressRetourner" id="addressRetourner" />
       </div>
 
       <div class="form-row">
-        <div class="form-group priority-group">
-          <label class="required">Priority:</label>
-          <div class="priority-options">
-            <label>
-              <input type="radio" formControlName="priorite" value="STANDARD" id="tooltipExample" 
-                     data-toggle="tooltip" data-placement="top" title="Standard"> 
-                     Standard
-            </label>
-            <label>
-              <input type="radio" formControlName="priorite" value="RUSH" id="tooltipExample1"
-                     data-toggle="tooltip" data-placement="top" title="Se précipiter">
-                     Rushing
-            </label>
-            
-          </div>
+        <div class="form-group">
+          <label for="dateFinPrelevement">Collection end date</label>
+          <input type="date" class="form-control" formControlName="dateFinPrelevement" id="dateFinPrelevement" />
+        </div>
+        <div class="form-group">
+          <label for="heureFinPrelevement">Sampling end time</label>
+          <input type="time" class="form-control" formControlName="heureFinPrelevement" id="heureFinPrelevement" />
         </div>
       </div>
+
       <div class="form-group">
-        <label for="commentairesInternes">Internal sample feedback:</label>
+        <label>Priority</label>
+        <div class="priority-options">
+          <label>
+            <input type="radio" formControlName="priorite" value="STANDARD" />
+            Standard
+          </label>
+          <label>
+            <input type="radio" formControlName="priorite" value="RUSH" />
+            Rushing
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="commentairesInternes">Internal sample feedback</label>
         <textarea class="form-control" formControlName="commentairesInternes" id="commentairesInternes"></textarea>
       </div>
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterTitle">Confirmation Save sample </h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>are you sure</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button  type="submit" class="btn btn-primary" >Save</button>
-            </div>
-          </div>
-        </div>
-        </div>
-        <div class="button-container">
-          <button type="button" (click)="navigateToPrevious()" class="btn btn-secondary">Previous </button>
-          <button type="button" class="btn btn-primary" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Next</button>
-        </div>
+
+      <div class="button-container">
+        <button type="button" class="btn btn-secondary" (click)="navigateToPrevious()">Previous</button>
+        <button type="submit" class="btn btn-primary">Next</button>
+      </div>
     </form>
   </div>
 </div>

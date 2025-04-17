@@ -35,13 +35,13 @@
 
     <div class="form-group">
       <label for="langueDuCertificat">Certificate language:</label>
-      <select class="form-control" formControlName="langueDuCertificat" id="langueDuCertificat">
-        <option value="" disabled selected>Select Certificate Language</option>
+      <select class="styled-select" formControlName="langueDuCertificat" id="langueDuCertificat">
+        <option value="" disabled selected hidden>Select Certificate Language</option>
         <option value="FRANCAIS">Français</option>
         <option value="ANGLAIS">Anglais</option>
       </select>
     </div>
-
+    
     <div class="form-group">
       <label for="commentairesInternes">Internal comments to the analysis request:</label>
       <textarea class="form-control" formControlName="commentairesInternes" id="commentairesInternes"></textarea>

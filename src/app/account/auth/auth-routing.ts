@@ -20,7 +20,7 @@ import { UpdateListParameterComponent } from './update-list-parameter/update-lis
 import { ListEchantillonsComponent } from './list-echantillons/list-echantillons.component';
 import { ValidationComponent } from './validation/validation.component';
 import { ResetPasswordMessageComponent } from './reset-password-message/reset-password-message.component';
-
+import {PdfViewerComponent} from './pdf-viewer/pdf-viewer.component';
 const routes: Routes = [
     {
         path: 'login',
@@ -94,6 +94,10 @@ const routes: Routes = [
     {
         path :'ResultDemande',
         component:ResultDemandeComponent
+    },
+    {
+        path :'pdf',
+        component:PdfViewerComponent
     }
 ];
 

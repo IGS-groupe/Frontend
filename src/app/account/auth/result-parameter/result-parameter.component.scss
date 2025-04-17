@@ -1,87 +1,116 @@
-/* Common styles for all containers */
-.card-container, .parameter-list-container {
-  background-color: #ffffff; /* White background for clarity */
-  border: 1px solid #ddd; /* Consistent light grey border */
-  border-radius: 8px; /* Uniform rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  padding: 0; /* No padding here, padding will be inside content areas */
-  margin: 20px auto; /* Center the card with some margin from the top and bottom */
-  width: 95%; /* Adjust based on your layout needs */
-  overflow: hidden; /* Ensures no content spills out */
-}
+.form-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
 
-/* Headers for both types of containers */
-.card-header, .parameter-list-header {
-  background-color: #007bff; /* Blue background */
-  color: #ffffff; /* White text */
-  padding: 10px 20px; /* Adequate padding */
-  font-size: 16px; /* Clear font size */
-  font-weight: bold; /* Bold for emphasis */
-  border-top-left-radius: 8px; /* Rounded top-left corner */
-  border-top-right-radius: 8px; /* Rounded top-right corner */
-}
+  .main-title {
+    text-align: left;
 
-/* General styles for tables */
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: #1f2937;
+    }
 
-th, td {
-  padding: 8px 16px;
-  text-align: left;
-  border-bottom: 2px solid #dee2e6;
-}
+    .required-note {
+      font-size: 14px;
+      color: #6b7280;
 
-th {
-  background-color: #f8f9fa;
-  color: #333;
-  white-space: nowrap;
-}
+      span {
+        color: #ef4444;
+        font-weight: bold;
+      }
+    }
+  }
 
-/* Button styles applicable to all buttons */
-.btn-action, .table-button {
-  background-color: #007bff; /* Blue background */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s, box-shadow 0.3s;
-  text-align: center;
-  margin-right: 10px;
-}
+  .card {
+    background: #f9fafb;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 25px;
 
-.btn-action:hover, .table-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Shadow effect for depth */
-}
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
 
-/* Flex container for buttons and other elements */
-.actions, .button-container, .icon-legend-container, .content-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
+      th, td {
+        padding: 12px 14px;
+        border-bottom: 1px solid #e5e7eb;
+        text-align: left;
+      }
 
-.icon-legend {
-  margin-left: 20px;
-}
+      th {
+        background-color: #f3f4f6;
+        font-weight: 600;
+        color: #374151;
+      }
 
-.icon {
-  font-size: 16px;
-  padding-right: 5px;
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .btn-delete {
+        background-color: #ef4444;
+        color: #fff;
+        padding: 6px 12px;
+        font-size: 14px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #dc2626;
+        }
+      }
+    }
+
+    .empty-message {
+      color: #6b7280;
+      text-align: center;
+      font-style: italic;
+      padding: 20px 0;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      .btn {
+        padding: 10px 24px;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+
+      .btn-secondary {
+        background-color: #3b82f6;
+        color: #fff;
+        border: none;
+
+        &:hover {
+          background-color: #2563eb;
+          transform: translateY(-1px);
+        }
+      }
+
+      .btn-primary {
+        background-color: #10b981;
+        color: #fff;
+        border: none;
+
+        &:hover {
+          background-color: #059669;
+          transform: translateY(-1px);
+        }
+      }
+    }
+  }
 }
-.button-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;  /* Adjust margin to create space after the cards */
-}
-.icon.green { color: green; }
-.icon.yellow { color: orange; }
-.icon.red { color: red; }
-.icon.blue { color: blue; }
-.icon.gray { color: gray; }

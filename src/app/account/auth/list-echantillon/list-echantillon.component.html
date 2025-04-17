@@ -1,64 +1,90 @@
 <app-client-nav-bar></app-client-nav-bar>
+
 <div class="form-container" *ngIf="form">
-  <button type="button" (click)="navigateToListEchantillon()" class="btn btn-primary">Add a Sample</button>
-  <div *ngFor="let echantillon of echantillons; let i = index" [formGroup]="form.get('echantillon'+i)" class="card">
+  <div class="main-title">
+    <h1>Sample Review</h1>
+    <p class="required-note"><span>*</span>: Required fields</p>
+  </div>
+
+  <button type="button" (click)="navigateToListEchantillon()" class="btn btn-primary add-sample-btn">
+    + Add a Sample
+  </button>
+
+  <div *ngFor="let echantillon of echantillons; let i = index" [formGroup]="form.get('echantillon' + i)" class="card">
     <div class="card-header">
       <h2>SAMPLE {{ echantillon.echantillonId }}</h2>
       <div class="card-actions">
         <button type="button" (click)="update(echantillon.echantillonId)" class="btn btn-success">Update</button>
-        <button type="button" (click)="delete(i)" class="btn btn-danger">DELETE</button>
+        <button type="button" (click)="delete(i)" class="btn btn-danger">Delete</button>
       </div>
     </div>
+
     <div class="card-body">
-      <div class="form-group">
-        <label for="gabarit{{ i }}">Sample type:</label>
-        <select formControlName="typeEchantillon" class="form-control" id="typesEchantillon{{ i }}">
-          <option *ngFor="let typesEchantillon of typesEchantillons" [value]="typesEchantillon.value">{{ typesEchantillon.display }}</option>
-        </select>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="gabarit{{ i }}">Sample type</label>
+          <select formControlName="typeEchantillon" class="styled-select" id="typesEchantillon{{ i }}">
+            <option value="" disabled selected hidden>Select Sample Type</option>
+            <option *ngFor="let typesEchantillon of typesEchantillons" [value]="typesEchantillon.value">
+              {{ typesEchantillon.display }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="returns{{ i }}">Back</label>
+          <select formControlName="returns" class="styled-select" id="returns{{ i }}">
+            <option value="" disabled selected hidden>Select Return</option>
+            <option *ngFor="let retour of retours" [value]="retour.value">{{ retour.display }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="disposer{{ i }}">Arrange</label>
+          <select formControlName="disposes" class="styled-select" id="disposer{{ i }}">
+            <option value="" disabled selected hidden>Select Arrange</option>
+            <option *ngFor="let disposer of disposers" [value]="disposer.value">{{ disposer.display }}</option>
+          </select>
+        </div>
       </div>
+
       <div class="form-group">
-        <label for="returns{{ i }}">Back:</label>
-        <select  class="form-control" id="returns{{ i }}">
-          <option *ngFor="let retour of retours" [value]="retour.value">{{ retour.display }}</option>
-        </select>
+        <label for="nomEchantillon{{ i }}">Sample Name</label>
+        <input type="text" formControlName="nomEchantillon" class="form-control" id="nomEchantillon{{ i }}" />
       </div>
+
       <div class="form-group">
-        <label for="returns{{ i }}">Arrange:</label>
-        <select formControlName="disposes" class="form-control" id="disposer{{ i }}">
-          <option *ngFor="let disposer of disposers" [value]="disposer.value">{{ disposer.display }}</option>
-        </select>
+        <label for="lieuPrelevement{{ i }}">Location Sampling</label>
+        <input type="text" formControlName="lieuPrelevement" class="form-control" id="lieuPrelevement{{ i }}" />
       </div>
+
       <div class="form-group">
-        <label for="nomEchantillon{{ i }}">Sample Name:</label>
-        <input type="text" formControlName="nomEchantillon" class="form-control" id="nomEchantillon{{ i }}">
+        <label for="addressRetourner{{ i }}">Return address</label>
+        <input type="text" formControlName="addressRetourner" class="form-control" id="addressRetourner{{ i }}" />
       </div>
-      <div class="form-group">
-        <label for="lieuPrelevement{{ i }}">Location Sampling:</label>
-        <input type="text" formControlName="lieuPrelevement" class="form-control" id="lieuPrelevement{{ i }}">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="dateFinPrelevement{{ i }}">Collection end date</label>
+          <input type="date" formControlName="dateFinPrelevement" class="form-control" id="dateFinPrelevement{{ i }}" />
+        </div>
+        <div class="form-group">
+          <label for="heureFinPrelevement{{ i }}">Sampling end time</label>
+          <input type="time" formControlName="heureFinPrelevement" class="form-control" id="heureFinPrelevement{{ i }}" />
+        </div>
       </div>
+
       <div class="form-group">
-        <label for="addressRetourner{{ i }}">Return address:</label>
-        <input type="text" formControlName="addressRetourner" class="form-control" id="addressRetourner{{ i }}">
-      </div>
-      <div class="form-group">
-        <label for="dateFinPrelevement{{ i }}">Collection end date:</label>
-        <input type="date" formControlName="dateFinPrelevement" class="form-control" id="dateFinPrelevement{{ i }}">
-      </div>
-      <div class="form-group">
-        <label for="heureFinPrelevement{{ i }}">Sampling end time:</label>
-        <input type="time" formControlName="heureFinPrelevement" class="form-control" id="heureFinPrelevement{{ i }}">
-      </div>
-      <div class="form-group">
-        <label for="commentairesInternes{{ i }}">Internal sample feedback:</label>
+        <label for="commentairesInternes{{ i }}">Internal sample feedback</label>
         <textarea formControlName="commentairesInternes" class="form-control" id="commentairesInternes{{ i }}"></textarea>
       </div>
     </div>
   </div>
+
   <div class="button-container">
-    <button type="button" (click)="navigateToPrevious()" class="btn btn-secondary">Previous </button>
-    <button type="button" (click)="navigateToNext()" class="btn btn-secondary">Next</button>
+    <button type="button" (click)="navigateToPrevious()" class="btn btn-secondary">← Previous</button>
+    <button type="button" (click)="navigateToNext()" class="btn btn-primary">Next →</button>
   </div>
 </div>
-<div *ngIf="loading" class="loading-indicator">
-  Loading...
-</div>
+
+<div *ngIf="loading" class="loading-indicator">Loading...</div>

@@ -1,7 +1,7 @@
 <app-client-nav-bar></app-client-nav-bar>
 <div class="request-summary" id="table-to-pdf">
   <div class="card-header">
-    Abstract request for {{firstName+' '+lastName}} 
+    Abstract request for {{ firstName + ' ' + lastName }}
   </div>
   <div class="card-content">
     <div class="header-details">
@@ -23,7 +23,6 @@
       </div>
     </div>
 
-    <!-- Main sample details table -->
     <div class="sample-details">
       <table class="sample-table">
         <thead>
@@ -36,7 +35,7 @@
             <th>Collection location</th>
             <th>Return address</th>
             <th>Priority</th>
-            <th>Start date <br>collection</th>
+            <th>Start date <br />collection</th>
           </tr>
         </thead>
         <tbody>
@@ -54,32 +53,48 @@
         </tbody>
       </table>
     </div>
+
     <div class="parameters-details">
       <h2>Parameters</h2>
       <div class="card">
-          <table class="parameters-table">
-              <thead>
-                  <tr >
-                      <th>Parameter Details</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr *ngFor="let group of groupedParameters">
-                      <td *ngFor="let parameter of group">
-                          Name: {{ parameter.name }} ,Rdl:{{ parameter.rdl }}
-                      </td>
-                  </tr>
-              </tbody>
-          </table>
+        <table class="parameters-table">
+          <thead>
+            <tr>
+              <th>Parameter Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let group of groupedParameters">
+              <td *ngFor="let parameter of group">
+                Name: {{ parameter.name }} ,Rdl:{{ parameter.rdl }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-  </div>
+    </div>
+
     <div class="form-actions">
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div
+        class="modal fade"
+        id="exampleModalCenter"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true"
+      >
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterTitle">Confirmation</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <h5 class="modal-title" id="exampleModalCenterTitle">
+                Confirmation
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -87,15 +102,33 @@
               <p>are you sure</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button (click)="saveDemande()" class="btn btn-primary" >Save changes</button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                (click)="saveDemande()"
+                class="btn btn-primary"
+              >
+                Save changes
+              </button>
             </div>
           </div>
         </div>
-        </div>
-        <button class="cancel-button">Cancel</button>
-      <button type="button" class="btn btn-primary" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Save</button>
-      <!-- <button class="submit-button" (click)="saveDemande()">Submit request</button> -->
+      </div>
+
+      <button class="cancel-button">Cancel</button>
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#exampleModalCenter"
+      >
+        Save
+      </button>
     </div>
   </div>
 </div>

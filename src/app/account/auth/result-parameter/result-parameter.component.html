@@ -1,40 +1,41 @@
 <app-client-nav-bar></app-client-nav-bar>
-<div class="parameter-list-container">
-    <div class="card-header">
-      PARAMETERS LIST
+<div class="form-container">
+  <div class="main-title">
+    <h1>Parameters List</h1>
+    <p class="required-note"><span>*</span>: Review and confirm the selected parameters</p>
+  </div>
+
+  <div class="card">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>RDL</th>
+          <th>Unit</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let parameter of ListParameters; let i = index">
+          <td>{{ parameter.name }}</td>
+          <td>{{ parameter.rdl }}</td>
+          <td>{{ parameter.unit }}</td>
+          <td>
+            <button class="btn-delete" (click)="deleteParameter(i)">
+              <i class="fas fa-trash"></i> Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="ListParameters?.length === 0" class="empty-message">
+      No parameters found for this sample.
     </div>
-    <div *ngIf="parameters.length; else noParametersTemplate">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>RDL</th>
-            <th>Unit</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let parameter of ListParameters; let i = index">
-            <td>{{ parameter.name }}</td>
-            <td>{{ parameter.rdl }}</td>
-            <td>{{ parameter.unit }}</td>
-            <td>
-              <button (click)="deleteParameter(parameter)" class="btn-action">
-                <!-- Use appropriate icon for delete -->
-                <i class="fas fa-trash"></i>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-        
-      </table>
-    </div>
-    <ng-template #noParametersTemplate>
-      <p>No records found.</p>
-    </ng-template>
+
     <div class="button-container">
-      <button type="button" (click)="navigateToPrevious()" class="btn btn-secondary">Previous </button>
-      <button type="button" (click)="submitRequest()" class="btn btn-primary" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Next</button>
+      <button type="button" class="btn btn-secondary" (click)="navigateToPrevious()">← Previous</button>
+      <button type="button" class="btn btn-primary" (click)="submitRequest()">Confirm & Continue →</button>
     </div>
   </div>
-  
+</div>

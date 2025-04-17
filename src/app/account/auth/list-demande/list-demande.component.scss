@@ -2,234 +2,199 @@
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
 }
 
-.demande-client-table th, .demande-client-table td {
-  padding: 8px 16px;
-  text-align: left;
+.demande-client-table th,
+.demande-client-table td {
+  padding: 10px 16px;
+  text-align: center;
   border-right: 1px solid #dee2e6;
   border-bottom: 2px solid #dee2e6;
 }
 
 .demande-client-table th {
-  background-color: #f8f9fa;
-  color: #333;
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-.demande-client-table input {
-  width: 95%; /* Makes the input field take up most of the cell */
-  padding: 4px; /* Smaller padding to fit within the cell */
-  margin: auto; /* Centered within the cell */
-  display: block; /* Ensures it doesn't inline with anything else */
-  border: 1px solid #ccc; /* Light border making it subtle */
-  border-radius: 4px; /* Rounded corners */
+  background-color: #f1f5f9;
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .demande-client-table tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #f8fafc;
 }
 
 .demande-client-table tr:nth-child(odd) {
   background-color: #ffffff;
 }
+
+.demande-client-table input[type="text"],
+.demande-client-table input[type="email"] {
+  width: 95%;
+  padding: 6px;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
 .demande-client-table input[type="checkbox"] {
-  margin-left: auto; /* Center checkbox horizontally */
-  margin-right: auto; /* Center checkbox horizontally */
+  margin: 0 auto;
   display: block;
 }
 
-.demande-client-table th, .demande-client-table td {
-  padding: 8px 16px;
-  text-align: center; /* Center content */
-  border-right: 1px solid #dee2e6;
-  border-bottom: 2px solid #dee2e6;
+.demande-client-table th:first-child,
+.demande-client-table td:first-child {
+  width: 50px;
 }
 
-.demande-client-table th:first-child, .demande-client-table td:first-child {
-  width: 50px; /* Ensure consistent width for checkbox column */
-}
-.demande-client-table .btn-search, .demande-client-table .btn-reset {
-  display: block; /* Make buttons block to fill the cell width */
-  width: 100%; /* Full width to align better in the cell */
-  padding: 6px 12px; /* Padding inside the buttons */
-  margin: 0px 0 0 0; /* Reduce margin on top for the second button */
+.demande-client-table .btn-search,
+.demande-client-table .btn-reset {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
   border: none;
   border-radius: 4px;
   color: white;
   cursor: pointer;
   font-size: 14px;
-  text-align: center;
   transition: background-color 0.3s;
 }
 
 .demande-client-table .btn-search {
-  margin-bottom: 2px; /* Smaller margin below the first button */
-  background-color: #007bff; /* Blue background */
-}
+  background-color: #3b82f6;
+  margin-bottom: 4px;
 
-.demande-client-table .btn-search:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  &:hover {
+    background-color: #2563eb;
+  }
 }
 
 .demande-client-table .btn-reset {
-  background-color: #dc3545; /* Red background */
+  background-color: #ef4444;
+
+  &:hover {
+    background-color: #dc2626;
+  }
 }
 
-.demande-client-table .btn-reset:hover {
-  background-color: #c82333; /* Darker red on hover */
-}
 .demande-client-table .table-legend-container {
   display: flex;
-  justify-content: flex-end; /* Aligns children to the right */
+  justify-content: flex-end;
   margin-bottom: 10px;
 }
 
 .demande-client-table .table-legend {
-  font-family: Arial, sans-serif;
-  margin-left: 20px; /* Ensures spacing between the two legend blocks */
+  font-family: 'Segoe UI', sans-serif;
+  margin-left: 20px;
+
+  .icon {
+    font-size: 16px;
+    padding-right: 5px;
+  }
+
+  .icon.green { color: green; }
+  .icon.yellow { color: orange; }
+  .icon.red { color: red; }
+  .icon.blue { color: blue; }
+  .icon.gray { color: gray; }
 }
 
-.demande-client-table .table-legend .icon {
-  font-size: 16px;
-  padding-right: 5px;
-}
-
-.demande-client-table .table-legend .icon.green {
-  color: green;
-}
-
-.demande-client-table .table-legend .icon.yellow {
-  color: orange;
-}
-
-.demande-client-table .table-legend .icon.red {
-  color: red;
-}
-
-.demande-client-table .table-legend .icon.blue {
-  color: blue;
-}
-
-.demande-client-table .table-legend .icon.gray {
-  color: gray;
-}
 .button-container {
   display: flex;
   justify-content: flex-start;
-  padding-top: 50px; /* Increased padding at the top to lower the buttons */
-  padding-bottom: 20px; /* Adjust padding at the bottom if needed */
-  padding-left: 20px; /* Left padding for alignment */
+  padding: 30px 20px 20px;
 }
 
 .table-button {
-  background-color: #007bff; /* Initial background color */
+  background-color: #3b82f6;
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-right: 10px; /* Space between buttons */
+  border-radius: 6px;
+  padding: 10px 22px;
+  margin-right: 12px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 600;
   text-align: center;
   transition: background-color 0.3s, box-shadow 0.3s;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Text shadow for better readability */
 }
 
 .table-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Shadow effect for depth */
+  background-color: #2563eb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .download-button {
-  background-image: linear-gradient(to right, #007bff, #0056b3); /* Gradient background */
-  position: relative; /* Needed for absolute positioning of the icon */
-  padding-right: 40px; /* Extra padding to accommodate the icon */
+  background-image: linear-gradient(to right, #3b82f6, #2563eb);
+  padding-right: 42px;
+  position: relative;
+
+  &::after {
+    content: '⬇️';
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+  }
 }
 
-.download-button::after {
-  content: '⬇️'; /* Using emoji as a placeholder */
-  position: absolute;
-  right: 10px; /* Position icon on the right within the button */
-  top: 50%; /* Center vertically */
-  transform: translateY(-50%); /* Ensure it's perfectly centered */
-  font-size: 16px; /* Icon size */
+.card-container {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin: 30px auto;
+  width: 95%;
+  overflow: hidden;
 }
+
+.card-header {
+  background-color: #3b82f6;
+  color: #ffffff;
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 .content-container {
+  padding: 20px;
   display: flex;
-  justify-content: space-between; /* This will position children at both ends */
-  align-items: center; /* Align items vertically */
-}
-
-.button-container {
-  display: flex;
-  padding: 20px; /* Adjust padding as needed */
-}
-
-.table-button {
-  background-color: #007bff; /* Blue background */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-right: 10px; /* Space between buttons */
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s;
-}
-
-.table-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .icon-legend-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .icon-legend {
-  font-family: Arial, sans-serif;
-  margin-left: 20px;
+  font-family: 'Segoe UI', sans-serif;
+
+  p {
+    margin: 4px 0;
+    font-size: 14px;
+  }
 }
 
-.icon-legend p {
-  margin: 0 10px; /* Adjust margin for spacing */
-}
+.btn-edit {
+  padding: 6px 14px;
+  font-size: 14px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 
-.icon {
-  font-size: 16px;
-  padding-right: 5px;
-}
-
-.icon.green { color: green; }
-.icon.yellow { color: orange; }
-.icon.red { color: red; }
-.icon.blue { color: blue; }
-.icon.gray { color: gray; }
-.card-container {
-  background-color: #ffffff; /* White background for the card */
-  border: 1px solid #ddd; /* Light grey border */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  padding: 0; /* No padding here, padding will be inside content areas */
-  margin: 20px auto; /* Center the card with some margin from the top and bottom */
-  width: 95%; /* Adjust based on your layout needs */
-  overflow: hidden; /* Ensures no content spills out */
-}
-
-.card-header {
-  background-color: #007bff; /* Blue background matching the top bar */
-  color: #ffffff; /* White text */
-  padding: 10px 20px; /* Adequate padding for the header */
-  font-size: 16px; /* Adequate font size for visibility */
-  font-weight: bold; /* Bold text */
-  border-top-left-radius: 8px; /* Rounded top left corner */
-  border-top-right-radius: 8px; /* Rounded top right corner */
-}
-
-.content-container {
-  padding: 20px; /* Padding inside the content area */
-  display: flex;
-  justify-content: space-between; /* Maintains layout of buttons and legends */
-  align-items: center; /* Vertical alignment */
+  &:hover {
+    background-color: #059669;
+  }
 }

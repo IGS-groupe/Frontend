@@ -9,21 +9,20 @@ import { UserService } from 'src/app/account/auth/user.service';
 })
 export class ClientNavBarComponent implements OnInit {
 
-  constructor(private router: Router,private userService: UserService) { }
+  constructor(private router: Router, private userService: UserService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
+
   logout() {
     this.userService.logout().subscribe({
       next: (response) => {
-        console.log('Logout successful', response);  // Response is now treated as plain text
-        localStorage.clear();  // Clear local storage after successful logout
-        this.router.navigate(['/account/login']);  // Navigate to login page after logout
+        console.log('Logout successful', response);
+        localStorage.clear();
+        this.router.navigate(['/account/login']);
       },
       error: (error) => {
-        console.error('Logout failed:', error);  // Now this should only log actual HTTP errors
+        console.error('Logout failed:', error);
       }
     });
   }
-  
 }

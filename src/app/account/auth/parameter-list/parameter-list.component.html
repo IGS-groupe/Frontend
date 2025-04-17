@@ -1,35 +1,38 @@
-
 <app-client-nav-bar></app-client-nav-bar>
 <div class="form-container">
-    <div class="main-title">
-        <h1>Parameter List</h1>
-        
-      </div>
-   <table class="table table-hover">
-    <thead>
+  <div class="main-title">
+    <h1>Parameter List</h1>
+    
+  </div>
+
+  <div class="card">
+    <table class="table">
+      <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Analyte</th>
-            <th scope="col">RDL</th>
-            <th scope="col">Unit</th>
+          <th>#</th>
+          <th>Analyte</th>
+          <th>RDL</th>
+          <th>Unit</th>
         </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let analyte of parameters; let i = index">
-        <th scope="row">
+      </thead>
+      <tbody>
+        <tr *ngFor="let analyte of parameters; let i = index">
+          <td>
             <input type="checkbox"
                    [name]="'check-' + analyte.name.toLowerCase()"
                    [value]="analyte.name"
-                   (change)="toggleAnalyteSelection(analyte)">
-        </th>
-        <td>{{ analyte.name }}</td>
-        <td>{{ analyte.rdl }}</td>
-        <td>{{ analyte.unit }}</td>
-    </tr>
-    </tbody>
-</table>
-<div class="button-container">
-    <button type="button" (click)="navigateToPrevious()" class="btn btn-secondary">Previous </button>
-    <button type="button" (click)="submitAnalytes()" class="btn btn-primary" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Next</button>
+                   (change)="toggleAnalyteSelection(analyte)" />
+          </td>
+          <td>{{ analyte.name }}</td>
+          <td>{{ analyte.rdl }}</td>
+          <td>{{ analyte.unit }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="button-container">
+    <button type="button" class="btn btn-secondary" (click)="navigateToPrevious()">← Previous</button>
+    <button type="button" class="btn btn-primary" (click)="submitAnalytes()">Next →</button>
   </div>
 </div>

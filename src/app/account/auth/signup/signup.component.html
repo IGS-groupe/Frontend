@@ -1,118 +1,88 @@
-<div class="account-pages my-5 pt-sm-5">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-10 col-lg-8 col-xl-7">
-        <div class="card overflow-hidden card-container">
-          <div class="card-header">
-            Inscription
-          </div>
-          <div class="card-body pt-0">
-            <!-- Success Message Panel -->
-            <div class="success-message-panel" *ngIf="successmsg">
-              <div class="success-icon">&#10004;</div>
-              <div class="success-message">{{ messageError }}</div>
-            </div>
-           
-            <div class="p-2">
-              <form class="needs-validation" novalidate [formGroup]="signupForm" (ngSubmit)="onSubmit()">
-                
-                <div class="form-row">
-                  <div class="col-md-6 mb-3">
-                    <label for="nom" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="nom" placeholder="Enter your Firts name" formControlName="firstName" required>
-                    <div class="invalid-feedback" *ngIf="submitted && f.firstName.errors?.required">
-                      The Firts Name is required.
-                    </div>
-                  </div>
+<div class="signup-wrapper">
+  <div class="signup-card">
+    <h2 class="signup-title">Créer un compte</h2>
+    <p class="signup-subtitle">Remplissez les informations ci-dessous pour vous inscrire</p>
 
-                  <div class="col-md-6 mb-3">
-                    <label for="prenom" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="prenom" placeholder="Enter your last name" formControlName="lastName" required>
-                    <div class="invalid-feedback" *ngIf="submitted && f.lastName.errors?.required">
-                      The last name is required..
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="col-md-6 mb-3">
-                    <label for="UserName" class="form-label">UserName</label>
-                    <input type="text" class="form-control" id="username" placeholder="Enter your username" formControlName="username" required>
-                    <div class="invalid-feedback" *ngIf="submitted && f.username.errors?.required">
-                      The UserName is required..
-                    </div>
-                  </div>
-
-                  <div class="col-md-6 mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your e-mail" formControlName="email" required>
-                    <div class="invalid-feedback" *ngIf="submitted && f.email.errors?.required">
-                      The email is required..
-                    </div>
-                    <div class="invalid-feedback" *ngIf="submitted && f.email.errors?.email">
-                      The email must be a valid email address.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="col-md-6 mb-3">
-                    <label for="phoneNumber" class="form-label">Phone number</label>
-                    <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your phone number" formControlName="phoneNumber" required>
-                    <div class="invalid-feedback" *ngIf="submitted && f.phoneNumber.errors?.required">
-                      Telephone number is required.
-                    </div>
-                    <div class="invalid-feedback" *ngIf="submitted && f.phoneNumber.errors?.phoneNumber">
-                      The phone number must be valid.
-                    </div>
-                  </div>
-
-                  <div class="col-md-6 mb-3">
-                    <label for="motdepasse" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="motdepasse" placeholder="Enter your password" formControlName="password" required>
-                    <div class="invalid-feedback" *ngIf="submitted && f.password.errors?.required">
-                      Password is required.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mb-3 d-flex align-items-center">
-                  <h6 class="mr-3">Gender</h6>
-                  &nbsp;&nbsp;&nbsp;
-                  <label for="male" class="mr-2">
-                    <input type="radio" id="male" name="genre" formControlName="genre" value="Homme" required>&nbsp;
-                    <span class="label-text">Man</span>
-                  </label>
-                
-                  <label for="female" class="mr-2">
-                    <input type="radio" id="female" name="genre" formControlName="genre" value="Femme" required>&nbsp;
-                    <span class="label-text">male</span>
-                  </label>
-                  <label for="female" class="mr-2">
-                    <input type="radio" id="other" name="genre" formControlName="genre" value="Femme" required>&nbsp;
-                    <span class="label-text">other</span>
-                  </label>
-                  <div class="invalid-feedback" *ngIf="submitted && f.genre.errors?.required">
-                    Gender is required.
-                  </div>
-                </div>
-
-                <div class="mt-4 d-grid">
-                  <button class="btn btn-primary" type="submit">Registration</button>
-                </div>
-                
-              </form>
-            </div>
-          </div>
-        </div>
-        <!-- end card -->
-
-        <div class="mt-5 text-center">
-          <p>Already have an account? <a routerLink="/account/login" class="fw-medium text-primary">Login</a></p>
-        </div>
-      </div> <!-- end col -->
+    <!-- Success Message -->
+    <div class="success-message-panel" *ngIf="successmsg">
+      <div class="success-icon">&#10004;</div>
+      <div class="success-message">{{ messageError }}</div>
     </div>
-    <!-- end row -->
+
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Prénom *</label>
+          <input type="text" class="form-control" formControlName="firstName" placeholder="Entrez votre prénom">
+          <div class="invalid-feedback" *ngIf="submitted && f.firstName.errors?.required">
+            Le prénom est requis.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Nom *</label>
+          <input type="text" class="form-control" formControlName="lastName" placeholder="Entrez votre nom">
+          <div class="invalid-feedback" *ngIf="submitted && f.lastName.errors?.required">
+            Le nom est requis.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Nom d'utilisateur *</label>
+          <input type="text" class="form-control" formControlName="username" placeholder="Entrez un nom d'utilisateur">
+          <div class="invalid-feedback" *ngIf="submitted && f.username.errors?.required">
+            Le nom d'utilisateur est requis.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Email *</label>
+          <input type="email" class="form-control" formControlName="email" placeholder="exemple@email.com">
+          <div class="invalid-feedback" *ngIf="submitted && f.email.errors?.required">
+            L'email est requis.
+          </div>
+          <div class="invalid-feedback" *ngIf="submitted && f.email.errors?.email">
+            Format de l'email invalide.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Téléphone *</label>
+          <input type="tel" class="form-control" formControlName="phoneNumber" placeholder="+21612345678">
+          <div class="invalid-feedback" *ngIf="submitted && f.phoneNumber.errors?.required">
+            Le numéro est requis.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Mot de passe *</label>
+          <input type="password" class="form-control" formControlName="password" placeholder="••••••••">
+          <div class="invalid-feedback" *ngIf="submitted && f.password.errors?.required">
+            Le mot de passe est requis.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label d-block">Genre *</label>
+        <div class="radio-group">
+          <label><input type="radio" value="Homme" formControlName="genre"> Homme</label>
+          <label><input type="radio" value="Femme" formControlName="genre"> Femme</label>
+          <label><input type="radio" value="Autre" formControlName="genre"> Autre</label>
+        </div>
+        <div class="invalid-feedback" *ngIf="submitted && f.genre.errors?.required">
+          Le genre est requis.
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <button class="btn-submit" type="submit">S'inscrire</button>
+      </div>
+    </form>
+
+    <div class="extra-links">
+      <p>Vous avez déjà un compte ? <a routerLink="/account/login">Se connecter</a></p>
+    </div>
   </div>
-  <!-- end container -->
 </div>
