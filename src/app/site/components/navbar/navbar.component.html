@@ -1,210 +1,121 @@
 <!-- navbar.component.html -->
 <nav class="navbar navbar-expand-lg navigation fixed-top sticky" id="navbar">
-    <div class="container">
-      <!-- Brand / Logo -->
-      <a class="navbar-brand" routerLink="/">
-        <img src="assets/images/logo.png" alt="Logo Dark" height="80" class="logo logo-dark" />
-        <img src="assets/images/logo.png" alt="Logo Light" height="80" class="logo logo-light" />
-      </a>
-  
-      <!-- Mobile toggle -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#topnav-menu-content"
-        aria-controls="topnav-menu-content"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <!-- Collapsible menu -->
-      <div class="collapse navbar-collapse" id="topnav-menu-content">
-        <!-- Left‑side navigation -->
-        <ul class="navbar-nav me-auto" id="topnav-menu">
-          <li class="nav-item dropdown" ngbDropdown>
-            <a class="nav-link" ngbDropdownToggle style="cursor: pointer;">
-              {{ 'navbar.aboutUs' | translate }}
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-              <li routerLink="/igs/a-propos">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.about' | translate }}
-                </a>
-              </li>
-              <li routerLink="/igs/gouvernance">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.governance' | translate }}
-                </a>
-              </li>
-              <li routerLink="/igs/Collaborateurs">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.collaborators' | translate }}
-                </a>
-              </li>
-            </ul>
-          </li>
-  
-          <li class="nav-item dropdown" ngbDropdown>
-            <a class="nav-link" ngbDropdownToggle routerLink="/igs/Consulting">
-              {{ 'navbar.consulting' | translate }}
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-              <li>
-                <a class="dropdown-item" [routerLink]="['/igs/Environmental']" style="cursor: pointer;">
-                  {{ 'navbar.environmentalSolutions' | translate }}
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" [routerLink]="['/igs/energy']" style="cursor: pointer;">
-                  {{ 'navbar.energySolutions' | translate }}
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" [routerLink]="['/igs/rd']" style="cursor: pointer;">
-                  {{ 'navbar.rnd' | translate }}
-                </a>
-              </li>
-            </ul>
-          </li>
-  
-          <li class="nav-item" ngbDropdown>
-            <a class="nav-link" routerLink="/igs/rmd">
-              {{ 'navbar.rmd' | translate }}
-            </a>
-          </li>
-  
-          <li class="nav-item dropdown" ngbDropdown>
-            <a class="nav-link" ngbDropdownToggle style="cursor: pointer;">
-              {{ 'navbar.analyticalServices' | translate }}
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-              <li routerLink="/igs/iso">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.iso' | translate }}
-                </a>
-              </li>
-              <li routerLink="/igs/Gold">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.goldPMAssaying' | translate }}
-                </a>
-              </li>
-              <li routerLink="/igs/testing">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.assayingTesting' | translate }}
-                </a>
-              </li>
-              <li routerLink="/igs/lab">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.labAuditing' | translate }}
-                </a>
-              </li>
-            </ul>
-          </li>
-  
-          <li class="nav-item dropdown" ngbDropdown>
-            <a class="nav-link" ngbDropdownToggle style="cursor: pointer;">
-              {{ 'navbar.metTesting' | translate }}
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-              <li routerLink="/igs/preparation">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.samplePreparation' | translate }}
-                </a>
-              </li>
-              <li routerLink="/igs/Communition">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.communitionTesting' | translate }}
-                </a>
-              </li>
-              <li routerLink="/igs/Gravity">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.gravityTesting' | translate }}
-                </a>
-              </li>
-              <li routerLink="/igs/Gold_Testing">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.goldTestingCapabilities' | translate }}
-                </a>
-              </li>
-              <li routerLink="/igs/Floatation">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.floatationTestingCapabilities' | translate }}
-                </a>
-              </li>
-              <li routerLink="/igs/Hydromet">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.hydrometTesting' | translate }}
-                </a>
-              </li>
-              <li routerLink="/igs/Separation">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.slSeparationTesting' | translate }}
-                </a>
-              </li>
-              <li routerLink="/igs/Magnetic">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.magneticAndElectrostaticSeparation' | translate }}
-                </a>
-              </li>
-            </ul>
-          </li>
-  
-          <li class="nav-item dropdown" ngbDropdown>
-            <a class="nav-link" ngbDropdownToggle style="cursor: pointer;">
-              {{ 'navbar.reference' | translate }}
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-              <li routerLink="/igs/projects">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.projects' | translate }}
-                </a>
-              </li>
-              <li routerLink="/igs/clients">
-                <a class="dropdown-item" style="cursor: pointer;">
-                  {{ 'navbar.clients' | translate }}
-                </a>
-              </li>
-            </ul>
-          </li>
-  
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/igs/news" style="cursor: pointer;">
-              {{ 'navbar.news' | translate }}
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/igs/contact" style="cursor: pointer;">
-              {{ 'navbar.contactUs' | translate }}
-            </a>
-          </li>
-        </ul>
-  
-        <!-- Right‑side utilities -->
-        <div class="navbar-utils d-flex align-items-center ms-auto">
-          <div class="language-switcher btn-group me-3" role="group">
-            <button
-              type="button"
-              class="btn lang-btn"
-              [class.active]="currentLang === 'en'"
-              (click)="switchLanguage('en')">
-              EN
-            </button>
-            <button
-              type="button"
-              class="btn lang-btn"
-              [class.active]="currentLang === 'fr'"
-              (click)="switchLanguage('fr')">
-              FR
-            </button>
-          </div>
-          <a class="btn login-btn" routerLink="/account/login">
-            <i class="fas fa-sign-in-alt"></i>
-            {{ 'navbar.login' | translate }}
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand" routerLink="/">
+      <img src="assets/images/logo.png" alt="Logo Dark" height="80" class="logo logo-dark" />
+      <img src="assets/images/logo.png" alt="Logo Light" height="80" class="logo logo-light" />
+    </a>
+
+    <!-- Mobile toggle -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#topnav-menu-content"
+      aria-controls="topnav-menu-content"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible menu -->
+    <div class="collapse navbar-collapse" id="topnav-menu-content">
+      <!-- Navigation items -->
+      <ul class="navbar-nav me-auto" id="topnav-menu">
+
+        <!-- About Us -->
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link" ngbDropdownToggle style="cursor: pointer;">
+            {{ 'navbar.aboutUs' | translate }}
           </a>
+          <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+            <li routerLink="/igs/a-propos">
+              <a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.about' | translate }}</a>
+            </li>
+            <li routerLink="/igs/gouvernance">
+              <a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.governance' | translate }}</a>
+            </li>
+            <!-- Commented in original -->
+            <!-- <li routerLink="/igs/Collaborateurs">
+              <a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.collaborators' | translate }}</a>
+            </li> -->
+          </ul>
+        </li>
+
+        <!-- Consulting -->
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link" ngbDropdownToggle routerLink="/igs/Consulting">
+            {{ 'navbar.consulting' | translate }}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+            <li><a class="dropdown-item" [routerLink]="['/igs/Environmental']" style="cursor: pointer;">{{ 'navbar.environmentalSolutions' | translate }}</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/igs/energy']" style="cursor: pointer;">{{ 'navbar.energySolutions' | translate }}</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/igs/rd']" style="cursor: pointer;">{{ 'navbar.rnd' | translate }}</a></li>
+          </ul>
+        </li>
+
+        <!-- R&D -->
+        <li class="nav-item" ngbDropdown>
+          <a class="nav-link" routerLink="/igs/rmd">{{ 'navbar.rmd' | translate }}</a>
+        </li>
+
+        <!-- Analytical Services -->
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link" ngbDropdownToggle style="cursor: pointer;">{{ 'navbar.analyticalServices' | translate }}</a>
+          <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+            <li routerLink="/igs/iso"><a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.iso' | translate }}</a></li>
+            <li routerLink="/igs/Gold"><a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.goldPMAssaying' | translate }}</a></li>
+            <!-- Uncomment if needed -->
+            <!-- <li routerLink="/igs/testing"><a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.assayingTesting' | translate }}</a></li> -->
+            <!-- <li routerLink="/igs/lab"><a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.labAuditing' | translate }}</a></li> -->
+          </ul>
+        </li>
+
+        <!-- Met Testing -->
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link" ngbDropdownToggle style="cursor: pointer;">{{ 'navbar.metTesting' | translate }}</a>
+          <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+            <li routerLink="/igs/preparation"><a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.samplePreparation' | translate }}</a></li>
+            <li routerLink="/igs/Communition"><a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.communitionTesting' | translate }}</a></li>
+            <li routerLink="/igs/Gravity"><a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.gravityTesting' | translate }}</a></li>
+            <li routerLink="/igs/Gold_Testing"><a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.goldTestingCapabilities' | translate }}</a></li>
+            <li routerLink="/igs/Floatation"><a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.floatationTestingCapabilities' | translate }}</a></li>
+            <li routerLink="/igs/Hydromet"><a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.hydrometTesting' | translate }}</a></li>
+            <li routerLink="/igs/Separation"><a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.slSeparationTesting' | translate }}</a></li>
+            <li routerLink="/igs/Magnetic"><a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.magneticAndElectrostaticSeparation' | translate }}</a></li>
+          </ul>
+        </li>
+
+        <!-- Reference -->
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link" ngbDropdownToggle style="cursor: pointer;">{{ 'navbar.reference' | translate }}</a>
+          <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+            <li routerLink="/igs/projects"><a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.projects' | translate }}</a></li>
+            <li routerLink="/igs/clients"><a class="dropdown-item" style="cursor: pointer;">{{ 'navbar.clients' | translate }}</a></li>
+          </ul>
+        </li>
+
+        <!-- News & Contact -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/igs/news" style="cursor: pointer;">{{ 'navbar.news' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/igs/contact" style="cursor: pointer;">{{ 'navbar.contactUs' | translate }}</a>
+        </li>
+      </ul>
+
+      <!-- Right‑side utilities -->
+      <div class="navbar-utils d-flex align-items-center ms-auto">
+        <div class="language-switcher btn-group me-3" role="group">
+          <button type="button" class="btn lang-btn" [class.active]="currentLang === 'en'" (click)="switchLanguage('en')">EN</button>
+          <button type="button" class="btn lang-btn" [class.active]="currentLang === 'fr'" (click)="switchLanguage('fr')">FR</button>
         </div>
-      </div>
+        <a class="btn login-btn" routerLink="/account/login">
+          <i class="fas fa-sign-in-alt"></i>
+          {{ 'navbar.login' | translate }}
+        </a>
+      </div>      
     </div>
-  </nav>
-  
+  </div>
+</nav>
