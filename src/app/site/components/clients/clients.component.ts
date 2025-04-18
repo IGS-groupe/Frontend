@@ -1,18 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-clients',
   templateUrl: './clients.component.html',
   styleUrls: ['./clients.component.scss']
 })
-export class ClientsComponent implements OnInit {
+export class ClientsComponent implements AfterViewInit {
 
-  showNavigationIndicators: any;
-  showNavigationArrows: any;
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
 
-  constructor() { }
+  ngAfterViewInit(): void {
+    const elements = this.el.nativeElement.querySelectorAll('.fade-up-card');
 
-  ngOnInit(): void {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.renderer.addClass(entry.target, 'fade-up-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elements.forEach((el: Element) => observer.observe(el));
   }
-
 }

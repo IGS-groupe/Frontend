@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -9,10 +9,17 @@ import { AuthService } from 'src/app/account/auth/services/auth.service'; // Adj
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
-  contactForm: FormGroup; // Define the FormGroup
+export class ContactComponent implements OnInit, AfterViewInit {
+  contactForm: FormGroup;
 
-  constructor(private authService: AuthService, private formBuilder: FormBuilder,private toastr: ToastrService,private router: Router ) { }
+  constructor(
+    private authService: AuthService,
+    private formBuilder: FormBuilder,
+    private toastr: ToastrService,
+    private router: Router,
+    private el: ElementRef,
+    private renderer: Renderer2
+  ) {}
 
   ngOnInit(): void {
     this.contactForm = this.formBuilder.group({
@@ -25,13 +32,27 @@ export class ContactComponent implements OnInit {
     });
   }
 
+  ngAfterViewInit(): void {
+    const elements = this.el.nativeElement.querySelectorAll('.fade-up-card');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.renderer.addClass(entry.target, 'fade-up-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elements.forEach((el: Element) => observer.observe(el));
+  }
+
   onSubmit(): void {
-    console.log('test');
     if (this.contactForm.valid) {
       this.authService.createContact(this.contactForm.value).subscribe({
         next: (response) => {
           console.log('Contact saved', response);
-          this.toastr.success("", 'Votre message envoyer avec success', {
+          this.toastr.success("", 'Votre message envoyer avec succès', {
             positionClass: 'toast-top-center',
             timeOut: 3000,
             closeButton: true
@@ -40,13 +61,10 @@ export class ContactComponent implements OnInit {
         },
         error: (error) => {
           console.error('Error saving contact', error);
-          // Optionally handle errors here
         }
       });
-    } 
-    else {
-      console.log('Validation failed');
-      this.toastr.error("", 'verify votre form', {
+    } else {
+      this.toastr.error("", 'Veuillez vérifier votre formulaire', {
         positionClass: 'toast-top-center',
         timeOut: 3000,
         closeButton: true

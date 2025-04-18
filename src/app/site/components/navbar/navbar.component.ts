@@ -7,18 +7,18 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
-
-  constructor(private translate: TranslateService) {
-    // Optional: set default language
+  constructor(public translate: TranslateService) {
     this.translate.setDefaultLang('en');
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   switchLanguage(language: string): void {
     this.translate.use(language);
   }
 
+  /** expose the current language to the template */
+  get currentLang(): string {
+    return this.translate.currentLang || this.translate.getDefaultLang();
+  }
 }

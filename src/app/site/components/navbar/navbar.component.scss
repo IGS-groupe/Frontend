@@ -1,79 +1,220 @@
-// Improved Navbar styles
-.navbar {
-    background: linear-gradient(to right, #2c3e50 0%, #34495e 100%); // Subtle gradient background
-    padding: 1rem 1rem; // Uniform padding
-    position: fixed;
-    width: 100%;
-    z-index: 1050; // High z-index for top layer
+/* navbar.component.scss */
 
-    .navbar-brand img {
-        height: 40px; // Optimal logo height
-        transition: transform 0.3s ease-in-out; // Smooth logo scale
+/* Color & Breakpoint Variables */
+$primary-blue:   #0055A4;
+$dropdown-bg:    #2d2d2d;
+$text-white:     #ffffff;
+$text-hover:     rgba(#ffffff, 0.8);
+$bg-hover:       rgba(#ffffff, 0.1);
+$breakpoint-md:  768px;
 
-        &:hover {
-            transform: scale(1.05); // Gentle scale effect on hover
+/* Navbar wrapper */
+#navbar {
+  background-color: $primary-blue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* Make container full‑width so logo is flush left */
+  .container {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  /* Brand / Logo */
+  .navbar-brand {
+    margin-right: auto;
+    padding: 0;
+
+    img {
+      height: 80px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  /* Mobile hamburger */
+  .navbar-toggler {
+    border: none;
+    margin-right: 1rem;
+
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+  }
+
+  /* Collapsible menu container */
+  .navbar-collapse {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Nav lists */
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &.me-auto { margin-right: auto; }
+    &.ms-auto { margin-left: auto; }
+
+    .nav-item {
+      position: relative;
+
+      .nav-link {
+        color: $text-white;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+
+        &:hover,
+        &:focus {
+          background-color: $bg-hover;
+          color: $text-hover;
+          border-radius: 4px;
         }
+      }
+    }
+  }
+
+  /* Standard dropdowns */
+  .dropdown-menu {
+    background-color: $dropdown-bg;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    min-width: 200px;
+
+    &.dropdown-menu-end {
+      right: 0;
+      left: auto;
     }
 
-    .navbar-nav .nav-link {
-        color: #ecf0f1; // Bright text color for readability
-        font-size: 12px; // Suitable font size
-        padding: 0.8rem 1rem; // Ample padding for easier click
-        transition: background-color 0.3s ease, color 0.3s ease;
+    .dropdown-item {
+      color: $text-white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
 
-        &:hover, &:focus {
-            color: #f1c40f; // Gold color for high visibility on hover
-            background-color: rgba(255, 255, 255, 0.1); // Slight background on hover for distinction
+      &:hover,
+      &:focus {
+        background-color: $bg-hover;
+        color: $text-hover;
+      }
+    }
+  }
+
+  /* Utility group (EN/FR toggles + Login) */
+  .navbar-utils {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  /* Language switcher buttons */
+  .language-switcher {
+    display: flex;
+
+    .lang-btn {
+      border: 1px solid $text-white;
+      background-color: transparent;
+      color: $text-white;
+      padding: 0.5rem 0.75rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
+
+      &:hover,
+      &:focus {
+        background-color: $bg-hover;
+        color: $primary-blue;
+      }
+
+      &.active {
+        background-color: $text-white;
+        color: $primary-blue;
+      }
+    }
+
+    /* spacing between EN and FR */
+    .lang-btn + .lang-btn {
+      margin-left: 0.5rem;
+    }
+
+    &.me-3 {
+      margin-right: 1rem;
+    }
+  }
+
+  /* Login button */
+  .login-btn {
+    background-color: $text-white;
+    color: $primary-blue;
+    padding: 0.55rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    cursor: pointer;
+
+    i {
+      margin-right: 0.5rem;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: lighten($text-white, 10%);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: $breakpoint-md) {
+    .navbar-collapse {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .navbar-nav {
+      flex-direction: column;
+      width: 100%;
+
+      .nav-item {
+        width: 100%;
+
+        .nav-link {
+          width: 100%;
+          text-align: left;
         }
+      }
     }
 
-    .dropdown-menu {
-        background-color: #2c3e50; // Matching with the navbar gradient start
-        border: none;
-        border-radius: 0.5rem; // Rounded corners for dropdown
-        margin-top: 0.5rem; // Slightly lower than the navbar for a layered effect
+    .navbar-utils {
+      flex-direction: column;
+      width: 100%;
 
-        .dropdown-item {
-            color: #ecf0f1;
-            padding: 0.5rem 1rem;
-
-            &:hover {
-                background-color: #f1c40f; // Uniform with hover color
-                color: #2c3e50;
-            }
-        }
+      .lang-btn,
+      .login-btn {
+        width: 100%;
+        text-align: left;
+        padding-left: 1rem;
+        margin: 0.5rem 0;
+      }
     }
-
-    .navbar-nav .nav-item:hover .dropdown-menu {
-        display: block; // Ensures the dropdown appears on hover
-    }
-
-    .language-switcher {
-        border-left: 1px solid #34495e; // Separator for the language switcher
-        margin-left: 20px;
-        padding-left: 20px;
-
-        button {
-            background: none;
-            border: none;
-            color: #ecf0f1;
-            font-size: 16px;
-            transition: color 0.3s;
-
-            &:hover {
-                color: #f1c40f; // Consistent hover effect
-            }
-        }
-    }
-
-    .btn-outline-success {
-        color: #28a745; // Original green tone
-        border-color: #28a745;
-
-        &:hover {
-            color: #fff;
-            background-color: #28a745;
-            border-color: #28a745;
-        }
-    }
+  }
 }
