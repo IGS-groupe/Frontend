@@ -1,96 +1,200 @@
+/* rd.component.scss */
 
+/* ===== Color Variables ===== */
+$primary-color:    #003366;
+$accent-color:     #ffd700;
+$light-bg:         #f8f9fa;
+$text-color:       #333333;
+$white:            #ffffff;
+$shadow:           rgba(0, 0, 0, 0.1);
 
+/* ===== Fade‑Up Scroll Animation ===== */
+.fade-up-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
 
-.full-width {
-    position: absolute; /* Position absolue pour que l'image occupe toute la section */
-    top: 0;
-    left: 0;
-    width: 100%; /* La largeur de l'image sera égale à la largeur de la section */
-    height: 100%; /* La hauteur de l'image sera égale à la hauteur de la section */
-    object-fit: cover; /* Remplir l'espace de manière proportionnée */
-} 
-
-.titre {
-    text-align: center; /* Centrer le texte horizontalement */
-    font-size: 2rem; /* Taille de police augmentée */
-    font-weight: bold; /* Poids de la police */
-    color: #ffffff; /* Couleur du texte en blanc */
-    margin-top: 50px; /* Espacement supérieur */
-    margin-bottom: 50px; /* Espacement inférieur */
-    position: relative; /* Position relative pour le conteneur du titre */
+  &.fade-up-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* ===== Hero Section ===== */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.img-bordered {
-    border-radius: 15px;
-    border: 1px solid #ddd; /* Couleur et épaisseur de la bordure */
-}
-/* General Styles for the Section */
-#propos {
-    position: relative;
-    overflow: hidden;
-    height: 60vh;  /* Adjust the height as necessary */
-    display: flex;
-    align-items: center;  /* Aligns content vertically */
-    justify-content: center;  /* Aligns content horizontally */
-}
-
-/* Background Image Styling with Gradient Overlay */
-#propos .full-width {
+  .hero-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 0;  /* Keeps the image below the overlay */
-}
+    z-index: 0;
+  }
 
-#propos:before {
-    content: '';
+  .hero-overlay {
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));  /* Gradient overlay */
-    z-index: 1;  /* Ensures overlay is below the text */
-}
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+    z-index: 1;
+  }
 
-/* Typography and Title Styling */
-.titre {
-    font-size: 3rem;  /* Larger font size for prominence */
-    color: #fff;  /* Ensuring high contrast */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);  /* Adding text shadow for better readability */
-    font-weight: bold;  /* Bold font for emphasis */
-    margin-top: 15vh;  /* Centering vertically more effectively */
+  .hero-content {
     position: relative;
-    z-index: 2;  /* Ensures the text is above the overlay */
-    animation: fadeInUp 1s ease-out forwards;  /* Animation for the title */
-    border-bottom: 2px solid #ffd700;  /* Gold underline for thematic consistency */
-    padding-bottom: 10px;  /* Spacing for underline */
+    z-index: 2;
+    text-align: center;
+
+    .hero-title {
+      font-size: 3rem;
+      color: $white;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      border-bottom: 2px solid $accent-color;
+      padding-bottom: 0.5rem;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+  }
 }
 
-/* Keyframes for fadeInUp Animation */
+/* ===== Section Wrapper ===== */
+.section {
+  padding: 4rem 1rem;
+
+  &.bg-light {
+    background: $light-bg;
+  }
+
+  &.bg-white {
+    background: $white;
+  }
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+  font-size: 2.5rem;
+  color: $primary-color;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 4px;
+    background: $accent-color;
+    margin: 0.5rem auto 0;
+  }
+}
+
+/* ===== Lead Paragraph ===== */
+.lead {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: lighten($text-color, 10%);
+  margin-bottom: 1rem;
+}
+
+/* ===== Image Border ===== */
+.img-bordered {
+  border-radius: 0.5rem;
+  border: 1px solid lighten($text-color, 60%);
+}
+
+/* ===== Introduction List ===== */
+#rd-intro {
+  ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 1rem;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+      color: $text-color;
+
+      i {
+        color: lighten($accent-color, 10%);
+        margin-right: 0.75rem;
+        margin-top: 0.2rem;
+      }
+    }
+  }
+}
+
+/* ===== Focus Area Cards ===== */
+#rd-focus {
+  .row {
+    margin-top: 2rem;
+  }
+
+  .col-sm-6 {
+    text-align: center;
+    padding: 1.5rem 0;
+
+    i {
+      font-size: 2.5rem;
+      color: $primary-color;
+      margin-bottom: 0.75rem;
+    }
+
+    h5 {
+      font-size: 1.125rem;
+      color: $primary-color;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: $text-color;
+    }
+  }
+}
+
+/* ===== Keyframes ===== */
 @keyframes fadeInUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Responsive Adjustments for Mobile Devices */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
-    .titre {
-        font-size: 1.5rem;  /* Smaller font size for smaller screens */
-        padding: 0 10px;  /* Padding to handle narrow screens */
-    }
+  .hero-section {
+    height: 40vh;
 
-    #propos {
-        height: 40vh;  /* Smaller height on mobile devices */
+    .hero-title {
+      font-size: 2rem;
     }
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  #rd-focus .col-sm-6 {
+    padding: 1rem 0;
+  }
 }

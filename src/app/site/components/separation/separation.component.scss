@@ -1,96 +1,127 @@
+/* separation.component.scss */
 
+/* ===== Color Palette ===== */
+$primary:    #003366;
+$accent:     #ffd700;
+$white:      #ffffff;
+$text:       #444444;
+$overlay:    rgba(0, 0, 0, 0.3);
+$shadow:     rgba(0, 0, 0, 0.1);
 
+/* ===== Fade‑Up Scroll Animation ===== */
+.fade-up-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
 
-.full-width {
-    position: absolute; /* Position absolue pour que l'image occupe toute la section */
-    top: 0;
-    left: 0;
-    width: 100%; /* La largeur de l'image sera égale à la largeur de la section */
-    height: 100%; /* La hauteur de l'image sera égale à la hauteur de la section */
-    object-fit: cover; /* Remplir l'espace de manière proportionnée */
-} 
-
-.titre {
-    text-align: center; /* Centrer le texte horizontalement */
-    font-size: 2rem; /* Taille de police augmentée */
-    font-weight: bold; /* Poids de la police */
-    color: #ffffff; /* Couleur du texte en blanc */
-    margin-top: 50px; /* Espacement supérieur */
-    margin-bottom: 50px; /* Espacement inférieur */
-    position: relative; /* Position relative pour le conteneur du titre */
+  &.fade-up-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* ===== Hero Section ===== */
+.hero-section {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 
-.img-bordered {
-    border-radius: 15px;
-    border: 1px solid #ddd; /* Couleur et épaisseur de la bordure */
-}
-/* General Styles for the Section */
-#propos {
-    position: relative;
-    overflow: hidden;
-    height: 60vh;  /* Adjust the height as necessary */
-    display: flex;
-    align-items: center;  /* Aligns content vertically */
-    justify-content: center;  /* Aligns content horizontally */
-}
-
-/* Background Image Styling with Gradient Overlay */
-#propos .full-width {
+  .full-width {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     object-fit: cover;
-    z-index: 0;  /* Keeps the image below the overlay */
-}
-
-#propos:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));  /* Gradient overlay */
-    z-index: 1;  /* Ensures overlay is below the text */
-}
+    z-index: 0;
+  }
 
-/* Typography and Title Styling */
-.titre {
-    font-size: 3rem;  /* Larger font size for prominence */
-    color: #fff;  /* Ensuring high contrast */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);  /* Adding text shadow for better readability */
-    font-weight: bold;  /* Bold font for emphasis */
-    margin-top: 15vh;  /* Centering vertically more effectively */
+  .hero-overlay {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, $overlay, darken($overlay, 20%));
+    z-index: 1;
+  }
+
+  .hero-content {
     position: relative;
-    z-index: 2;  /* Ensures the text is above the overlay */
-    animation: fadeInUp 1s ease-out forwards;  /* Animation for the title */
-    border-bottom: 2px solid #ffd700;  /* Gold underline for thematic consistency */
-    padding-bottom: 10px;  /* Spacing for underline */
-}
+    z-index: 2;
+    text-align: center;
 
-/* Keyframes for fadeInUp Animation */
-@keyframes fadeInUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Responsive Adjustments for Mobile Devices */
-@media (max-width: 768px) {
     .titre {
-        font-size: 1.5rem;  /* Smaller font size for smaller screens */
-        padding: 0 10px;  /* Padding to handle narrow screens */
+      font-size: 3rem;
+      color: $white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      font-weight: bold;
+      border-bottom: 2px solid $accent;
+      padding-bottom: 0.5rem;
+      animation: fadeInUp 1s ease-out forwards;
     }
+  }
+}
 
-    #propos {
-        height: 40vh;  /* Smaller height on mobile devices */
+/* ===== Main Section Wrapper ===== */
+.section {
+  padding: 4rem 1rem;
+  background: $white;
+}
+
+/* ===== Title Styling ===== */
+.titre {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: $primary;
+  margin-bottom: 1rem;
+  position: relative;
+
+  &.text-center {
+    text-align: center;
+  }
+}
+
+/* ===== Text Styling ===== */
+.text-muted {
+  color: lighten($text, 20%);
+  line-height: 1.6;
+}
+
+/* ===== Image Border ===== */
+.img-bordered {
+  border-radius: 0.5rem;
+  border: 1px solid lighten($text, 60%);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 40vh;
+
+    .titre {
+      font-size: 2rem;
+      padding: 0 1rem;
     }
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .titre {
+    font-size: 2rem;
+  }
 }

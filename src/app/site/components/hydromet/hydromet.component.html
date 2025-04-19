@@ -1,77 +1,61 @@
 <app-navbar></app-navbar>
-<br><br><br>
 
-<div>
-    <section class="section" id="propos" style="height: 60vh;">
-        <img src="assets/images/small/gold.jpeg" alt="Image de fond" class="full-width" />
-        <div class="container">
-            <div class="row ">
+<main class="hydromet-page">
 
-                <h1 class=" titre text-center"> Hydromet Testing </h1>
+  <!-- 🔶 Hero Section -->
+  <section id="propos" class="hero-section fade-up-card" style="height: 60vh;">
+    <img src="assets/images/small/gold.jpeg" alt="Hydromet Testing Hero" class="full-width hero-bg" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Hydromet Testing</h1>
+    </div>
+  </section>
 
-            </div>
+  <!-- 🔶 Hydromet Testing Details & Carousel -->
+  <section class="section bg-white fade-up-card">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <!-- Text Column -->
+        <div class="col-md-6">
+          <h2 class="section-title">Hydromet Testing</h2>
+          <p class="text-muted mb-4">
+            The IGS team is well experienced in hydrometallurgical process development and R&amp;D. Our lab‑scale hydrometallurgical testing—including all acid and base leach methods—covers:
+          </p>
+          <ul class="list-unstyled text-muted">
+            <li class="mb-2"><i class="mdi mdi-circle-medium text-success me-2"></i>Acid leaching</li>
+            <li class="mb-2"><i class="mdi mdi-circle-medium text-success me-2"></i>Fusion &amp; calcine leach</li>
+            <li class="mb-2"><i class="mdi mdi-circle-medium text-success me-2"></i>Ion exchange / solvent extraction</li>
+            <li class="mb-2"><i class="mdi mdi-circle-medium text-success me-2"></i>Purification steps</li>
+            <li class="mb-2"><i class="mdi mdi-circle-medium text-success me-2"></i>Chlorination</li>
+            <li class="mb-2"><i class="mdi mdi-circle-medium text-success me-2"></i>Fractional distillation</li>
+            <li class="mb-2"><i class="mdi mdi-circle-medium text-success me-2"></i>Ultrasound‑assisted leaching</li>
+          </ul>
         </div>
-    </section>
-
-    <section  class="section pt-4 bg-white">
-        <div class="container">
-            <div class="row align-items-center mt-5 pt-md-5">
-                <div class="col-md-6">
-                    <div class="mt-4 mt-md-0">
-                        <div class="d-flex align-items-center mb-2">
-                            <h1> Hydromet Testing</h1>
-                        </div>
-                        <p class="text-muted"> IGS team is well experienced in hydrometallurgical testing and process development, being actively involved in many related R&D projects.  Hydrometallurgical lab scale testing involving all mineral acids and bases includes:</p>
-
-                        <div class="text-muted mt-4">
-                            <p class="mb-2"><i class="mdi mdi-circle-medium text-success me-1"></i>Acid leaching</p>
-                            <p class="mb-2"><i class="mdi mdi-circle-medium text-success me-1"></i>Fusion and calcine leach</p>
-                            <p class="mb-2"><i class="mdi mdi-circle-medium text-success me-1"></i>IX/SX separation</p>
-                            <p class="mb-2"><i class="mdi mdi-circle-medium text-success me-1"></i>Purification steps</p>
-                            <p class="mb-2"><i class="mdi mdi-circle-medium text-success me-1"></i>Chlorination</p>
-                            <p class="mb-2"><i class="mdi mdi-circle-medium text-success me-1"></i>Fractional distillation</p>
-                            <p class="mb-2"><i class="mdi mdi-circle-medium text-success me-1"></i>Ultrasound assisted leaching</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6  col-sm-8 ms-md-auto">
-                   
-                    <div class="card">
-
-                        <div class="card-body">
-                          <!-- Crossfade carousel -->
-                          <ngb-carousel [showNavigationIndicators]="showNavigationIndicators">
-                            <ng-template ngbSlide>
-                              <img src="assets/images/small/h.jpg" alt="first slide" class="animated fadeIn d-block img-fluid img-bordered" width="1500">
-                            </ng-template>
-                            <ng-template ngbSlide>
-                              <img src="assets/images/small/h2.jpg" alt="second slide" class="animated fadeIn d-block img-fluid img-bordered">
-                            </ng-template>
-                            <ng-template ngbSlide>
-                              <img src="assets/images/small/h3.jpg" alt="third slide" class="animated fadeIn d-block img-fluid img-bordered">
-                            </ng-template>
-                          </ngb-carousel>
-                          <!-- End Crossfade carousel -->
-                        </div>
-                      </div>
-                   
-                    
-                </div>
-
+        <!-- Carousel Column -->
+        <div class="col-md-6 text-center">
+          <div class="card shadow-sm">
+            <div class="card-body p-0">
+              <ngb-carousel
+                [showNavigationIndicators]="showNavigationIndicators"
+                [showNavigationArrows]="showNavigationArrows"
+              >
+                <ng-template ngbSlide>
+                  <img src="assets/images/small/h.jpg" alt="Acid Leaching Setup" class="img-fluid img-bordered" />
+                </ng-template>
+                <ng-template ngbSlide>
+                  <img src="assets/images/small/h2.jpg" alt="Fusion & Calcine Leach" class="img-fluid img-bordered" />
+                </ng-template>
+                <ng-template ngbSlide>
+                  <img src="assets/images/small/h3.jpg" alt="Ion Exchange / SX" class="img-fluid img-bordered" />
+                </ng-template>
+              </ngb-carousel>
             </div>
+          </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-center mb-5">
+      </div>
+    </div>
+  </section>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</div>
-
+</main>
 
 <app-footer></app-footer>

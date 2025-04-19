@@ -1,15 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-rd',
   templateUrl: './rd.component.html',
   styleUrls: ['./rd.component.scss']
 })
-export class RdComponent implements OnInit {
+export class RdComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(private el: ElementRef, private renderer: Renderer2) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    const elements = this.el.nativeElement.querySelectorAll('.fade-up-card');
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.renderer.addClass(entry.target, 'fade-up-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elements.forEach((el: Element) => observer.observe(el));
   }
 
+  scrollToSection(id: string): void {
+    const target = document.getElementById(id);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }

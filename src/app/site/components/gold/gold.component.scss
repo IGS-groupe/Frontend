@@ -1,69 +1,290 @@
-/* General Styles for the Section */
-#propos {
-    position: relative;
-    overflow: hidden;
-    height: 60vh;  /* Adjust the height as necessary */
-    display: flex;
-    align-items: center;  /* Aligns content vertically */
-    justify-content: center;  /* Aligns content horizontally */
+/* gold.component.scss */
+
+/* ===== Color Variables ===== */
+$primary-color:    #003366;
+$accent-color:     #ffd700;
+$light-bg:         #f8f9fa;
+$text-color:       #333;
+$white:            #fff;
+$shadow:           rgba(0, 0, 0, 0.1);
+
+/* ===== Fade‑Up Scroll Animation ===== */
+.fade-up-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+
+  &.fade-up-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Background Image Styling with Gradient Overlay */
-#propos .full-width {
+/* ===== Hero Section (original, untouched) ===== */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero-bg {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     object-fit: cover;
-    z-index: 0;  /* Keeps the image below the overlay */
-}
+    z-index: 0;
+  }
 
-#propos:before {
-    content: '';
+  .hero-overlay {
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));  /* Gradient overlay */
-    z-index: 1;  /* Ensures overlay is below the text */
-}
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+    z-index: 1;
+  }
 
-/* Typography and Title Styling */
-.titre {
-    font-size: 3rem;  /* Larger font size for prominence */
-    color: #fff;  /* Ensuring high contrast */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);  /* Adding text shadow for better readability */
-    font-weight: bold;  /* Bold font for emphasis */
-    margin-top: 15vh;  /* Centering vertically more effectively */
+  .hero-content {
     position: relative;
-    z-index: 2;  /* Ensures the text is above the overlay */
-    animation: fadeInUp 1s ease-out forwards;  /* Animation for the title */
-    border-bottom: 2px solid #ffd700;  /* Gold underline for thematic consistency */
-    padding-bottom: 10px;  /* Spacing for underline */
+    z-index: 2;
+    text-align: center;
+
+    .hero-title {
+      font-size: 3rem;
+      color: $white;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+  }
 }
 
-/* Keyframes for fadeInUp Animation */
+/* ===== Section Wrapper ===== */
+.section {
+  padding: 4rem 1rem;
+
+  &.bg-light {
+    background: $light-bg;
+  }
+
+  &.text-center {
+    text-align: center;
+  }
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+  font-size: 2.5rem;         /* increased from 2rem */
+  color: $primary-color;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2.5rem;     /* a bit more spacing */
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 4px;
+    background: $accent-color;
+    margin: 0.5rem auto 0;
+  }
+}
+
+/* ===== Highlight Cards ===== */
+.highlight-card {
+  background: $white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px $shadow;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: $text-color;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px $shadow;
+  }
+
+  i {
+    font-size: 2.25rem;     /* slightly larger icon */
+    color: $primary-color;
+    margin-bottom: 0.75rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;     /* increased from 1.125rem */
+    margin-bottom: 0.75rem;
+    color: $primary-color;
+  }
+
+  p {
+    font-size: 1rem;        /* increased from 0.9rem */
+    color: lighten($text-color, 20%);
+    line-height: 1.5;       /* slightly looser */
+  }
+}
+
+/* ===== Carousel Images ===== */
+.carousel-section {
+  .carousel-img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px $shadow;
+    max-height: 300px;
+    object-fit: cover;
+  }
+}
+
+/* ===== Media Sections (Sample Prep, Core Service, Exploration) ===== */
+.media-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .media-image img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px $shadow;
+    max-height: 350px;
+    object-fit: cover;
+  }
+
+  .media-content {
+    flex: 1;
+
+    h3, h4 {
+      font-size: 2rem;      /* increased from 1.75rem */
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: lighten($text-color, 20%);
+      font-size: 1.125rem;  /* increased from 1rem */
+      line-height: 1.75;    /* more breathing room */
+    }
+
+    .service-list > div {
+      margin-bottom: 1rem;
+
+      h5 {
+        font-size: 1.5rem;  /* bump up service titles */
+        margin-bottom: 0.5rem;
+        color: $primary-color;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1rem;    /* consistent body text size */
+        color: lighten($text-color, 20%);
+      }
+    }
+  }
+}
+
+/* ===== Base Metals Analysis ===== */
+.base-metals {
+  background: $primary-color;
+  color: $white;
+  text-align: center;
+  padding: 4rem 1rem;
+
+  h3, h4 {
+    font-size: 2.25rem;   /* larger headings */
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.125rem;  /* larger paragraph */
+    line-height: 1.75;
+  }
+}
+
+/* ===== Precious Title ===== */
+.precious-title {
+  padding: 3rem 1rem;
+  text-align: center;
+
+  .titre, h3 {
+    font-size: 2.75rem;   /* increase main title */
+    color: $primary-color;
+  }
+}
+
+/* ===== Portrait, Quality & Safety ===== */
+.portrait,
+.quality,
+.safety {
+  background: $white;
+  text-align: center;
+  padding: 4rem 1rem;
+
+  h4 {
+    font-size: 1.75rem;   /* larger subheadings */
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: lighten($text-color, 20%);
+    font-size: 1.125rem;  /* larger body text */
+    line-height: 1.75;
+  }
+
+  .portrait-card {
+    display: inline-block;
+    background: $white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px $shadow;
+    padding: 2rem;
+    margin-top: 1rem;
+
+    img {
+      width: auto;
+      max-width: 120px;
+      height: auto;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+/* ===== Keyframes ===== */
 @keyframes fadeInUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Responsive Adjustments for Mobile Devices */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
-    .titre {
-        font-size: 1.5rem;  /* Smaller font size for smaller screens */
-        padding: 0 10px;  /* Padding to handle narrow screens */
-    }
+  .hero-section {
+    height: 40vh;
 
-    #propos {
-        height: 40vh;  /* Smaller height on mobile devices */
+    .hero-title {
+      font-size: 2.2rem;
     }
+  }
+
+  .media-section {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .highlight-card {
+    margin: 0 auto;
+  }
 }

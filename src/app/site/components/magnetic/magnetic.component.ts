@@ -1,19 +1,45 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  ElementRef,
+  Renderer2
+} from '@angular/core';
 
 @Component({
   selector: 'app-magnetic',
   templateUrl: './magnetic.component.html',
   styleUrls: ['./magnetic.component.scss']
 })
-export class MagneticComponent implements OnInit {
+export class MagneticComponent implements OnInit, AfterViewInit {
+  showNavigationIndicators = true;
+  showNavigationArrows    = true;
 
-  showNavigationIndicators: any;
-  showNavigationArrows: any;
+  constructor(
+    private elRef:   ElementRef,
+    private renderer: Renderer2
+  ) {}
 
-  
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    const cards = this.elRef.nativeElement.querySelectorAll('.fade-up-card');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.renderer.addClass(entry.target, 'fade-up-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach((c: Element) => observer.observe(c));
   }
 
+  scrollToSection(id: string): void {
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }
