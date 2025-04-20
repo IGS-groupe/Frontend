@@ -10,7 +10,7 @@ export class PdfViewerComponent {
   pdfUrl: SafeResourceUrl;
 
   constructor(private sanitizer: DomSanitizer) {
-    this.pdfUrl = this.sanitizer.bypassSecurityTrustResourceUrl('/assets/pdfs/sample2.pdf');
+    this.pdfUrl = this.sanitizer.bypassSecurityTrustResourceUrl('/assets/pdfs/pdfeeeeet.pdf');
 
   }
 }

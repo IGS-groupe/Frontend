@@ -26,6 +26,7 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { NewsComponent } from './components/news/news.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { IsoComponent } from './components/iso/iso.component';
+import { PdfViewerComponent } from './components/pdf-viewer/pdf-viewer.component';
 
 const routes: Routes = [
   {
@@ -150,7 +151,7 @@ const routes: Routes = [
   },
   {
     path:'iso' , 
-    component:IsoComponent
+    component:PdfViewerComponent
   
   }
 ];
