@@ -1,69 +1,199 @@
-/* General Styles for the Section */
+/* 🔷 Hero Section Styles */
 #propos {
     position: relative;
     overflow: hidden;
-    height: 60vh;  /* Adjust the height as necessary */
+    height: 60vh;
     display: flex;
-    align-items: center;  /* Aligns content vertically */
-    justify-content: center;  /* Aligns content horizontally */
-}
-
-/* Background Image Styling with Gradient Overlay */
-#propos .full-width {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #propos .full-width {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 0;  /* Keeps the image below the overlay */
-}
-
-#propos:before {
+    z-index: 0;
+  }
+  
+  #propos:before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));  /* Gradient overlay */
-    z-index: 1;  /* Ensures overlay is below the text */
-}
-
-/* Typography and Title Styling */
-.titre {
-    font-size: 3rem;  /* Larger font size for prominence */
-    color: #fff;  /* Ensuring high contrast */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);  /* Adding text shadow for better readability */
-    font-weight: bold;  /* Bold font for emphasis */
-    margin-top: 15vh;  /* Centering vertically more effectively */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+  }
+  
+  .titre {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    margin-top: 15vh;
     position: relative;
-    z-index: 2;  /* Ensures the text is above the overlay */
-    animation: fadeInUp 1s ease-out forwards;  /* Animation for the title */
-    border-bottom: 2px solid #ffd700;  /* Gold underline for thematic consistency */
-    padding-bottom: 10px;  /* Spacing for underline */
-}
-
-/* Keyframes for fadeInUp Animation */
-@keyframes fadeInUp {
+    z-index: 2;
+    animation: fadeInUp 1s ease-out forwards;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 10px;
+  }
+  
+  /* 🔷 Keyframes Animation */
+  @keyframes fadeInUp {
     from {
-        transform: translateY(20px);
-        opacity: 0;
+      transform: translateY(20px);
+      opacity: 0;
     }
     to {
-        transform: translateY(0);
-        opacity: 1;
+      transform: translateY(0);
+      opacity: 1;
     }
-}
-
-/* Responsive Adjustments for Mobile Devices */
-@media (max-width: 768px) {
+  }
+  
+  /* 🔶 ISO Main Section Styles */
+  .iso-content-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: #ffffff;
+  }
+  
+  .iso-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #003366;
+    position: relative;
+    padding-left: 20px;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 80%;
+      background-color: #0055a4;
+      border-radius: 4px;
+    }
+  }
+  
+  .iso-features {
+    li {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+  
+      i {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  
+  /* 🔷 Button Style */
+  .btn-primary {
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+    background-color: #0055a4;
+    border: none;
+  
+    &:hover {
+      background-color: #003f7f;
+      color: white;
+    }
+  }
+  
+  /* 🔶 Carousel Section */
+  .card {
+    border: none;
+    background-color: #f8f9fa;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  img.img-fluid {
+    border-radius: 0.5rem;
+  }
+  
+  /* 🔶 Extra Highlight Cards Section */
+  .bg-light {
+    background-color: #f4f6f9 !important;
+  }
+  
+  .card.h-100 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+  
+    i {
+      font-size: 2.5rem;
+    }
+  
+    h5 {
+      margin-bottom: 0.75rem;
+      color: #003366;
+    }
+  
+    p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+  }
+  
+  /* 🔶 Responsive Design */
+  @media (max-width: 768px) {
     .titre {
-        font-size: 1.5rem;  /* Smaller font size for smaller screens */
-        padding: 0 10px;  /* Padding to handle narrow screens */
+      font-size: 1.8rem;
+      padding: 0 10px;
     }
-
+  
     #propos {
-        height: 40vh;  /* Smaller height on mobile devices */
+      height: 40vh;
     }
-}
+  
+    .iso-title {
+      font-size: 1.5rem;
+    }
+  
+    .btn-primary {
+      width: 100%;
+      padding: 0.75rem;
+    }
+  
+    .iso-features li {
+      font-size: 0.95rem;
+    }
+  
+    .card-body {
+      padding: 0.75rem;
+    }
+  
+    .card.h-100 i {
+      font-size: 2rem;
+    }
+  }
+  /* 🔽 Fade Up Animation */
+.fade-up-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.7s ease-out;
+  }
+  
+  .fade-up-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

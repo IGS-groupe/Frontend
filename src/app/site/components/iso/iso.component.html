@@ -1,73 +1,102 @@
 <app-navbar></app-navbar>
 <br><br><br>
 
-<div>
-    <section class="section" id="propos" style="height: 60vh;">
-        <img src="assets/images/small/gold.jpeg" alt="Background Image" class="full-width"/>
-        <div class="container">
-            <div class="row">
-                <h1 class="titre text-center">ISO</h1>
-            </div>
+<!-- Hero Section (Background + Title + Animation) -->
+<section class="section" id="propos">
+  <img src="assets/images/small/gold.jpeg" alt="Background Image" class="full-width" />
+  <div class="container">
+    <div class="row">
+      <h1 class="titre text-center">ISO Certifications</h1>
+    </div>
+  </div>
+</section>
+
+<!-- ISO Intro & Carousel Section -->
+<section class="section iso-content-section bg-white pt-5 fade-up-card">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Left Text Column -->
+      <div class="col-lg-6">
+        <h2 class="iso-title mb-4">Our Commitment to Quality and Excellence</h2>
+        <p class="text-muted">
+          At Impact Global Solutions (IGS), our dedication to quality is backed by internationally recognized ISO certifications. We focus on continuous improvement to ensure outstanding service in metallurgy, consulting, and analysis for the mining industry.
+        </p>
+        <ul class="iso-features list-unstyled mt-4">
+          <li><i class="mdi mdi-check-circle-outline text-success me-2"></i> ISO/IEC 17025:2017 Certified Laboratories</li>
+          <li><i class="mdi mdi-check-circle-outline text-success me-2"></i> Advanced Multi-element and PM Assaying</li>
+          <li><i class="mdi mdi-check-circle-outline text-success me-2"></i> Fire Assay, ICP-OES, and Sample Preparation</li>
+          <li><i class="mdi mdi-check-circle-outline text-success me-2"></i> Environmental and Sustainability Compliance</li>
+        </ul>
+        <button class="btn btn-primary mt-4 px-4 py-2" onclick="window.open('https://stgeorgesecomining.com/', '_blank')">
+          For More Information
+        </button>
+      </div>
+
+      <!-- Right Carousel -->
+      <div class="col-lg-6">
+        <div class="card shadow rounded-4 border-0 fade-up-card">
+          <div class="card-body">
+            <ngb-carousel [showNavigationIndicators]="showNavigationIndicators">
+              <ng-template ngbSlide>
+                <img src="assets/images/small/gol1.jpg" alt="First slide" class="img-fluid rounded-3" />
+              </ng-template>
+              <ng-template ngbSlide>
+                <img src="assets/images/small/gol2.jpg" alt="Second slide" class="img-fluid rounded-3" />
+              </ng-template>
+              <ng-template ngbSlide>
+                <img src="assets/images/small/gol3.jpg" alt="Third slide" class="img-fluid rounded-3" />
+              </ng-template>
+            </ngb-carousel>
+          </div>
         </div>
-    </section>
-    
+      </div>
 
-    <section  class="section pt-4 bg-white">
-        <div class="container">
-            <div class="row align-items-center mt-5 pt-md-5">
-                <div class="col-md-6">
-                    <div class="mt-4 mt-md-0">
-                        <div class="d-flex align-items-center mb-2">
-                            <h1>Gold & PM Assaying </h1>
-                        </div>
-                        <p class="text-muted"> Gold & PM Assaying encompasses a series of crucial steps for the accurate analysis of precious metals like gold. Initially, samples are subjected to fusion and cupellation processes, which involve melting and separating the metal from impurities. Following this, digestion and dilution techniques are utilized to prepare the metals for analysis. Atomic Absorption methods are then employed to detect and measure the presence of gold and other metals with precision. Furthermore, the samples undergo separation via sieves before undergoing fire assay to determine the gold content accurately. These meticulous procedures ensure thorough assessment and quantification of precious metals for a variety of purposes.</p>
+    </div>
+  </div>
+</section>
 
-                        <div class="text-muted mt-4">
-                            <p class="mb-2"><i class="mdi mdi-circle-medium text-success me-1"></i>Fusion, and Cupellation of Samples</p>
-                            <p class="mb-2"><i class="mdi mdi-circle-medium text-success me-1"></i>Digestion and dilution of metals</p>
-                            <p class="mb-2"><i class="mdi mdi-circle-medium text-success me-1"></i>Detection of gold and metals by Atomic Absorption</p>
-                            <p class="mb-2"><i class="mdi mdi-circle-medium text-success me-1"></i>Separation by sieves followed by fire assay of samples and determination of gold</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6  col-sm-8 ms-md-auto">
-                   
-                    <div class="card">
+<!-- Highlight Cards Section -->
+<section class="section pt-5 pb-5 bg-light fade-up-card">
+  <div class="container">
+    <h2 class="text-center mb-5 text-dark fw-bold">Why ISO Certification Matters</h2>
+    <div class="row g-4">
 
-                        <div class="card-body">
-                          <!-- Crossfade carousel -->
-                          <ngb-carousel [showNavigationIndicators]="showNavigationIndicators">
-                            <ng-template ngbSlide>
-                              <img src="assets/images/small/gol1.jpg" alt="first slide" class="animated fadeIn d-block img-fluid img-bordered">
-                            </ng-template>
-                            <ng-template ngbSlide>
-                              <img src="assets/images/small/gol2.jpg" alt="second slide" class="animated fadeIn d-block img-fluid img-bordered">
-                            </ng-template>
-                            <ng-template ngbSlide>
-                              <img src="assets/images/small/gol3.jpg" alt="third slide" class="animated fadeIn d-block img-fluid img-bordered">
-                            </ng-template>
-                          </ngb-carousel>
-                          <!-- End Crossfade carousel -->
-                        </div>
-                      </div>
-                   
-                    
-                </div>
-
-            </div>
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm rounded-4 border-0 text-center p-4 fade-up-card">
+          <div class="mb-3">
+            <i class="mdi mdi-certificate-outline display-4 text-primary"></i>
+          </div>
+          <h5 class="fw-bold">Certification Benefits</h5>
+          <p class="text-muted">Enhanced credibility and customer confidence through globally accepted standards.</p>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-center mb-5">
+      </div>
 
-                    </div>
-                </div>
-            </div>
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm rounded-4 border-0 text-center p-4 fade-up-card">
+          <div class="mb-3">
+            <i class="mdi mdi-shield-check-outline display-4 text-success"></i>
+          </div>
+          <h5 class="fw-bold">Compliance Areas</h5>
+          <p class="text-muted">Ensures rigorous adherence to quality, environmental, and safety regulations.</p>
         </div>
-    </section>
+      </div>
 
-</div>
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm rounded-4 border-0 text-center p-4 fade-up-card">
+          <div class="mb-3">
+            <i class="mdi mdi-account-group-outline display-4 text-warning"></i>
+          </div>
+          <h5 class="fw-bold">Client Commitment</h5>
+          <p class="text-muted">Promotes transparency, accountability, and long-term partnerships with clients.</p>
+        </div>
+      </div>
 
+    </div>
+  </div>
+</section>
 
 <app-footer></app-footer>
