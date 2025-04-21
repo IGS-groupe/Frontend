@@ -1,7 +1,7 @@
 /* navbar.component.scss */
 
 /* Color & Breakpoint Variables */
-$primary-blue:   #0055A4;
+$primary-blue:   #042caf;
 $dropdown-bg:    #2d2d2d;
 $text-white:     #ffffff;
 $text-hover:     rgba(#ffffff, 0.8);
@@ -9,13 +9,13 @@ $bg-hover:       rgba(#ffffff, 0.1);
 $breakpoint-md:  768px;
 
 #navbar {
-  background-color: $primary-blue;
+  background-color:  #042caf;;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1050;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  // background: linear-gradient(135deg, #3b82f6, #6366f1);
   padding: 0.75rem 2.5rem; // Top-Bottom: 0.75rem, Left-Right: 2.5rem
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   .container {
@@ -115,40 +115,41 @@ $breakpoint-md:  768px;
   }
 
   .dropdown-menu {
-    background-color: $dropdown-bg;
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem 0;
-    min-width: 200px;
-    margin-top: 0;
-    display: none;
-    transition: all 0.3s ease;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-
-    @media (min-width: $breakpoint-md) {
-      left: auto;
-      right: 0;
-    }
+    background-color: #0a80bb; // Dark background color
+    border: none; // Remove border
+    margin-top: 0; // Reset default margin
+    display: none; // Hide by default
 
     .dropdown-item {
-      color: $text-white;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
+        color: #fffffffb; // Text color
+        font-weight: 400; // Font weight
+        transition: background-color 0.3s ease; // Smooth transition
 
-      &:hover,
-      &:focus {
-        background-color: #4f2cfa;
-        color: $text-hover;
-      }
+        &:hover {
+            background-color: #4f2cfa; // Background color on hover
+        }
     }
   }
 
+.navbar-nav .nav-item:hover .dropdown-menu {
+    display: block; // Display dropdown on parent link hover
+}
+
+.navbar-nav .btn {
+    margin-left: 15px; // Spacing between buttons
+}
+
+.btn-outline-success {
+    color: #28a745; // Text color
+    border-color: #28a745; // Border color
+    transition: all 0.3s ease; // Smooth transition
+
+    &:hover {
+        color: #f3f4f7; // Text color on hover
+        background-color: #28a745; // Background color on hover
+        border-color: #28a745; // Border color on hover
+    }
+}
   .navbar-utils {
     flex-shrink: 0;
     gap: 0.5rem;
@@ -292,6 +293,32 @@ $breakpoint-md:  768px;
       }
     }
   }
+  .login-btn, .user-icon-btn {
+    background-color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #1f2937;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .login-btn:hover, .user-icon-btn:hover {
+    background-color: #f0f0f0;
+    color: #0d6efd;
+    transform: translateY(-1px);
+  }
+  
+  .user-icon-btn {
+    padding: 6px 10px;
+    font-size: 18px;
+  }
+  
 }
 
 @media (max-width: 991px) {

@@ -151,6 +151,11 @@ const routes: Routes = [
   },
   {
     path:'iso' , 
+    component:IsoComponent
+  
+  },
+  {
+    path:'isopdf' , 
     component:PdfViewerComponent
   
   }

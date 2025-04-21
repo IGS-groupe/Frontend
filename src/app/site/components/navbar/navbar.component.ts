@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,17 +8,27 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  constructor(public translate: TranslateService) {
+  isLoggedIn = false;
+
+  constructor(
+    public translate: TranslateService,
+    private router: Router
+  ) {
     this.translate.setDefaultLang('en');
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isLoggedIn = !!localStorage.getItem('token');
+  }
+
+  navigateToDemande(): void {
+    this.router.navigate(['/account/Listdemande']);
+  }
 
   switchLanguage(language: string): void {
     this.translate.use(language);
   }
 
-  /** expose the current language to the template */
   get currentLang(): string {
     return this.translate.currentLang || this.translate.getDefaultLang();
   }

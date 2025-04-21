@@ -1,35 +1,33 @@
 {
-    "navbar": {
-      "aboutUs": "About Us",
-      "about": "About",
-      "governance": "Governance",
-      "collaborators": "Collaborators",
-      "consulting": "Consulting",
-      "environmentalSolutions": "Environmental Solutions",
-      "energySolutions": "Energy Solutions",
-      "rnd": "R&D",
-      "rmd": "RMD",
-      "analyticalServices": "Analytical Services",
-      "iso": "ISO",
-      "goldPMAssaying": "Gold & PM Assaying",
-      "assayingTesting": "Assaying & Testing",
-      "labAuditing": "Lab Auditing",
-      "metTesting": "Met Testing",
-      "samplePreparation": "Sample Preparation",
-      "communitionTesting": "Communition Testing",
-      "gravityTesting": "Gravity Testing",
-      "goldTestingCapabilities": "Gold Testing Capabilities",
-      "floatationTestingCapabilities": "Floatation Testing Capabilities",
-      "hydrometTesting": "Hydromet Testing",
-      "slSeparationTesting": "S/L Separation Testing",
-      "magneticAndElectrostaticSeparation": "Magnetic and Electrostatic Separation",
-      "reference": "Reference",
-      "projects": "Projects",
-      "clients": "Clients",
-      "news": "News",
-      "contactUs": "Contact Us",
-      "login": "Login"
-    },
+  "navbar": {
+  "aboutUs": "About Us",
+  "about": "About",
+  "governance": "Values",
+  "consulting": "Consulting",
+  "processOperationAuditing": "Process Operation Auditing",
+  "siteLabAuditing": "Site Lab Auditing & Opreation",
+  "projectStatusSpecification": "Project Status Specification & Collaboration",
+  "rmd": "R&D",
+  "analyticalServices": "Analytical Services",
+  "iso": "ISO 17025-2017",
+  "goldPMAssaying": "Geochemistry",
+  "metTesting": "Met Testing",
+  "samplePreparation": "Sample Preparation",
+  "communitionTesting": "Communition Testing",
+  "gravityTesting": "Gravity Testing",
+  "goldTestingCapabilities": "Gold Testing Capabilities",
+  "floatationTestingCapabilities": "Floatation Testing Capabilities",
+  "hydrometTesting": "Hydromet Testing",
+  "slSeparationTesting": "S/L Separation Testing",
+  "magneticAndElectrostaticSeparation": "Magnetic and Electrostatic Separation",
+  "reference": "Reference",
+  "projects": "Projects",
+  "clients": "Clients",
+  "news": "News",
+  "contactUs": "Contact Us",
+  "login": "Login"
+},
+
   "home":{
     "home": {
       "slide1": {
@@ -301,16 +299,16 @@
             "Thermal energy, energy conversion, biofuels"
           ]
       },
-    "goldPM": {
+          "goldPM": {
             "title": "Gold & PM Assaying",
-            "description": "Gold & PM Assaying encompasses a series of crucial steps for the accurate analysis of precious metals like gold. Initially, samples are subjected to fusion and cupellation processes, which involve melting and separating the metal from impurities. Following this, digestion and dilution techniques are utilized to prepare the metals for analysis. Atomic Absorption methods are then employed to detect and measure the presence of gold and other metals with precision. Furthermore, the samples undergo separation via sieves before undergoing fire assay to determine the gold content accurately. These meticulous procedures ensure thorough assessment and quantification of precious metals for a variety of purposes.",
+            "description": "Gold & PM Assaying encompasses a series of crucial steps for the accurate analysis of precious metals like gold. Initially, samples are subjected to fusion and cupellation processes, which involve melting and separating the metal from impurities. Following this, digestion and dilution techniques are utilized to prepare the metals for analysis. Atomic Absorption methods are then employed to detect and measure the presence of gold and other metals with precision. Furthermore, the samples undergo separation via sieves before undergoing fire assay to determine the gold content accurately. These meticulous procedures ensure thorough assessment and quantification of precious metals for a variety of purposes. You can view the full ISO procedure in PDF format by clicking the button at the end of this page.",
             "processes": [
               "Fusion, and Cupellation of Samples",
               "Digestion and dilution of metals",
               "Detection of gold and metals by Atomic Absorption",
               "Separation by sieves followed by fire assay of samples and determination of gold"
             ]
-      },
+          },
     "goldTesting": {
               "title": "Gold Testing Capabilities",
               "description": "Gold cyanidation remains the most used gold processing technology. IGS, being associated with many gold processing scheme development and optimization projects, can bring added value to your project development and thus guide your testing program to be well-suited to your deposit and earlier in the project cycle. Our gold cyanidation testing capabilities cover everything from free gold milling to the most refractory gold bearing minerals:",
