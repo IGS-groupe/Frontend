@@ -7,7 +7,15 @@
     </a>
 
     <!-- Mobile toggle -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content" aria-controls="topnav-menu-content" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#topnav-menu-content"
+      aria-controls="topnav-menu-content"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -23,8 +31,6 @@
           <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
             <li><a class="dropdown-item" routerLink="/igs/a-propos">{{ 'navbar.about' | translate }}</a></li>
             <li><a class="dropdown-item" routerLink="/igs/gouvernance">{{ 'navbar.governance' | translate }}</a></li>
-            <!-- Optional -->
-            <!-- <li><a class="dropdown-item" routerLink="/igs/Collaborateurs">{{ 'navbar.collaborators' | translate }}</a></li> -->
           </ul>
         </li>
 
@@ -47,19 +53,31 @@
 
         <!-- Analytical Services -->
         <li class="nav-item dropdown" ngbDropdown>
-          <a class="nav-link" ngbDropdownToggle style="cursor: pointer;">{{ 'navbar.analyticalServices' | translate }}</a>
+          <a class="nav-link" ngbDropdownToggle style="cursor: pointer;">
+            {{ 'navbar.analyticalServices' | translate }}
+          </a>
           <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
             <li><a class="dropdown-item" routerLink="/igs/iso">{{ 'navbar.iso' | translate }}</a></li>
             <li><a class="dropdown-item" routerLink="/igs/Gold">{{ 'navbar.goldPMAssaying' | translate }}</a></li>
-            <!-- Optional -->
-            <!-- <li><a class="dropdown-item" routerLink="/igs/testing">{{ 'navbar.assayingTesting' | translate }}</a></li> -->
-            <!-- <li><a class="dropdown-item" routerLink="/igs/lab">{{ 'navbar.labAuditing' | translate }}</a></li> -->
+          </ul>
+        </li>
+
+        <!-- Reference -->
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link" ngbDropdownToggle style="cursor: pointer;">
+            {{ 'navbar.reference' | translate }}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+            <li><a class="dropdown-item" routerLink="/igs/projects">{{ 'navbar.projects' | translate }}</a></li>
+            <li><a class="dropdown-item" routerLink="/igs/clients">{{ 'navbar.clients' | translate }}</a></li>
           </ul>
         </li>
 
         <!-- Met Testing -->
         <li class="nav-item dropdown" ngbDropdown>
-          <a class="nav-link" ngbDropdownToggle style="cursor: pointer;">{{ 'navbar.metTesting' | translate }}</a>
+          <a class="nav-link" ngbDropdownToggle style="cursor: pointer;">
+            {{ 'navbar.metTesting' | translate }}
+          </a>
           <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
             <li><a class="dropdown-item" routerLink="/igs/preparation">{{ 'navbar.samplePreparation' | translate }}</a></li>
             <li><a class="dropdown-item" routerLink="/igs/Communition">{{ 'navbar.communitionTesting' | translate }}</a></li>
@@ -72,15 +90,6 @@
           </ul>
         </li>
 
-        <!-- Reference -->
-        <!-- <li class="nav-item dropdown" ngbDropdown>
-          <a class="nav-link" ngbDropdownToggle style="cursor: pointer;">{{ 'navbar.reference' | translate }}</a>
-          <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-            <li><a class="dropdown-item" routerLink="/igs/projects">{{ 'navbar.projects' | translate }}</a></li>
-            <li><a class="dropdown-item" routerLink="/igs/clients">{{ 'navbar.clients' | translate }}</a></li>
-          </ul>
-        </li> -->
-
         <!-- News -->
         <li class="nav-item">
           <a class="nav-link" routerLink="/igs/news">{{ 'navbar.news' | translate }}</a>
@@ -92,23 +101,19 @@
         </li>
       </ul>
 
-      <!-- Login button -->
-      <!-- Right side: show login or user icon -->
+      <!-- Login / User Icon -->
       <div class="ms-auto me-3">
         <ng-container *ngIf="isLoggedIn; else loginButton">
           <button class="btn user-icon-btn" (click)="navigateToDemande()" title="Go to your dashboard">
             <i class="fas fa-user-circle fa-lg"></i>
           </button>
         </ng-container>
-      
         <ng-template #loginButton>
           <a routerLink="/account/login" class="btn login-btn">
             <i class="fas fa-sign-in-alt me-1"></i> Login
           </a>
         </ng-template>
       </div>
-      
-
     </div>
   </div>
 </nav>

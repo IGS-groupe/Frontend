@@ -1,76 +1,128 @@
 <app-navbar></app-navbar>
+<br /><br /><br />
 
 <main class="environmental-page">
 
   <!-- 🔶 Hero Section -->
   <section id="env-hero" class="hero-section fade-up-card">
-    <img src="assets/images/small/solution.jpeg" alt="Environmental Solutions Hero" class="hero-bg" />
+    <img src="assets/images/small/solution.jpeg" alt="Environmental Solutions Hero" class="hero-bg grayscale-hover" />
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="hero-title">Environmental Solutions</h1>
     </div>
   </section>
 
-  <!-- 🔶 Introduction -->
-  <section id="env-intro" class="section bg-white fade-up-card">
+  <!-- 🔶 01. Environmental Solutions (image on left) -->
+  <section id="env-solution1" class="section fade-up-card bg-white">
     <div class="container">
-      <div class="row align-items-center gy-4">
-        <div class="col-lg-6">
-          <h2 class="section-title mb-4">Environmental Solutions</h2>
-          <p class="lead mb-3">
-            IGS Environment Group offers specialized consulting and support across all phases of industrial project development. Our experts bring deep knowledge and proven techniques to help you mitigate environmental impacts and stay compliant.
+      <!-- Title pulled out of the flex -->
+      <h2 class="section-title mb-4">Environmental Solutions</h2>
+      <div class="media-section align-paragraph">
+        <div class="media-image">
+          <img
+            src="assets/images/small/solution.jpeg"
+            alt="Environmental Process"
+            class="img-fluid rounded shadow-sm grayscale-hover"
+          />
+        </div>
+        <div class="media-content">
+          <p class="lead">
+            IGS Environment Group offers specialized consulting and support across all phases of
+            industrial project development. Our experts bring deep knowledge and proven techniques
+            to help you mitigate environmental impacts and stay compliant.
           </p>
-          <ul class="list-unstyled text-muted">
+          <ul>
             <li><i class="mdi mdi-circle-medium text-success me-2"></i>Industrial emissions mitigation</li>
             <li><i class="mdi mdi-circle-medium text-success me-2"></i>Tailings management expertise</li>
             <li><i class="mdi mdi-circle-medium text-success me-2"></i>Soil decontamination & water treatment</li>
             <li><i class="mdi mdi-circle-medium text-success me-2"></i>Recycling & wastewater solutions</li>
             <li><i class="mdi mdi-circle-medium text-success me-2"></i>NORMs mapping and monitoring</li>
-            <li><i class="mdi mdi-circle-medium text-success me-2"></i>Best‑practice advising</li>
+            <li><i class="mdi mdi-circle-medium text-success me-2"></i>Best-practice advising</li>
             <li><i class="mdi mdi-circle-medium text-success me-2"></i>Consumable recycling & recovery</li>
           </ul>
-        </div>
-        <div class="col-lg-6 text-center">
-          <img src="assets/images/small/solution.jpeg" alt="Environmental Process" class="img-fluid rounded shadow-sm img-bordered" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 🔶 Our Capabilities -->
-  <section id="env-capabilities" class="section bg-light fade-up-card">
+  <!-- 🔶 02. Environmental Solutions (image on right) -->
+  <section id="env-solution2" class="section fade-up-card bg-light">
     <div class="container">
-      <h2 class="section-title text-center mb-4">Our Capabilities</h2>
+      <h2 class="section-title mb-4">Environmental Solutions</h2>
+      <div class="media-section reverse align-paragraph">
+        <div class="media-image">
+          <img
+            src="assets/images/small/solution.jpeg"
+            alt="Environmental Process"
+            class="img-fluid rounded shadow-sm grayscale-hover"
+          />
+        </div>
+        <div class="media-content">
+          <p class="lead">
+            IGS Environment Group offers specialized consulting and support across all phases of
+            industrial project development. Our experts bring deep knowledge and proven techniques
+            to help you mitigate environmental impacts and stay compliant.
+          </p>
+          <ul>
+            <li><i class="mdi mdi-circle-medium text-success me-2"></i>Industrial emissions mitigation</li>
+            <li><i class="mdi mdi-circle-medium text-success me-2"></i>Tailings management expertise</li>
+            <li><i class="mdi mdi-circle-medium text-success me-2"></i>Soil decontamination & water treatment</li>
+            <li><i class="mdi mdi-circle-medium text-success me-2"></i>Recycling & wastewater solutions</li>
+            <li><i class="mdi mdi-circle-medium text-success me-2"></i>NORMs mapping and monitoring</li>
+            <li><i class="mdi mdi-circle-medium text-success me-2"></i>Best-practice advising</li>
+            <li><i class="mdi mdi-circle-medium text-success me-2"></i>Consumable recycling & recovery</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔶 03. Our Capabilities (highlight cards) -->
+  <section id="env-capabilities" class="section fade-up-card bg-white text-center">
+    <div class="container">
+      <h2 class="section-title mb-4">Our Capabilities</h2>
       <div class="row g-4">
-        <div class="col-sm-6 col-md-4 text-center">
-          <i class="mdi mdi-air-filter icon-3x mb-2 text-primary"></i>
-          <h5>Emission Controls</h5>
-          <p class="small text-muted">Design & implement advanced air pollution mitigation systems.</p>
+        <div class="col-sm-6 col-md-4">
+          <div class="card highlight-card p-3 grayscale-hover">
+            <i class="mdi mdi-air-filter icon-3x mb-2 text-primary"></i>
+            <h5>Emission Controls</h5>
+            <p class="small text-muted">Design & implement advanced air pollution mitigation systems.</p>
+          </div>
         </div>
-        <div class="col-sm-6 col-md-4 text-center">
-          <i class="mdi mdi-water icon-3x mb-2 text-primary"></i>
-          <h5>Water Treatment</h5>
-          <p class="small text-muted">Innovative approaches for wastewater purification and reuse.</p>
+        <div class="col-sm-6 col-md-4">
+          <div class="card highlight-card p-3 grayscale-hover">
+            <i class="mdi mdi-water icon-3x mb-2 text-primary"></i>
+            <h5>Water Treatment</h5>
+            <p class="small text-muted">Innovative approaches for wastewater purification and reuse.</p>
+          </div>
         </div>
-        <div class="col-sm-6 col-md-4 text-center">
-          <i class="mdi mdi-earth icon-3x mb-2 text-primary"></i>
-          <h5>Soil Remediation</h5>
-          <p class="small text-muted">In‑situ and ex‑situ techniques for contaminated land recovery.</p>
+        <div class="col-sm-6 col-md-4">
+          <div class="card highlight-card p-3 grayscale-hover">
+            <i class="mdi mdi-earth icon-3x mb-2 text-primary"></i>
+            <h5>Soil Remediation</h5>
+            <p class="small text-muted">In-situ and ex-situ techniques for contaminated land recovery.</p>
+          </div>
         </div>
-        <div class="col-sm-6 col-md-4 text-center">
-          <i class="mdi mdi-map-marker-radius icon-3x mb-2 text-primary"></i>
-          <h5>NORMs Mapping</h5>
-          <p class="small text-muted">Comprehensive survey and mapping of naturally occurring radioactive materials.</p>
+        <div class="col-sm-6 col-md-4">
+          <div class="card highlight-card p-3 grayscale-hover">
+            <i class="mdi mdi-map-marker-radius icon-3x mb-2 text-primary"></i>
+            <h5>NORMs Mapping</h5>
+            <p class="small text-muted">Comprehensive survey and mapping of radioactive materials.</p>
+          </div>
         </div>
-        <div class="col-sm-6 col-md-4 text-center">
-          <i class="mdi mdi-recycle icon-3x mb-2 text-primary"></i>
-          <h5>Recycling Programs</h5>
-          <p class="small text-muted">End‑to‑end strategies for material recovery and reuse.</p>
+        <div class="col-sm-6 col-md-4">
+          <div class="card highlight-card p-3 grayscale-hover">
+            <i class="mdi mdi-recycle icon-3x mb-2 text-primary"></i>
+            <h5>Recycling Programs</h5>
+            <p class="small text-muted">End-to-end strategies for material recovery and reuse.</p>
+          </div>
         </div>
-        <div class="col-sm-6 col-md-4 text-center">
-          <i class="mdi mdi-lightbulb-on-outline icon-3x mb-2 text-primary"></i>
-          <h5>Technical Advisory</h5>
-          <p class="small text-muted">Expert guidance on environmental regulations and best practices.</p>
+        <div class="col-sm-6 col-md-4">
+          <div class="card highlight-card p-3 grayscale-hover">
+            <i class="mdi mdi-lightbulb-on-outline icon-3x mb-2 text-primary"></i>
+            <h5>Technical Advisory</h5>
+            <p class="small text-muted">Expert guidance on environmental regulations and best practices.</p>
+          </div>
         </div>
       </div>
     </div>

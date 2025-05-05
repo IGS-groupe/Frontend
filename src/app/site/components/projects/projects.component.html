@@ -1,48 +1,50 @@
+<!-- projects.component.html -->
 <app-navbar></app-navbar>
-<br><br><br>
+<br /><br /><br />
 
 <!-- 🔷 Hero Section -->
-<section class="section" id="propos" style="height: 60vh;">
+<section id="propos" class="section position-relative d-flex align-items-center justify-content-center" style="height:60vh;">
   <img src="assets/images/small/pr1.jpg" alt="Project Background" class="full-width" />
-  <div class="container">
-    <div class="row">
-      <h1 class="titre text-center">Projects</h1>
-    </div>
+  <div class="container text-center position-relative" style="z-index:2;">
+    <h1 class="titre">Projects</h1>
   </div>
 </section>
 
-<!-- 🔷 Projects Section -->
+<!-- 🔷 Projects Showcase -->
 <section class="section bg-white py-5">
   <div class="container">
+    <!-- Header -->
     <div class="row justify-content-center mb-5">
-        <div class="col-lg-9 text-center">
-          <h2 class="highlight-title animate-title">Our Impact in Action</h2>
-          <p class="highlight-subtitle">A showcase of the projects that define our innovation, precision, and commitment.</p>
-        </div>
+      <div class="col-lg-8 text-center">
+        <h2 class="highlight-title animate-title">Our Impact in Action</h2>
+        <p class="highlight-subtitle">
+          A showcase of the projects that define our innovation, precision, and commitment.
+        </p>
       </div>
-      
+    </div>
 
+    <!-- Project Cards Grid -->
     <div class="row g-4">
-      <!-- Project Card 1 -->
+      <!-- Card 1 -->
       <div class="col-xl-4 col-md-6 fade-up-card">
-        <div class="project-card">
-          <img src="assets/images/small/ip1.jpg" alt="Project 1" class="project-image" />
+        <div class="project-card h-100">
+          <img src="assets/images/small/ip1.jpg" alt="Lab Auditing" class="project-image" />
           <div class="project-content">
-            <h5>Lab auditing and operation</h5>
+            <h5>Lab Auditing & Operation</h5>
             <ul>
-              <li>Audit, review QA/QC practices and Interim operation of Cu-Zn plant analytical Lab</li>
+              <li>Audit, review QA/QC practices and interim operation of Cu-Zn plant analytical lab</li>
               <li>Base engineering for the commissioning of 1 tpd demo-plant (hydrometallurgical extraction)</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- Project Card 2 -->
+      <!-- Card 2 -->
       <div class="col-xl-4 col-md-6 fade-up-card">
-        <div class="project-card">
-          <img src="assets/images/small/ip2.jpg" alt="Project 2" class="project-image" />
+        <div class="project-card h-100">
+          <img src="assets/images/small/ip2.jpg" alt="Hydromet Tech" class="project-image" />
           <div class="project-content">
-            <h5>Hydromet Process Tech Development</h5>
+            <h5>Hydromet Process Development</h5>
             <ul>
               <li>Vanadium solvent extraction with focus on Fe/Cr efficient removal</li>
             </ul>
@@ -50,12 +52,12 @@
         </div>
       </div>
 
-      <!-- Project Card 3 -->
+      <!-- Card 3 -->
       <div class="col-xl-4 col-md-6 fade-up-card">
-        <div class="project-card">
-          <img src="assets/images/small/ip3.jpg" alt="Project 3" class="project-image" />
+        <div class="project-card h-100">
+          <img src="assets/images/small/ip3.jpg" alt="Tech Review" class="project-image" />
           <div class="project-content">
-            <h5>Processing Technology Review</h5>
+            <h5>Processing Tech Review</h5>
             <ul>
               <li>Nb-Apatite-RE-Uranium Project: Critical review and roadmap</li>
             </ul>
@@ -63,24 +65,24 @@
         </div>
       </div>
 
-      <!-- Project Card 4 -->
+      <!-- Card 4 -->
       <div class="col-xl-4 col-md-6 fade-up-card">
-        <div class="project-card">
-          <img src="assets/images/small/ip4.jpg" alt="Project 4" class="project-image" />
+        <div class="project-card h-100">
+          <img src="assets/images/small/ip4.jpg" alt="Team Involvement" class="project-image" />
           <div class="project-content">
-            <h5>Team Member Involvements</h5>
+            <h5>Team Member Involvement</h5>
             <ul>
-              <li>Niobec Mine due diligence, Titanium tech review, radioactivity mapping</li>
-              <li>Met testing, Rare Earth & Niobium processing</li>
+              <li>Niobec Mine due diligence, titanium tech review, radioactivity mapping</li>
+              <li>Met testing, rare earth & niobium processing</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- Project Card 5 -->
+      <!-- Card 5 -->
       <div class="col-xl-4 col-md-6 fade-up-card">
-        <div class="project-card">
-          <img src="assets/images/small/ip5.jpg" alt="Project 5" class="project-image" />
+        <div class="project-card h-100">
+          <img src="assets/images/small/ip5.jpg" alt="Environmental Solutions" class="project-image" />
           <div class="project-content">
             <h5>Environmental Solutions</h5>
             <ul>
@@ -90,6 +92,8 @@
           </div>
         </div>
       </div>
+
+      <!-- add more cards here as needed -->
     </div>
   </div>
 </section>

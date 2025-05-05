@@ -1,8 +1,14 @@
-import { Component, OnInit, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  ElementRef,
+  Renderer2
+} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { AuthService } from 'src/app/account/auth/services/auth.service'; // Adjust the path as necessary
+import { AuthService } from 'src/app/account/auth/services/auth.service';
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +16,12 @@ import { AuthService } from 'src/app/account/auth/services/auth.service'; // Adj
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit, AfterViewInit {
-  contactForm: FormGroup;
+  contactForm!: FormGroup;
+
+  locations = [/* your locations here */];
+  states = [/* your states here */];
+  industries = [/* your industries here */];
+  enquiryTypes = [/* your enquiry types here */];
 
   constructor(
     private authService: AuthService,
@@ -23,52 +34,62 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.contactForm = this.formBuilder.group({
-      name: ['', [Validators.required]],
-      company: [''],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      dateOfComplaint: ['', [Validators.required]],
-      issueDescription: ['', [Validators.required]],
-      contactPerson: ['']
+      phone: [''],
+      serviceLocation: ['', Validators.required],
+      stateProvince: [''],
+      serviceIndustry: [''],
+      enquiryType: ['', Validators.required],
+      message: ['', Validators.required],
+      privacyPolicy: [false, Validators.requiredTrue]
     });
   }
 
   ngAfterViewInit(): void {
-    const elements = this.el.nativeElement.querySelectorAll('.fade-up-card');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.renderer.addClass(entry.target, 'fade-up-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    elements.forEach((el: Element) => observer.observe(el));
+    const cards = this.el.nativeElement.querySelectorAll('.fade-up-card');
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.renderer.addClass(entry.target, 'fade-up-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    cards.forEach((card: Element) => observer.observe(card));
   }
 
   onSubmit(): void {
-    if (this.contactForm.valid) {
-      this.authService.createContact(this.contactForm.value).subscribe({
-        next: (response) => {
-          console.log('Contact saved', response);
-          this.toastr.success("", 'Votre message envoyer avec succès', {
-            positionClass: 'toast-top-center',
-            timeOut: 3000,
-            closeButton: true
-          });
-          this.router.navigate(['/']);
-        },
-        error: (error) => {
-          console.error('Error saving contact', error);
-        }
-      });
-    } else {
-      this.toastr.error("", 'Veuillez vérifier votre formulaire', {
+    if (this.contactForm.invalid) {
+      this.toastr.error('', 'Veuillez vérifier votre formulaire', {
         positionClass: 'toast-top-center',
         timeOut: 3000,
         closeButton: true
       });
+      return;
     }
+
+    this.authService.createContact(this.contactForm.value).subscribe({
+      next: res => {
+        this.toastr.success('', 'Votre message envoyé avec succès', {
+          positionClass: 'toast-top-center',
+          timeOut: 3000,
+          closeButton: true
+        });
+        this.router.navigate(['/']);
+      },
+      error: err => {
+        console.error('Error saving contact', err);
+        this.toastr.error('', 'Une erreur est survenue, réessayez plus tard', {
+          positionClass: 'toast-top-center',
+          timeOut: 3000,
+          closeButton: true
+        });
+      }
+    });
   }
 }

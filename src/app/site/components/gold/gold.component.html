@@ -3,7 +3,7 @@
 
 <main class="gold-page">
 
-  <!-- 🔶 Hero Section (original, untouched) -->
+  <!-- 🔶 Hero Section -->
   <section id="propos" class="hero-section">
     <img src="assets/images/small/gold.jpeg" alt="Background Image" class="hero-bg" />
     <div class="hero-overlay"></div>
@@ -12,7 +12,7 @@
     </div>
   </section>
 
-  <!-- 🔶 Geochemistry Highlights as clickable cards -->
+  <!-- 🔶 Geochemistry Highlights -->
   <section id="highlights" class="section fade-up-card bg-light">
     <div class="container">
       <h2 class="section-title text-center mb-4">
@@ -24,9 +24,7 @@
             <i class="mdi mdi-hammer icon-2x text-primary mb-2"></i>
             <h5>01. Sample Preparation</h5>
             <p class="small text-muted">
-              IGS, centre d’expertise et d’innovation, réalise un concassage et un broyage de haute précision,
-              suivis d’une homogénéisation rigoureuse et d’une digestion acide optimisée pour garantir
-              des analyses géochimiques d’une exactitude maximale.
+              Concassage et broyage de haute précision pour des analyses exactes.
             </p>
           </div>
         </div>
@@ -35,8 +33,7 @@
             <i class="mdi mdi-cogs icon-2x text-primary mb-2"></i>
             <h5>02. Core Service</h5>
             <p class="small text-muted">
-              Innover constamment avec intégrité : protocoles géochimiques sur‑mesure,
-              transparence totale et rapidité d’exécution.
+              Protocoles géochimiques sur-mesure avec intégrité et rapidité.
             </p>
           </div>
         </div>
@@ -45,18 +42,16 @@
             <i class="mdi mdi-earth icon-2x text-primary mb-2"></i>
             <h5>03. Generative <span>Exploration</span></h5>
             <p class="small text-muted">
-              Techniques avancées de data‑mining et modélisation pour guider vos
-              opérations et évaluer la qualité des gisements.
+              Techniques avancées de data-mining et modélisation.
             </p>
           </div>
         </div>
         <div class="col-sm-6 col-lg-3">
           <div class="card highlight-card p-3 text-center" (click)="scrollToSection('base-metals')">
             <i class="mdi mdi-gold icon-2x text-primary mb-2"></i>
-            <h5>Base Metals <span>Analysis</span></h5>
+            <h5>04. Base Metals <span>Analysis</span></h5>
             <p class="small text-muted">
-              Priorité à la satisfaction client : rapports précis et recommandations pratiques
-              à chaque étape de votre projet.
+              Rapports précis et recommandations pratiques.
             </p>
           </div>
         </div>
@@ -67,10 +62,7 @@
   <!-- 🔶 Image Carousel -->
   <section class="section carousel-section fade-up-card">
     <div class="container">
-      <ngb-carousel
-        [showNavigationIndicators]="showNavigationIndicators"
-        [showNavigationArrows]="showNavigationArrows"
-      >
+      <ngb-carousel [showNavigationIndicators]="showNavigationIndicators" [showNavigationArrows]="showNavigationArrows">
         <ng-template ngbSlide>
           <img src="assets/images/small/gol1.jpg" alt="Slide 1" class="carousel-img" />
         </ng-template>
@@ -78,23 +70,23 @@
           <img src="assets/images/small/gol2.jpg" alt="Slide 2" class="carousel-img" />
         </ng-template>
         <ng-template ngbSlide>
-          <img src="assets/images/small/gol3.jpg" alt="Slide 3" class="carousel-img" />
+          <img src="assets-images/small/gol3.jpg" alt="Slide 3" class="carousel-img" />
         </ng-template>
       </ngb-carousel>
     </div>
   </section>
 
-  <!-- 🔶 Sample Preparation -->
+  <!-- 🔶 01. Sample Preparation (image on left) -->
   <section id="sample-prep" class="section fade-up-card bg-light">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 mb-4 mb-md-0">
-          <img src="assets/images/small/introduction.jpg" alt="Sample Preparation" class="img-fluid rounded shadow-sm" />
+          <img src="assets/images/small/introduction.jpg"
+               alt="Sample Preparation"
+               class="img-fluid rounded shadow-sm grayscale-hover" />
         </div>
         <div class="col-md-6">
-          <h2 class="section-title text-center mb-4">
-            01. <span>Sample Preparation</span>
-          </h2>
+          <h2 class="section-title text-center mb-4">01. <span>Sample Preparation</span></h2>
           <p class="lead text-center">
             IGS, centre d’expertise et d’innovation, réalise un concassage et un broyage de haute précision,
             suivis d’une homogénéisation rigoureuse et d’une digestion acide optimisée pour garantir
@@ -105,48 +97,38 @@
     </div>
   </section>
 
-  <!-- 🔶 Core Service -->
+  <!-- 🔶 02. Core Service (un seul paragraphe) -->
   <section id="core-service" class="section fade-up-card">
     <div class="container">
-      <h2 class="section-title text-center mb-4">
-        02. <span>Core Service</span>
-      </h2>
-      <div class="row g-4">
-        <div class="col-md-4 text-center">
-          <h3>Créativité</h3>
-          <p class="lead">
-            Innover constamment pour développer des protocoles géochimiques sur‑mesure.
-          </p>
+      <div class="row align-items-center">
+        <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+          <img src="assets/images/small/introduction.jpg"
+               alt="Core Service"
+               class="img-fluid rounded shadow-sm grayscale-hover" />
         </div>
-        <div class="col-md-4 text-center">
-          <h3>Intégrité</h3>
-          <p class="lead">
-            Respect strict des normes internationales et transparence totale des résultats.
-          </p>
-        </div>
-        <div class="col-md-4 text-center">
-          <h3>Engagement</h3>
-          <p class="lead">
-            Mettre notre expertise au service de votre succès en garantissant fiabilité et réactivité.
+        <div class="col-md-6 order-md-1">
+          <h2 class="section-title text-center mb-4">02. <span>Core Service</span></h2>
+          <p class="lead text-center">
+            IGS s’engage à innover constamment en développant des protocoles géochimiques sur-mesure, à respecter strictement les normes internationales et à garantir fiabilité, transparence et réactivité pour mener à bien vos projets d’analyse.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 🔶 Generative Exploration -->
+  <!-- 🔶 03. Generative Exploration (image on left) -->
   <section id="exploration" class="section fade-up-card bg-light">
     <div class="container">
-      <h2 class="section-title text-center mb-4">
-        03. <span>Generative Exploration</span>
-      </h2>
       <div class="row align-items-center">
         <div class="col-md-6 mb-4 mb-md-0">
-          <img src="assets/images/small/introduction.jpg" alt="Generative Exploration" class="img-fluid rounded shadow-sm" />
+          <img src="assets/images/small/introduction.jpg"
+               alt="Generative Exploration"
+               class="img-fluid rounded shadow-sm grayscale-hover" />
         </div>
         <div class="col-md-6">
+          <h2 class="section-title text-center mb-4">03. <span>Generative Exploration</span></h2>
           <p class="lead text-center">
-            Exploiter des techniques avancées de data‑mining et de modélisation pour guider vos
+            Exploiter des techniques avancées de data-mining et de modélisation pour guider vos
             opérations d’exploration et évaluer la qualité des gisements.
           </p>
         </div>
@@ -154,27 +136,31 @@
     </div>
   </section>
 
-  <!-- 🔶 Base Metals Analysis -->
-  <section id="base-metals" class="section fade-up-card text-center">
+  <!-- 🔶 04. Base Metals Analysis (image on right) -->
+  <section id="base-metals" class="section fade-up-card">
     <div class="container">
-      <h2 class="section-title mb-4">
-        Base Metals <span>Analysis</span>
-      </h2>
-      <p class="lead">
-        Priorité à la satisfaction client : rapports précis et recommandations pratiques
-        à chaque étape de votre projet.
-      </p>
+      <div class="row align-items-center">
+        <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+          <img src="assets/images/small/introduction.jpg"
+               alt="Base Metals Analysis"
+               class="img-fluid rounded shadow-sm grayscale-hover" />
+        </div>
+        <div class="col-md-6 order-md-1">
+          <h2 class="section-title text-center mb-4">04. <span>Base Metals</span> Analysis</h2>
+          <p class="lead text-center">
+            Priorité à la satisfaction client : rapports précis et recommandations pratiques à chaque étape de votre projet.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- 🔶 Precious Metals Analysis (highlighted importance) -->
+  <!-- 🔶 Precious Metals Analysis -->
   <section id="precious-title" class="section fade-up-card precious-highlight bg-primary text-white text-center py-5">
     <div class="container">
-      <h2 class="section-title text-white mb-3">
-        Precious Metals <span>Analysis</span>
-      </h2>
+      <h2 class="section-title text-white mb-3">Precious Metals <span>Analysis</span></h2>
       <p class="lead">
-        Découvrez nos services premium d’analyse des métaux précieux : fiabilité maximale, délais optimisés,
+        Découvrez nos services premium d’analyse des métaux précieux : fiabilité maximale, délais optimisés,
         et rapports détaillés conformes aux normes internationales.
       </p>
     </div>
@@ -183,21 +169,17 @@
   <!-- 🔶 Corporate Portrait -->
   <section id="corporate" class="section fade-up-card bg-white text-center">
     <div class="container">
-      <h2 class="section-title mb-4">
-        Portrait d'<span>entreprise</span>
-      </h2>
+      <h2 class="section-title mb-4">Portrait d'<span>entreprise</span></h2>
       <div class="row justify-content-center">
         <div class="col-lg-6">
           <div class="card border-0 shadow-sm p-4">
-            <img
-              src="assets/images/small/tech.jpeg"
-              alt="Portrait"
-              class="rounded-circle mx-auto mb-3"
-              style="width:120px;height:120px;object-fit:cover;"
-            />
+            <img src="assets/images/small/tech.jpeg"
+                 alt="Portrait"
+                 class="rounded-circle mx-auto mb-3"
+                 style="width:120px;height:120px;object-fit:cover;" />
             <p class="lead fs-4 mt-3">
               IGS se positionne comme votre partenaire privilégié, alliant rigueur scientifique
-              et service sur‑mesure pour répondre à vos enjeux industriels.
+              et service sur-mesure pour répondre à vos enjeux industriels.
             </p>
           </div>
         </div>
@@ -208,13 +190,11 @@
   <!-- 🔶 Quality Policy -->
   <section id="quality-policy" class="section fade-up-card bg-light text-center">
     <div class="container">
-      <h2 class="section-title mb-4">
-        Politique <span>qualité</span>
-      </h2>
+      <h2 class="section-title mb-4">Politique <span>qualité</span></h2>
       <div class="row justify-content-center">
         <div class="col-md-8">
           <p class="lead fs-4">
-            IGS met en œuvre deux systèmes de management de la qualité (ISO 9001 & IATF 16949) pour garantir
+            IGS met en œuvre deux systèmes de management de la qualité (ISO 9001 & IATF 16949) pour garantir
             conformité, traçabilité et amélioration continue de vos analyses.
           </p>
         </div>
@@ -225,9 +205,7 @@
   <!-- 🔶 Safety & Environment -->
   <section id="safety-environment" class="section fade-up-card bg-white text-center">
     <div class="container">
-      <h2 class="section-title mb-4">
-        Santé, Sécurité <span>&</span> Environnement
-      </h2>
+      <h2 class="section-title mb-4">Santé, Sécurité <span>&</span> Environnement</h2>
       <div class="row g-4">
         <div class="col-md-4">
           <i class="mdi mdi-hospital-building icon-3x text-primary mb-2"></i>
@@ -247,7 +225,7 @@
           <i class="mdi mdi-leaf icon-3x text-primary mb-2"></i>
           <h5>Environnement</h5>
           <p class="small text-muted fs-4">
-            Engagement durable : gestion responsable des déchets et réduction de notre empreinte carbone.
+            Engagement durable : gestion responsable des déchets et réduction de notre empreinte carbone.
           </p>
         </div>
       </div>

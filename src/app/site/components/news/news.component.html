@@ -1,9 +1,12 @@
 <app-navbar></app-navbar>
-<br><br><br>
 
-<!-- 🔷 Hero Section -->
+<!-- 🔷 Hero Section (unchanged) -->
 <section class="section" id="propos" style="height: 60vh;">
-  <img src="assets/images/small/news.jpg" alt="News Background" class="full-width" />
+  <img
+    src="assets/images/small/news.jpg"
+    alt="News Background"
+    class="full-width"
+  />
   <div class="container">
     <div class="row">
       <h1 class="titre text-center">News</h1>
@@ -11,36 +14,68 @@
   </div>
 </section>
 
-<!-- 🔷 News Section -->
-<section class="section bg-white py-5" id="features">
+<!-- 🔷 News Grid + Pagination -->
+<section class="section bg-white py-5">
   <div class="container">
+    <div class="row g-4">
+      <div
+        class="col-lg-4 col-md-6 fade-up-card"
+        *ngFor="let item of newsItems"
+      >
+        <div class="news-card d-flex flex-column h-100 p-4">
+          <!-- Category Badge -->
+          <div class="mb-3">
+            <span class="badge-category">CORPORATE NEWS</span>
+          </div>
 
-    <!-- Title + Subtitle -->
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-9 text-center">
-        <h2 class="highlight-title animate-title">Latest Developments & Events</h2>
-        <p class="highlight-subtitle">Follow our latest contributions, recognitions, and industry appearances around the world.</p>
-      </div>
-    </div>
-
-    <!-- News Item -->
-    <div class="row align-items-center fade-up-card">
-      <div class="col-md-6 col-sm-8">
-        <div class="news-card">
-          <img src="assets/images/small/news1.jpg" alt="IGS News" class="news-image img-bordered img-fluid mx-auto d-block" />
-        </div>
-      </div>
-      <div class="col-md-5 ms-auto">
-        <div class="news-content mt-4 mt-md-0">
-          <h4 class="mb-3">IGS meets the US Senate</h4>
-          <p class="text-muted">
-            IGS, represented by Mr. Ahmed Boujila (President), was part of the Central American Nickel team meeting with the US Senate members in charge of the critical minerals program.
+          <!-- Title & Date -->
+          <h3 class="news-title mb-2">{{ item.title }}</h3>
+          <p class="news-date mb-4">
+            <i class="bx bx-calendar me-1"></i>
+            {{ item.date | date: 'MMMM d, y' }}
           </p>
-          <p class="mb-0"><i class="bx bx-calendar me-1"></i> 21 August, 2020</p>
+
+          <!-- Read More with horizontal lines -->
+          <div class="readmore-container mt-auto">
+            <a
+              [routerLink]="['/news', item.slug]"
+              class="btn-readmore"
+            >
+              READ MORE →
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- Pagination -->
+    <nav aria-label="News pagination" class="mt-5">
+      <ul class="pagination justify-content-center">
+        <li
+          class="page-item"
+          [class.disabled]="currentPage === 1"
+        >
+          <a class="page-link" (click)="goToPage(currentPage - 1)">
+            « Prev
+          </a>
+        </li>
+        <li
+          class="page-item"
+          *ngFor="let pg of pages"
+          [class.active]="pg === currentPage"
+        >
+          <a class="page-link" (click)="goToPage(pg)">{{ pg }}</a>
+        </li>
+        <li
+          class="page-item"
+          [class.disabled]="currentPage === totalPages"
+        >
+          <a class="page-link" (click)="goToPage(currentPage + 1)">
+            Next »
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </section>
 

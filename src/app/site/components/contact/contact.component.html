@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
-<br><br>
+<br /><br />
 
-<!-- 🔷 Hero Section -->
+<!-- 🔷 Hero Section 
 <section class="section" id="propos" style="height: 60vh;">
   <img src="assets/images/small/energy1.jpeg" alt="Hero Background" class="full-width" />
   <div class="container">
@@ -10,15 +10,22 @@
     </div>
   </div>
 </section>
-
+-->
 <!-- 🔷 Intro Section -->
+ <br/> <br/>   
 <section class="section fade-up-card">
   <div class="container text-center">
-    <h2 class="highlight-title animate-title">Let's discuss how to optimize your results!</h2>
+    <h2 class="highlight-title animate-title">
+      Let's discuss how to optimize your results!
+    </h2>
     <p class="highlight-subtitle">
-      Our solution-oriented team at IGS offers a range of services and deep expertise in mineral processing optimization. With 20+ years of innovation, we're here to help.
+      Our solution-oriented team at IGS offers a range of services and deep expertise in
+      mineral processing optimization. With 20+ years of innovation, we're here to help.
     </p>
-    <p>Contact us to discuss your challenges, and we’ll provide the right solutions tailored to your operations.</p>
+    <p>
+      Contact us to discuss your challenges, and we’ll provide the right solutions tailored
+      to your operations.
+    </p>
   </div>
 </section>
 
@@ -27,28 +34,36 @@
   <div class="container">
     <div class="section-header text-center mb-5">
       <h2 class="highlight-title">Why Choose IGS</h2>
-      <p class="highlight-subtitle">Explore key advantages that make us a reliable partner.</p>
+      <p class="highlight-subtitle">
+        Explore key advantages that make us a reliable partner.
+      </p>
     </div>
     <div class="row g-4 text-center justify-content-center">
       <div class="col-md-4">
         <div class="info-box p-4 shadow-sm rounded h-100">
           <i class="fa fa-cogs icon-feature mb-3"></i>
           <h5 class="fw-bold">Custom Process Design</h5>
-          <p class="text-muted">Tailored engineering solutions for your mineral challenges.</p>
+          <p class="text-muted">
+            Tailored engineering solutions for your mineral challenges.
+          </p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="info-box p-4 shadow-sm rounded h-100">
           <i class="fa fa-flask icon-feature mb-3"></i>
-          <h5 class="fw-bold">Innovative R&D</h5>
-          <p class="text-muted">Leverage 20+ years of innovation and research expertise.</p>
+          <h5 class="fw-bold">Innovative R&amp;D</h5>
+          <p class="text-muted">
+            Leverage 20+ years of innovation and research expertise.
+          </p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="info-box p-4 shadow-sm rounded h-100">
           <i class="fa fa-globe icon-feature mb-3"></i>
           <h5 class="fw-bold">Global Experience</h5>
-          <p class="text-muted">We’ve worked with partners and clients all over the world.</p>
+          <p class="text-muted">
+            We’ve worked with partners and clients all over the world.
+          </p>
         </div>
       </div>
     </div>
@@ -60,7 +75,9 @@
   <div class="container">
     <div class="section-header text-center mb-5">
       <h2 class="highlight-title">Get in Touch</h2>
-      <p class="highlight-subtitle">Reach out directly through our contact channels.</p>
+      <p class="highlight-subtitle">
+        Reach out directly through our contact channels.
+      </p>
     </div>
     <div class="row g-4 justify-content-center">
       <div class="col-md-5">
@@ -94,14 +111,17 @@
   <div class="container">
     <div class="section-header text-center mb-4">
       <h2 class="highlight-title">Our Location</h2>
-      <p class="highlight-subtitle">Visit our main office or find us on the map below.</p>
+      <p class="highlight-subtitle">
+        Visit our main office or find us on the map below.
+      </p>
     </div>
     <div class="card">
-      <iframe class="card-map"
-              src="https://maps.google.com/maps?q=45.36105684619159,-73.5365741576717&hl=en&z=14&amp;output=embed"
-              frameborder="0"
-              allowfullscreen>
-      </iframe>
+      <iframe
+        class="card-map"
+        src="https://maps.google.com/maps?q=45.36105684619159,-73.5365741576717&hl=en&z=14&amp;output=embed"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
       <div class="card-footer">
         70 Goodfellow, Delson, QC, Canada
       </div>
@@ -109,56 +129,156 @@
   </div>
 </section>
 
-<!-- 🔷 Contact Form Section -->
-<section id="contact-us" class="section bg-light fade-up-card">
+<!-- 🔷 Contact Form Section (Updated) -->
+<section id="contact-us" class="bg-light py-5">
   <div class="container">
-    <div class="section-header text-center mb-4">
-      <h2 class="highlight-title">Send Us a Message</h2>
-      <p class="highlight-subtitle">We're happy to hear from you. Please fill out the form below.</p>
-    </div>
-    <div class="card">
-      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-        <div class="row p-4">
-          <!-- Left Column -->
-          <div class="col-md-6">
-            <div class="mb-3">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" class="form-control" formControlName="name" placeholder="Your name" required>
-            </div>
-            <div class="mb-3">
-              <label for="email">Your Email</label>
-              <input type="email" id="email" class="form-control" formControlName="email" placeholder="Your email" required>
-            </div>
-            <div class="mb-3">
-              <label for="issueDescription">Describe the Problem</label>
-              <textarea id="issueDescription" class="form-control" formControlName="issueDescription" rows="4" placeholder="Describe the Problem" required></textarea>
-            </div>
-          </div>
+    <!-- Section title -->
+    <h1 class="mb-4">Contact us</h1>
 
-          <!-- Right Column -->
-          <div class="col-md-6">
-            <div class="mb-3">
-              <label for="company">Your Business</label>
-              <input type="text" id="company" class="form-control" formControlName="company" placeholder="Your business">
-            </div>
-            <div class="mb-3">
-              <label for="dateOfComplaint">Date of Claim</label>
-              <input type="date" id="dateOfComplaint" class="form-control" formControlName="dateOfComplaint" required>
-            </div>
-            <div class="mb-3">
-              <label for="contactPerson">Contact Person</label>
-              <textarea id="contactPerson" class="form-control" formControlName="contactPerson" rows="4" placeholder="Contact person"></textarea>
-            </div>
-          </div>
+    <!-- Form -->
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="row g-3">
+        <!-- First Name -->
+        <div class="col-md-6">
+          <label for="firstName" class="form-label">First Name *</label>
+          <input
+            type="text"
+            id="firstName"
+            class="form-control"
+            formControlName="firstName"
+            required
+          />
+        </div>
 
-          <!-- Submit -->
-          <div class="col-12 text-center">
-            <button type="submit" class="btn btn-primary">Send</button>
+        <!-- Last Name -->
+        <div class="col-md-6">
+          <label for="lastName" class="form-label">Last Name *</label>
+          <input
+            type="text"
+            id="lastName"
+            class="form-control"
+            formControlName="lastName"
+            required
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email *</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            formControlName="email"
+            required
+          />
+        </div>
+
+        <!-- Phone -->
+        <div class="col-md-6">
+          <label for="phone" class="form-label">
+            Phone <span class="text-muted">(optional)</span>
+          </label>
+          <input
+            type="text"
+            id="phone"
+            class="form-control"
+            formControlName="phone"
+          />
+        </div>
+
+        <!-- Service Location -->
+        <div class="col-md-6">
+          <label for="serviceLocation" class="form-label">Service Location *</label>
+          <select
+            id="serviceLocation"
+            class="form-select"
+            formControlName="serviceLocation"
+            required
+          >
+            <option value="" disabled selected>Select location</option>
+            <option *ngFor="let loc of locations" [value]="loc">{{ loc }}</option>
+          </select>
+        </div>
+
+        <!-- State/Province -->
+        <div class="col-md-6">
+          <label for="stateProvince" class="form-label">State/Province</label>
+          <select
+            id="stateProvince"
+            class="form-select"
+            formControlName="stateProvince"
+          >
+            <option value="" disabled selected>–</option>
+            <option *ngFor="let st of states" [value]="st">{{ st }}</option>
+          </select>
+        </div>
+
+        <!-- Service Industry -->
+        <div class="col-md-6">
+          <label for="serviceIndustry" class="form-label">Service Industry</label>
+          <select
+            id="serviceIndustry"
+            class="form-select"
+            formControlName="serviceIndustry"
+          >
+            <option value="" disabled selected>Select industry</option>
+            <option *ngFor="let ind of industries" [value]="ind">{{ ind }}</option>
+          </select>
+        </div>
+
+        <!-- Type of enquiry -->
+        <div class="col-md-6">
+          <label for="enquiryType" class="form-label">Type of enquiry *</label>
+          <select
+            id="enquiryType"
+            class="form-select"
+            formControlName="enquiryType"
+            required
+          >
+            <option value="" disabled selected>Select type</option>
+            <option *ngFor="let t of enquiryTypes" [value]="t">{{ t }}</option>
+          </select>
+        </div>
+
+        <!-- Message -->
+        <div class="col-12">
+          <label for="message" class="form-label">Message *</label>
+          <textarea
+            id="message"
+            class="form-control"
+            formControlName="message"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Privacy Policy -->
+        <div class="col-12">
+          <div class="form-check">
+            <input
+              type="checkbox"
+              id="privacyPolicy"
+              class="form-check-input"
+              formControlName="privacyPolicy"
+              required
+            />
+            <label for="privacyPolicy" class="form-check-label">
+              I agree to the
+              <a href="/privacy-policy" target="_blank">Privacy Policy</a>
+              *
+            </label>
           </div>
         </div>
-      </form>
-    </div>
+
+        <!-- Submit Button -->
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">SUBMIT</button>
+        </div>
+      </div>
+    </form>
   </div>
 </section>
+
 
 <app-footer></app-footer>

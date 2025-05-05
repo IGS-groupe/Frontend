@@ -8,7 +8,7 @@ $text-color:       #333;
 $white:            #fff;
 $shadow:           rgba(0, 0, 0, 0.1);
 
-/* ===== Fade‑Up Scroll Animation ===== */
+/* ===== Fade-Up Scroll Animation ===== */
 .fade-up-card {
   opacity: 0;
   transform: translateY(40px);
@@ -76,11 +76,11 @@ $shadow:           rgba(0, 0, 0, 0.1);
 
 /* ===== Section Titles ===== */
 .section-title {
-  font-size: 2.5rem;         /* increased from 2rem */
+  font-size: 2.5rem;
   color: $primary-color;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 2.5rem;     /* a bit more spacing */
+  margin-bottom: 2.5rem;
   position: relative;
 
   &::after {
@@ -108,21 +108,21 @@ $shadow:           rgba(0, 0, 0, 0.1);
   }
 
   i {
-    font-size: 2.25rem;     /* slightly larger icon */
+    font-size: 2.25rem;
     color: $primary-color;
     margin-bottom: 0.75rem;
   }
 
   h5 {
-    font-size: 1.25rem;     /* increased from 1.125rem */
+    font-size: 1.25rem;
     margin-bottom: 0.75rem;
     color: $primary-color;
   }
 
   p {
-    font-size: 1rem;        /* increased from 0.9rem */
+    font-size: 1rem;
     color: lighten($text-color, 20%);
-    line-height: 1.5;       /* slightly looser */
+    line-height: 1.5;
   }
 }
 
@@ -134,6 +134,16 @@ $shadow:           rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 12px $shadow;
     max-height: 300px;
     object-fit: cover;
+  }
+}
+
+/* ===== Grayscale Hover Effect ===== */
+.grayscale-hover {
+  filter: grayscale(0);
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: grayscale(100%);
   }
 }
 
@@ -160,29 +170,29 @@ $shadow:           rgba(0, 0, 0, 0.1);
     flex: 1;
 
     h3, h4 {
-      font-size: 2rem;      /* increased from 1.75rem */
+      font-size: 2rem;
       color: $primary-color;
       margin-bottom: 1rem;
     }
 
     p {
       color: lighten($text-color, 20%);
-      font-size: 1.125rem;  /* increased from 1rem */
-      line-height: 1.75;    /* more breathing room */
+      font-size: 1.125rem;
+      line-height: 1.75;
     }
 
     .service-list > div {
       margin-bottom: 1rem;
 
       h5 {
-        font-size: 1.5rem;  /* bump up service titles */
+        font-size: 1.5rem;
         margin-bottom: 0.5rem;
         color: $primary-color;
       }
 
       p {
         margin: 0;
-        font-size: 1rem;    /* consistent body text size */
+        font-size: 1rem;
         color: lighten($text-color, 20%);
       }
     }
@@ -197,12 +207,12 @@ $shadow:           rgba(0, 0, 0, 0.1);
   padding: 4rem 1rem;
 
   h3, h4 {
-    font-size: 2.25rem;   /* larger headings */
+    font-size: 2.25rem;
     margin-bottom: 1rem;
   }
 
   p {
-    font-size: 1.125rem;  /* larger paragraph */
+    font-size: 1.125rem;
     line-height: 1.75;
   }
 }
@@ -213,7 +223,7 @@ $shadow:           rgba(0, 0, 0, 0.1);
   text-align: center;
 
   .titre, h3 {
-    font-size: 2.75rem;   /* increase main title */
+    font-size: 2.75rem;
     color: $primary-color;
   }
 }
@@ -227,14 +237,14 @@ $shadow:           rgba(0, 0, 0, 0.1);
   padding: 4rem 1rem;
 
   h4 {
-    font-size: 1.75rem;   /* larger subheadings */
+    font-size: 1.75rem;
     color: $primary-color;
     margin-bottom: 1rem;
   }
 
   p {
     color: lighten($text-color, 20%);
-    font-size: 1.125rem;  /* larger body text */
+    font-size: 1.125rem;
     line-height: 1.75;
   }
 
