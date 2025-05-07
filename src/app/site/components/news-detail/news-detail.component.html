@@ -1,0 +1,45 @@
+<!-- news.component.html -->
+
+<app-navbar></app-navbar>
+
+<main class="news-page">
+
+  <!-- 🔶 Hero Section -->
+  <section id="propos" class="hero-section">
+    <img src="assets/images/small/news.jpg" alt="News Background" class="full-width" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="titre">News</h1>
+    </div>
+  </section>
+
+  <!-- 🔶 Detail Content Section -->
+  <section class="section bg-white fade-up-card">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <!-- Text Column -->
+        <div class="col-md-6">
+          <h2 class="section-title">{{ title }}</h2>
+          <p class="text-muted mb-3">
+            <i class="bx bx-calendar me-1"></i>
+            {{ date | date: 'MMMM d, y' }}
+          </p>
+          <p class="text-muted mb-2"><strong>Slug:</strong> {{ slug }}</p>
+          <p class="text-muted">{{ content }}</p>
+        </div>
+
+        <!-- Image Column -->
+        <div class="col-md-6 text-center">
+          <div class="card shadow-sm">
+            <div class="card-body p-0">
+              <img [src]="image" alt="News Image" class="img-fluid img-bordered" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<app-footer></app-footer>

@@ -27,6 +27,7 @@ import { NewsComponent } from './components/news/news.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { IsoComponent } from './components/iso/iso.component';
 import { PdfViewerComponent } from './components/pdf-viewer/pdf-viewer.component';
+import { NewsDetailComponent } from './components/news-detail/news-detail.component';
 
 const routes: Routes = [
   {
@@ -157,6 +158,12 @@ const routes: Routes = [
   {
     path:'isopdf' , 
     component:PdfViewerComponent
+  
+  },
+  {
+    path:'news-detail' ,
+    component:NewsDetailComponent 
+    
   
   }
 ];

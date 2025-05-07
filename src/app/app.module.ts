@@ -22,6 +22,7 @@ import { ResetPasswordMessageComponent } from './account/auth/reset-password-mes
 import { ContactComponent } from './site/components/contact/contact.component';
 import { IsoComponent } from './site/components/iso/iso.component';
 
+
 export function createTranslateLoader(http: HttpClient): any {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
@@ -31,6 +32,7 @@ export function createTranslateLoader(http: HttpClient): any {
     AppComponent,
     ValidationComponent,
     ResetPasswordMessageComponent,
+
   
     
   ],

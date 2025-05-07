@@ -21,6 +21,8 @@
       <div
         class="col-lg-4 col-md-6 fade-up-card"
         *ngFor="let item of newsItems"
+        (click)="goToDetail(item)"
+        style="cursor: pointer; text-decoration: none; color: inherit;"
       >
         <div class="news-card d-flex flex-column h-100 p-4">
           <!-- Category Badge -->
@@ -37,12 +39,7 @@
 
           <!-- Read More with horizontal lines -->
           <div class="readmore-container mt-auto">
-            <a
-              [routerLink]="['/news', item.slug]"
-              class="btn-readmore"
-            >
-              READ MORE →
-            </a>
+            <span class="btn-readmore">READ MORE →</span>
           </div>
         </div>
       </div>
@@ -51,10 +48,7 @@
     <!-- Pagination -->
     <nav aria-label="News pagination" class="mt-5">
       <ul class="pagination justify-content-center">
-        <li
-          class="page-item"
-          [class.disabled]="currentPage === 1"
-        >
+        <li class="page-item" [class.disabled]="currentPage === 1">
           <a class="page-link" (click)="goToPage(currentPage - 1)">
             « Prev
           </a>
@@ -66,10 +60,7 @@
         >
           <a class="page-link" (click)="goToPage(pg)">{{ pg }}</a>
         </li>
-        <li
-          class="page-item"
-          [class.disabled]="currentPage === totalPages"
-        >
+        <li class="page-item" [class.disabled]="currentPage === totalPages">
           <a class="page-link" (click)="goToPage(currentPage + 1)">
             Next »
           </a>

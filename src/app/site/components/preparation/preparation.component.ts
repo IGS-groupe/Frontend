@@ -1,3 +1,5 @@
+// preparation.component.ts
+
 import {
   Component,
   OnInit,
@@ -13,10 +15,10 @@ import {
 })
 export class PreparationComponent implements OnInit, AfterViewInit {
   showNavigationIndicators = true;
-  showNavigationArrows = true;
+  showNavigationArrows      = true;
 
   constructor(
-    private elRef: ElementRef,
+    private elRef:    ElementRef,
     private renderer: Renderer2
   ) {}
 

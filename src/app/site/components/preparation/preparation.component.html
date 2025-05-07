@@ -1,13 +1,18 @@
+<!-- preparation.component.html -->
+
 <app-navbar></app-navbar>
 
 <main class="preparation-page">
 
-  <!-- 🔶 Hero Section -->
-  <section id="propos" class="hero-section">
-    <img src="assets/images/small/gold.jpeg" alt="Sample Preparation Hero" class="full-width" />
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="titre">Sample Preparation</h1>
+  <!-- 🔶 Actlabs-Style Hero Section -->
+  <section id="propos" class="locations-hero">
+    <img
+      src="/assets/images/small/gold.jpeg"
+      alt="Sample Preparation Hero"
+      class="hero-img"
+    />
+    <div class="hero-caption">
+      <h1 class="hero-title">Sample Preparation</h1>
     </div>
   </section>
 
@@ -22,22 +27,38 @@
             IGS offers diligent material handling and sample preparation at the start of the analytical services chain, comprising crushing, splitting, homogenization, and pulverizing of samples.
           </p>
           <p class="text-muted">
-            We use purpose‑built equipment and validated procedures to prevent segregation, contamination, and ensure full traceability of every sample.
+            We use purpose-built equipment and validated procedures to prevent segregation, contamination, and ensure full traceability of every sample.
           </p>
         </div>
+
         <!-- Carousel Column -->
         <div class="col-md-6 text-center">
           <div class="card shadow-sm">
             <div class="card-body p-0">
-              <ngb-carousel [showNavigationIndicators]="showNavigationIndicators" [showNavigationArrows]="showNavigationArrows">
+              <ngb-carousel
+                [showNavigationIndicators]="showNavigationIndicators"
+                [showNavigationArrows]="showNavigationArrows"
+              >
                 <ng-template ngbSlide>
-                  <img src="assets/images/small/prepa2.jpg" alt="Preparation Slide 1" class="img-fluid img-bordered" />
+                  <img
+                    src="assets/images/small/prepa2.jpg"
+                    alt="Preparation Slide 1"
+                    class="img-fluid img-bordered"
+                  />
                 </ng-template>
                 <ng-template ngbSlide>
-                  <img src="assets/images/small/prepa3.jpg" alt="Preparation Slide 2" class="img-fluid img-bordered" />
+                  <img
+                    src="assets/images/small/prepa3.jpg"
+                    alt="Preparation Slide 2"
+                    class="img-fluid img-bordered"
+                  />
                 </ng-template>
                 <ng-template ngbSlide>
-                  <img src="assets/images/small/prepa4.jpg" alt="Preparation Slide 3" class="img-fluid img-bordered" />
+                  <img
+                    src="assets/images/small/prepa4.jpg"
+                    alt="Preparation Slide 3"
+                    class="img-fluid img-bordered"
+                  />
                 </ng-template>
               </ngb-carousel>
             </div>

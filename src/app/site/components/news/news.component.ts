@@ -5,12 +5,12 @@ import {
   ElementRef,
   Renderer2
 } from '@angular/core';
+import { Router } from '@angular/router'; // ✅ Add this import
 
 interface NewsItem {
   title: string;
-  date: string;    // ISO string or whatever format your backend returns
-  slug: string;    // for linking to detail pages
-  // add other fields here (e.g. category, excerpt, imageUrl) as needed
+  date: string;
+  slug: string;
 }
 
 @Component({
@@ -21,20 +21,17 @@ interface NewsItem {
 export class NewsComponent implements OnInit, AfterViewInit {
   newsItems: NewsItem[] = [];
   currentPage = 1;
-  totalPages = 22;       // set this to the real total from your API
+  totalPages = 22;
   pages: number[] = [];
 
   constructor(
     private el: ElementRef,
     private renderer: Renderer2,
-    // private newsService: NewsService   // uncomment & implement your data service
+    private router: Router // ✅ Inject router
   ) {}
 
   ngOnInit(): void {
-    // build an array [1,2,3…totalPages]
     this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1);
-
-    // load the first page
     this.loadPage(this.currentPage);
   }
 
@@ -54,24 +51,10 @@ export class NewsComponent implements OnInit, AfterViewInit {
     cards.forEach((c: Element) => observer.observe(c));
   }
 
-  /**
-   * Load a given page of news.
-   * Replace the stub below with your API call.
-   */
   loadPage(page: number): void {
-    if (page < 1 || page > this.totalPages) {
-      return;
-    }
+    if (page < 1 || page > this.totalPages) return;
     this.currentPage = page;
 
-    // TODO: replace this stub with a call to your backend,
-    // e.g. this.newsService.getNews(page).subscribe(resp => {
-    //         this.newsItems = resp.items;
-    //         this.totalPages = resp.totalPages;
-    //         this.pages = Array.from({length: this.totalPages}, (_, i) => i+1);
-    //       });
-
-    // STUB: demo items
     this.newsItems = Array.from({ length: 6 }, (_, idx) => ({
       title: `Demo News #${(page - 1) * 6 + idx + 1}`,
       date: new Date().toISOString(),
@@ -79,12 +62,18 @@ export class NewsComponent implements OnInit, AfterViewInit {
     }));
   }
 
-  /**
-   * Trigger navigation to a different page.
-   * Scrolls back up and reloads data.
-   */
   goToPage(page: number): void {
     this.loadPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // ✅ New method to navigate to detail page
+  goToDetail(item: NewsItem): void {
+    this.router.navigate(['/igs/news-detail'], {
+      state: {
+        title: item.title,
+        date: item.date
+      }
+    });
   }
 }
