@@ -24,7 +24,10 @@
       <ul class="navbar-nav me-auto" id="topnav-menu">
         
         <!-- About Us -->
-        <li class="nav-item dropdown" ngbDropdown>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/igs/a-propos">{{ 'navbar.about' | translate }}</a>
+        </li>
+        <!-- <li class="nav-item dropdown" ngbDropdown>
           <a class="nav-link" ngbDropdownToggle style="cursor: pointer;">
             {{ 'navbar.aboutUs' | translate }}
           </a>
@@ -32,7 +35,7 @@
             <li><a class="dropdown-item" routerLink="/igs/a-propos">{{ 'navbar.about' | translate }}</a></li>
             <li><a class="dropdown-item" routerLink="/igs/gouvernance">{{ 'navbar.governance' | translate }}</a></li>
           </ul>
-        </li>
+        </li> -->
 
         <!-- Consulting -->
         <li class="nav-item dropdown" ngbDropdown>

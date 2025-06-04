@@ -4,21 +4,38 @@
     <p class="login-subtitle">Connectez-vous à votre compte</p>
 
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+      <!-- Email -->
       <div class="form-group">
         <label for="email" class="form-label">Adresse Email *</label>
         <div class="input-wrapper">
           <i class="fa fa-envelope icon"></i>
-          <input type="email" id="email" class="form-control" formControlName="usernameOrEmail" placeholder="exemple@email.com" required>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            formControlName="usernameOrEmail"
+            placeholder="exemple@email.com"
+            required
+          />
         </div>
         <div *ngIf="f.usernameOrEmail.errors?.required" class="error-text">Email requis.</div>
         <div *ngIf="f.usernameOrEmail.errors?.email" class="error-text">Format email invalide.</div>
       </div>
 
+      <!-- Password -->
       <div class="form-group">
         <label for="password" class="form-label">Mot de passe *</label>
         <div class="input-wrapper">
           <i class="fa fa-lock icon"></i>
-          <input type="password" id="password" class="form-control" formControlName="password" placeholder="••••••••" required>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            formControlName="password"
+            placeholder="••••••••"
+            required
+          />
         </div>
         <div *ngIf="f.password.errors?.required" class="error-text">Mot de passe requis.</div>
       </div>
