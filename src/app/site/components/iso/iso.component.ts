@@ -34,4 +34,11 @@ export class IsoComponent implements OnInit, AfterViewInit {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
+
+  downloadPDF(): void {
+    const link = document.createElement('a');
+    link.href = 'assets/pdfs/iso.pdf'; // Your PDF path
+    link.download = 'ISO-Certification.pdf';
+    link.click();
+  }
 }

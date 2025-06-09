@@ -1,52 +1,71 @@
 <div class="login-wrapper">
-  <div class="login-card">
-    <h1 class="login-title">Bienvenue 👋</h1>
-    <p class="login-subtitle">Connectez-vous à votre compte</p>
+  <div class="login-card-group">
 
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <!-- Left panel: form -->
+    <div class="login-form-card">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <h1 class="login-title">Connexion</h1>
+        <div *ngIf="error" class="error-alert">{{ error }}</div>
+        <p class="login-subtitle">Connectez-vous à votre compte</p>
 
-      <!-- Email -->
-      <div class="form-group">
-        <label for="email" class="form-label">Adresse Email *</label>
-        <div class="input-wrapper">
-          <i class="fa fa-envelope icon"></i>
+        <!-- Email input -->
+        <div class="input-group">
+          <span class="input-icon">
+            <i class="fa fa-envelope"></i>
+          </span>
           <input
             type="email"
-            id="email"
-            class="form-control"
             formControlName="usernameOrEmail"
-            placeholder="exemple@email.com"
+            placeholder="Email"
+            autocomplete="username"
             required
           />
         </div>
-        <div *ngIf="f.usernameOrEmail.errors?.required" class="error-text">Email requis.</div>
-        <div *ngIf="f.usernameOrEmail.errors?.email" class="error-text">Format email invalide.</div>
-      </div>
+        <div
+          *ngIf="f.usernameOrEmail.invalid && (f.usernameOrEmail.dirty || f.usernameOrEmail.touched)"
+          class="validation-error"
+        >
+          <div *ngIf="f.usernameOrEmail.errors?.required">Email requis.</div>
+          <div *ngIf="f.usernameOrEmail.errors?.email">Format invalide.</div>
+        </div>
 
-      <!-- Password -->
-      <div class="form-group">
-        <label for="password" class="form-label">Mot de passe *</label>
-        <div class="input-wrapper">
-          <i class="fa fa-lock icon"></i>
+        <!-- Password input -->
+        <div class="input-group">
+          <span class="input-icon">
+            <i class="fa fa-lock"></i>
+          </span>
           <input
             type="password"
-            id="password"
-            class="form-control"
             formControlName="password"
-            placeholder="••••••••"
+            placeholder="Mot de passe"
+            autocomplete="current-password"
             required
           />
         </div>
-        <div *ngIf="f.password.errors?.required" class="error-text">Mot de passe requis.</div>
-      </div>
+        <div
+          *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)"
+          class="validation-error"
+        >
+          <div *ngIf="f.password.errors?.required">Mot de passe requis.</div>
+        </div>
 
-      <button type="submit" class="btn-login">Se connecter</button>
-    </form>
+        <!-- Actions -->
+        <div class="form-actions">
+          <button type="submit" class="btn-login">Se connecter</button>
+          <a routerLink="/account/restpassword" class="forgot-password">Mot de passe oublié ?</a>
+        </div>
 
-    <div class="extra-links">
-      <a routerLink="/account/restpassword">Mot de passe oublié ?</a>
-      <span> | </span>
-      <a routerLink="/account/signup">Créer un compte</a>
+        <!-- Signup link -->
+        <div class="extra-link">
+          <a routerLink="/account/signup">Créer un compte</a>
+        </div>
+      </form>
     </div>
+
+    <!-- Right panel: logo/image -->
+    <div class="login-image-card">
+      <img src="assets/images/logo.png" alt="Logo" />
+    </div>
+
   </div>
 </div>

@@ -186,3 +186,56 @@ $text-color:    #333;
     }
   }
 }
+.counter-section {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .z-2 {
+    z-index: 2;
+  }
+
+  .counter-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .counter-value {
+      font-size: 4rem;
+      color: #ffd700;
+      margin-bottom: 0.5rem;
+    }
+
+    p.lead {
+      font-size: 1rem;
+      color: #fff;
+    }
+  }
+}

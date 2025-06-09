@@ -1,4 +1,26 @@
-<div class="pdf-container">
-    <iframe [src]="pdfUrl" width="100%" height="1000px" frameborder="0"></iframe>
+<!-- 1) Confirmation page -->
+<div *ngIf="!confirmed" class="confirm-page">
+  <p class="confirm-text">
+    Vous êtes sur le point d’accéder au document PDF. Voulez-vous confirmer le téléchargement ?
+  </p>
+  <button class="btn-confirm" (click)="confirmDownload()">
+    Confirmer le téléchargement
+  </button>
+</div>
+
+<!-- 2) PDF viewer + download link -->
+<div *ngIf="confirmed" class="pdf-section">
+  <div class="pdf-container">
+    <iframe
+      [src]="pdfUrl"
+      width="100%"
+      height="800px"
+      frameborder="0"
+    ></iframe>
   </div>
-  
+  <div class="download-wrapper">
+    <a [href]="pdfSrc" download class="btn-download">
+      Télécharger le PDF
+    </a>
+  </div>
+</div>

@@ -1,26 +1,43 @@
+<!-- signup.component.html -->
 <div class="signup-wrapper">
   <div class="signup-card">
     <h2 class="signup-title">Créer un compte</h2>
-    <p class="signup-subtitle">Remplissez les informations ci-dessous pour vous inscrire</p>
+    <p class="signup-subtitle">
+      Remplissez les informations ci-dessous pour vous inscrire
+    </p>
 
-    <!-- Success Message -->
     <div class="success-message-panel" *ngIf="successmsg">
-      <div class="success-icon">&#10004;</div>
+      <div class="success-icon">✔</div>
       <div class="success-message">{{ messageError }}</div>
     </div>
 
     <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate>
       <div class="row">
+        <!-- Prénom -->
         <div class="col-md-6 mb-3">
-          <label class="form-label">Prénom *</label>
-          <input type="text" class="form-control" formControlName="firstName" placeholder="Entrez votre prénom">
+          <label class="form-label" for="firstName">Prénom *</label>
+          <input
+            id="firstName"
+            type="text"
+            class="form-control"
+            formControlName="firstName"
+            placeholder="Entrez votre prénom"
+          />
           <div class="invalid-feedback" *ngIf="submitted && f.firstName.errors?.required">
             Le prénom est requis.
           </div>
         </div>
+
+        <!-- Nom -->
         <div class="col-md-6 mb-3">
-          <label class="form-label">Nom *</label>
-          <input type="text" class="form-control" formControlName="lastName" placeholder="Entrez votre nom">
+          <label class="form-label" for="lastName">Nom *</label>
+          <input
+            id="lastName"
+            type="text"
+            class="form-control"
+            formControlName="lastName"
+            placeholder="Entrez votre nom"
+          />
           <div class="invalid-feedback" *ngIf="submitted && f.lastName.errors?.required">
             Le nom est requis.
           </div>
@@ -28,16 +45,31 @@
       </div>
 
       <div class="row">
+        <!-- Nom d'utilisateur -->
         <div class="col-md-6 mb-3">
-          <label class="form-label">Nom d'utilisateur *</label>
-          <input type="text" class="form-control" formControlName="username" placeholder="Entrez un nom d'utilisateur">
+          <label class="form-label" for="username">Nom d'utilisateur *</label>
+          <input
+            id="username"
+            type="text"
+            class="form-control"
+            formControlName="username"
+            placeholder="Entrez un nom d'utilisateur"
+          />
           <div class="invalid-feedback" *ngIf="submitted && f.username.errors?.required">
             Le nom d'utilisateur est requis.
           </div>
         </div>
+
+        <!-- Email -->
         <div class="col-md-6 mb-3">
-          <label class="form-label">Email *</label>
-          <input type="email" class="form-control" formControlName="email" placeholder="exemple@email.com">
+          <label class="form-label" for="email">Email *</label>
+          <input
+            id="email"
+            type="email"
+            class="form-control"
+            formControlName="email"
+            placeholder="exemple@email.com"
+          />
           <div class="invalid-feedback" *ngIf="submitted && f.email.errors?.required">
             L'email est requis.
           </div>
@@ -48,28 +80,80 @@
       </div>
 
       <div class="row">
+        <!-- Téléphone -->
         <div class="col-md-6 mb-3">
-          <label class="form-label">Téléphone *</label>
-          <input type="tel" class="form-control" formControlName="phoneNumber" placeholder="+21612345678">
-          <div class="invalid-feedback" *ngIf="submitted && f.phoneNumber.errors?.required">
-            Le numéro est requis.
+          <label class="form-label" for="countryCode">Téléphone *</label>
+          <div class="phone-group" [class.code-selected]="signupForm.get('countryCode')?.value">
+            <select
+              id="countryCode"
+              class="country-code"
+              formControlName="countryCode"
+            >
+              <option value="" disabled>Pays…</option>
+              <option
+                *ngFor="let c of countryCodes"
+                [value]="c.dialCode"
+              >
+                {{ c.iso }} {{ c.dialCode }}
+              </option>
+            </select>
+            <input
+              id="phoneNumber"
+              type="tel"
+              class="form-control phone-input"
+              formControlName="phoneNumber"
+              placeholder="12345678"
+              [disabled]="!signupForm.get('countryCode')?.value"
+            />
+          </div>
+          <div class="invalid-feedback" *ngIf="
+            submitted &&
+            (f.countryCode.errors || f.phoneNumber.errors)
+          ">
+            <div *ngIf="f.countryCode.errors?.required">
+              Le préfixe est requis.
+            </div>
+            <div *ngIf="f.phoneNumber.errors?.required">
+              Le numéro est requis.
+            </div>
+            <div *ngIf="f.phoneNumber.errors?.pattern">
+              Format invalide.
+            </div>
           </div>
         </div>
+
+        <!-- Mot de passe -->
         <div class="col-md-6 mb-3">
-          <label class="form-label">Mot de passe *</label>
-          <input type="password" class="form-control" formControlName="password" placeholder="••••••••">
+          <label class="form-label" for="password">Mot de passe *</label>
+          <input
+            id="password"
+            type="password"
+            class="form-control"
+            formControlName="password"
+            placeholder="••••••••"
+          />
           <div class="invalid-feedback" *ngIf="submitted && f.password.errors?.required">
             Le mot de passe est requis.
+          </div>
+          <div class="invalid-feedback" *ngIf="submitted && f.password.errors?.minlength">
+            Doit comporter au moins 6 caractères.
           </div>
         </div>
       </div>
 
+      <!-- Genre -->
       <div class="mb-3">
         <label class="form-label d-block">Genre *</label>
         <div class="radio-group">
-          <label><input type="radio" value="Homme" formControlName="genre"> Homme</label>
-          <label><input type="radio" value="Femme" formControlName="genre"> Femme</label>
-          <label><input type="radio" value="Autre" formControlName="genre"> Autre</label>
+          <label>
+            <input type="radio" value="Homme" formControlName="genre" /> Homme
+          </label>
+          <label>
+            <input type="radio" value="Femme" formControlName="genre" /> Femme
+          </label>
+          <label>
+            <input type="radio" value="Autre" formControlName="genre" /> Autre
+          </label>
         </div>
         <div class="invalid-feedback" *ngIf="submitted && f.genre.errors?.required">
           Le genre est requis.
@@ -82,7 +166,10 @@
     </form>
 
     <div class="extra-links">
-      <p>Vous avez déjà un compte ? <a routerLink="/account/login">Se connecter</a></p>
+      <p>
+        Vous avez déjà un compte ?
+        <a routerLink="/account/login">Se connecter</a>
+      </p>
     </div>
   </div>
 </div>
