@@ -1,4 +1,3 @@
-// src/app/services/news.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -6,18 +5,11 @@ import { Observable } from 'rxjs';
 export interface NewsItem {
   id: number;
   title: string;
-  date: string;
   slug: string;
   content: string;
-  image: {
-    id: number;
-    fileName: string;
-    contentType: string;
-    url: string;
-    filePath: string;
-  };
+  date: string;
+  imageUrl: string | null; // Updated to match backend NewsDTO
 }
-
 
 @Injectable({
   providedIn: 'root'

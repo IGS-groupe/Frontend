@@ -1,17 +1,6 @@
-import {
-  Component,
-  OnInit,
-  AfterViewInit,
-  ElementRef,
-  Renderer2
-} from '@angular/core';
-import { Router } from '@angular/router'; // ✅ Add this import
-
-interface NewsItem {
-  title: string;
-  date: string;
-  slug: string;
-}
+import { Component, OnInit, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
+import { NewsService, NewsItem } from '../../services/news.service'; // Adjust the import path as necessary
 
 @Component({
   selector: 'app-news',
@@ -21,17 +10,18 @@ interface NewsItem {
 export class NewsComponent implements OnInit, AfterViewInit {
   newsItems: NewsItem[] = [];
   currentPage = 1;
-  totalPages = 22;
+  totalPages = 1;
   pages: number[] = [];
+  pageSize = 6;
 
   constructor(
     private el: ElementRef,
     private renderer: Renderer2,
-    private router: Router // ✅ Inject router
+    private router: Router,
+    private newsService: NewsService
   ) {}
 
   ngOnInit(): void {
-    this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1);
     this.loadPage(this.currentPage);
   }
 
@@ -55,11 +45,20 @@ export class NewsComponent implements OnInit, AfterViewInit {
     if (page < 1 || page > this.totalPages) return;
     this.currentPage = page;
 
-    this.newsItems = Array.from({ length: 6 }, (_, idx) => ({
-      title: `Demo News #${(page - 1) * 6 + idx + 1}`,
-      date: new Date().toISOString(),
-      slug: `demo-news-${(page - 1) * 6 + idx + 1}`
-    }));
+    this.newsService.getNews().subscribe({
+      next: (news) => {
+        console.log('Fetched news:', news); // Debug log
+        this.newsItems = news;
+        this.totalPages = Math.ceil(news.length / this.pageSize);
+        this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1);
+        const startIndex = (page - 1) * this.pageSize;
+        this.newsItems = news.slice(startIndex, startIndex + this.pageSize);
+      },
+      error: (error) => {
+        console.error('Error fetching news:', error);
+        this.newsItems = [];
+      }
+    });
   }
 
   goToPage(page: number): void {
@@ -67,13 +66,7 @@ export class NewsComponent implements OnInit, AfterViewInit {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // ✅ New method to navigate to detail page
   goToDetail(item: NewsItem): void {
-    this.router.navigate(['/igs/news-detail'], {
-      state: {
-        title: item.title,
-        date: item.date
-      }
-    });
+    this.router.navigate(['/igs/news-detail', item.slug]);
   }
 }
