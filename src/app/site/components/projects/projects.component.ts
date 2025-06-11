@@ -6,6 +6,7 @@ import {
   Renderer2,
   ViewChild
 } from '@angular/core';
+import { AuthenticationService } from 'src/app/core/services/auth.service'; // Adjust path as needed
 
 @Component({
   selector: 'app-projects',
@@ -13,13 +14,30 @@ import {
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit, AfterViewInit {
-  projectCount = 567;
+  projectCount: number = 0;
 
   @ViewChild('projectCounterEl', { static: true }) projectCounterEl!: ElementRef<HTMLElement>;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+    private authService: AuthenticationService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.authService.getCompleteResultDemandesCount().subscribe({
+      next: (data) => {
+        this.projectCount = data.completeResultsCount;
+        // If DOM already loaded, animate it
+        if (this.projectCounterEl) {
+          this.animateCounter(this.projectCounterEl, this.projectCount, 2000);
+        }
+      },
+      error: (err) => {
+        console.error('Failed to load complete result demandes count:', err);
+      }
+    });
+  }
 
   ngAfterViewInit(): void {
     const elements = this.el.nativeElement.querySelectorAll('.fade-up-card');
@@ -34,9 +52,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     }, { threshold: 0.1 });
 
     elements.forEach((el: Element) => observer.observe(el));
-
-    // Counter logic
-    this.animateCounter(this.projectCounterEl, this.projectCount, 2000);
   }
 
   private animateCounter(elRef: ElementRef<HTMLElement>, end: number, duration: number) {

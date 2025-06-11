@@ -26,40 +26,57 @@ export class NewsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    const cards = this.el.nativeElement.querySelectorAll('.fade-up-card');
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            this.renderer.addClass(entry.target, 'fade-up-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    cards.forEach((c: Element) => observer.observe(c));
+    setTimeout(() => {
+      const cards = this.el.nativeElement.querySelectorAll('.fade-up-card');
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              this.renderer.addClass(entry.target, 'fade-up-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      cards.forEach((c: Element) => observer.observe(c));
+    }, 0); // ✅ Wrap in setTimeout to wait for rendering
   }
+
 
   loadPage(page: number): void {
-    if (page < 1 || page > this.totalPages) return;
-    this.currentPage = page;
+  if (page < 1 || page > this.totalPages) return;
+  this.currentPage = page;
 
-    this.newsService.getNews().subscribe({
-      next: (news) => {
-        console.log('Fetched news:', news); // Debug log
-        this.newsItems = news;
-        this.totalPages = Math.ceil(news.length / this.pageSize);
-        this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1);
-        const startIndex = (page - 1) * this.pageSize;
-        this.newsItems = news.slice(startIndex, startIndex + this.pageSize);
-      },
-      error: (error) => {
-        console.error('Error fetching news:', error);
-        this.newsItems = [];
+  this.newsService.getNews().subscribe({
+    next: (news) => {
+      this.totalPages = Math.ceil(news.length / this.pageSize);
+      this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1);
+      const startIndex = (page - 1) * this.pageSize;
+      this.newsItems = news.slice(startIndex, startIndex + this.pageSize);
+
+      // ✅ Wait until Angular has rendered the view
+      setTimeout(() => this.runFadeAnimation(), 0);
+    },
+    error: (error) => {
+      this.newsItems = [];
+    }
+  });
+}
+
+runFadeAnimation(): void {
+  const cards = this.el.nativeElement.querySelectorAll('.fade-up-card');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        this.renderer.addClass(entry.target, 'fade-up-visible');
+        observer.unobserve(entry.target);
       }
     });
-  }
+  }, { threshold: 0.1 });
+  cards.forEach((c: Element) => observer.observe(c));
+}
+
 
   goToPage(page: number): void {
     this.loadPage(page);

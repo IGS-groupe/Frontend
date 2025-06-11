@@ -3,23 +3,50 @@ import {
   Component,
   ElementRef,
   Renderer2,
-  ViewChild
+  ViewChild,
+  OnInit
 } from '@angular/core';
+import { AuthenticationService } from 'src/app/core/services/auth.service';
 
 @Component({
   selector: 'app-clients',
   templateUrl: './clients.component.html',
   styleUrls: ['./clients.component.scss']
 })
-export class ClientsComponent implements AfterViewInit {
-  clientCount = 1234;
+export class ClientsComponent implements OnInit, AfterViewInit {
+  clientCount: number = 0;
+  clients: any[] = []; // Store real client users from backend
 
   @ViewChild('clientCounterEl', { static: true }) clientCounterEl!: ElementRef<HTMLElement>;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+    private authService: AuthenticationService
+  ) {}
+
+  ngOnInit(): void {
+    // Get count for counter
+    this.authService.getUserCount().subscribe({
+      next: (data) => {
+        this.clientCount = data.userCount;
+        if (this.clientCounterEl) {
+          this.animateCounter(this.clientCounterEl, this.clientCount, 2000);
+        }
+      },
+      error: (err) => console.error('Failed to fetch user count:', err)
+    });
+
+    // Get real clients (users with role ROLE_USER)
+    this.authService.getUsersWithRoleUser().subscribe({
+      next: (users) => {
+        this.clients = users;
+      },
+      error: (err) => console.error('Failed to fetch users by role:', err)
+    });
+  }
 
   ngAfterViewInit(): void {
-    // Fade-up animations
     const elements = this.el.nativeElement.querySelectorAll('.fade-up-card');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -31,9 +58,6 @@ export class ClientsComponent implements AfterViewInit {
     }, { threshold: 0.1 });
 
     elements.forEach((el: Element) => observer.observe(el));
-
-    // Counter animation
-    this.animateCounter(this.clientCounterEl, this.clientCount, 2000);
   }
 
   private animateCounter(elRef: ElementRef<HTMLElement>, end: number, duration: number) {
