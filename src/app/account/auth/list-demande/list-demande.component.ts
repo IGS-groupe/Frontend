@@ -7,6 +7,10 @@ import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
 import QRCode from 'qrcode';
 
+import { saveAs } from 'file-saver';
+import * as XLSX from 'xlsx';
+
+
 @Component({
   selector: 'app-list-demande',
   templateUrl: './list-demande.component.html',
@@ -86,6 +90,48 @@ export class ListDemandeComponent implements OnInit {
       if (button) button.style.visibility = 'visible'; // Show the button again
     });
   }
+  exportToExcel(): void {
+    const formattedData = this.demandes.map(demande => ({
+      'ID': demande.demandeId,
+      'Demande pour': demande.demandePour,
+      'Envoyé au laboratoire': demande.envoyeAuLaboratoire,
+      'Courriels supplémentaires': demande.courrielsSupplementaires,
+      'Bon de commande': demande.bonDeCommande,
+      'Un échantillon': demande.unEchantillon ? 'Oui' : 'Non',
+      'État': demande.etat,
+      'Langue du certificat': demande.langueDuCertificat,
+      'Commentaires internes': demande.commentairesInternes,
+      'User ID': demande.userId || ''
+    }));
+
   
+    const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(formattedData);
+
+    
+    const columnWidths = [
+      { wch: 10 },
+      { wch: 30 }, 
+      { wch: 20 }, 
+      { wch: 40 },  
+      { wch: 20 },
+      { wch: 15 },  
+      { wch: 15 }, 
+      { wch: 20 },  
+      { wch: 40 }, 
+      { wch: 20 }   
+    ];
+    worksheet['!cols'] = columnWidths;
+
+    const workbook: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Liste des demandes');
+
+    
+    const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+    const data: Blob = new Blob([excelBuffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+    
+    
+    const date = new Date().toISOString().slice(0, 10);
+    saveAs(data, `liste_demandes_${date}.xlsx`);
+  }
 
 }
