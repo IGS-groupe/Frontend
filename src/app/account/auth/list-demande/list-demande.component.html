@@ -25,6 +25,16 @@
 
     <!-- Check if demandes array is empty -->
     <div *ngIf="demandes && demandes.length > 0; else noData">
+      <div class="row mb-3">
+        <div class="col">
+          <button class="btn btn-success float-end ms-2" (click)="exportToExcel()">
+            <i class="fas fa-file-excel me-1"></i> Exporter en Excel
+          </button>
+          <button class="btn btn-primary float-end ms-2" (click)="saveAsPdf()">
+            <i class="fas fa-file-pdf me-1"></i> Exporter en PDF
+          </button>
+        </div>
+      </div>
       <table>
         <thead>
           <tr>
